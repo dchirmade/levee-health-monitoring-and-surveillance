@@ -18,7 +18,7 @@
  * 
  * GSoC11 Developer: Dipak 
  * GSoC11 Dashboard: http://www.google-melange.com/gsoc/project/google/gsoc2011/q1w2e3r4/12001
- * GSoC11 Mentor   : Dr.Raju Gottumukkala. 
+ * GSoC11 Mentor   : Dr.Raju Gottumukkala and Crawford Comeaux
  * 
  */
 
@@ -35,8 +35,19 @@
  * 5. Connecting wires 
  * 6. HXD buzzer
  * 
- * FixMe: a. Connection diagram.
- * b. Currently only one sensors is used to demonstrate hardware event base. 
+ * 
+ * Steps to reuse this code (only tried on gnu/linux platform): 
+ * 1. Download and install Arduino IDE with complier. 
+ * On Ubuntu do: aptitude  update ; aptitude install arduino; 
+ * 2. Open this file in Arduino IDE. 
+ * 3. Configure  Arduino IDE for first time use by selecting correct serial port and 
+ * board type in tools section. 
+ * 4. Press compile and upload button to upload cross complied code to Arduino board. 
+ * 5. Open serial terminal to see any responses from Arduino board. 
+ * 
+ * 
+ * FixMe: 
+ * Currently only one sensors is used to demonstrate hardware event base. 
  * Other sensors could be covered at later stage of project. 
  * 
  */
@@ -370,6 +381,7 @@ void loop( void )
   digitalWrite(speakerPin, LOW); 
   delay(MEDIUMDELAY);
 }
+
 
 
 
