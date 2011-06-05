@@ -20,11 +20,13 @@
  * GSoC11 Dashboard: http://www.google-melange.com/gsoc/project/google/gsoc2011/q1w2e3r4/12001
  * GSoC11 Mentor   : Dr.Raju Gottumukkala and Crawford Comeaux
  * 
+ * Todo: Add more information about this software sensor here!  
  */
 
-#ifndef SOFTWARE_WEATHER_SENSORS_HPP
-#define SOFTWARE_WEATHER_SENSORS_HPP
+#ifndef NOAA_SOFTWARE_WEATHER_SENSORS_HPP
+#define NOAA_SOFTWARE_WEATHER_SENSORS_HPP
 
+/** Include files for XERCESC DOM parser and library */
 #include <xercesc/dom/DOM.hpp>
 #include <xercesc/dom/DOMDocument.hpp>
 #include <xercesc/dom/DOMDocumentType.hpp>
@@ -38,12 +40,20 @@
 #include <xercesc/parsers/XercesDOMParser.hpp>
 #include <xercesc/util/XMLUni.hpp>
 
+/** Include files for string and vector operations */
 #include <string>
 #include <stdexcept>
 #include <vector>
 
 using namespace xercesc;
 using namespace std;
+
+/**
+
+ Desc: Class, Weather Sensor, This is reposible for fetching, building vector base of all 
+ latest ( upto a delay of an hour ) weather feeds located in USA.         
+ 
+*/ 
 
 class WeatherSensors {
 
@@ -69,7 +79,8 @@ public:
       ~WeatherSensors( void );       /** Frees any memory allocated by xerces parser */
       void printDebugMessages( string );  /** Prints debug messages if enalbed */
       string GetTextContentOfAnElement ( DOMElement *, string ); /** Get the text contect of given dom element */
-      void readAndParseWeatherFeeds ( string & ) throw(std::runtime_error); /** Reads and parse feeds per desire needs */       
+      bool readAndParseWeatherFeeds ( string & ) throw(std::runtime_error); /** Reads and parse feeds per desire needs */       
+      void printAllStationsData( void ); /** Prints all fetched stations and substation data */
 
 private:
       /** Handle for Xerces DOM Parser */
