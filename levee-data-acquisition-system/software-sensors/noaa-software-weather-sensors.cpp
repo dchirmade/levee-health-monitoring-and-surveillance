@@ -20,10 +20,12 @@
  * GSoC11 Dashboard: http://www.google-melange.com/gsoc/project/google/gsoc2011/q1w2e3r4/12001
  * GSoC11 Mentor   : Dr.Raju Gottumukkala and Crawford Comeaux
  * 
+ * 
+ * Todo: Add more information about this software sensor here! 
  */
 
-#ifndef SOFTWARE_WEATHER_SENSORS_CPP
-#define SOFTWARE_WEATHER_SENSORS_CPP
+#ifndef NOAA_SOFTWARE_WEATHER_SENSORS_CPP
+#define NOAA_SOFTWARE_WEATHER_SENSORS_CPP
 
 #include <string>
 #include <iostream>
@@ -35,10 +37,18 @@
 #include <unistd.h>
 #include <errno.h>
 
-#include "software-weather-sensors.hpp"
+#include "noaa-software-weather-sensors.hpp"
 
 using namespace xercesc;
 using namespace std;
+
+/**
+
+ Desc: Constructor for weather sensor. This should initialize xerces libraries and parser handle.  
+ Arguments: Nothing, void  
+ Returns: Not applicable  
+   
+*/ 
 
 WeatherSensors::WeatherSensors( void ){
 
@@ -63,6 +73,14 @@ WeatherSensors::WeatherSensors( void ){
      
 }
 
+/**
+
+ Desc: Distructor for weather sensor. This should release xerces libraries and parser handle.  
+ Arguments: Nothing, void  
+ Returns: Not applicable  
+   
+*/ 
+
 WeatherSensors::~WeatherSensors( void ){
 
    /** Free the XML DOM instance before terminating XMLPlatformUtils */
@@ -81,6 +99,15 @@ WeatherSensors::~WeatherSensors( void ){
    } 
   
 }
+
+/**
+
+ Desc: This should extract the text content of DOM element.   
+ Arguments: DOMElement, DOM element of an XML tree to which text content to be fetched. 
+            String, Name of a tag in XML tree
+ Returns: String, Returns extracted text content of a desire DOM element
+   
+*/ 
 
 string WeatherSensors::GetTextContentOfAnElement ( 
                        DOMElement* tCurrentElementLevel2,
@@ -102,10 +129,11 @@ string WeatherSensors::GetTextContentOfAnElement (
       tCharAttribute = XMLString::transcode(tCTAG);
                        
       if( tCharAttribute != NULL )
-          cout << tCharAttribute << endl;
+          tStringAttribute.assign( tCharAttribute );
       if( tCharAttribute ) XMLString::release( &tCharAttribute );
      
      }
+     else tStringAttribute.assign( "_NO_TAG_FOUND_" );
      
      XMLString::release( &tTAG );
      }
@@ -117,32 +145,83 @@ string WeatherSensors::GetTextContentOfAnElement (
      return tStringAttribute;  
 }
 
+/**
+
+ Desc: This should print debug messages only if it is enabled.   
+ Arguments: String, Lines which needs to be printed on standard console. 
+ Returns: Nothing, void 
+   
+*/ 
+
 void WeatherSensors::printDebugMessages( string debugLines ){
 
    /** Print debug messages to standard console. */
    if( isDebugEnabled )
-       cout << endl << debugLines << endl; 
+       cout << debugLines << endl; 
 
    return; 
 }
 
-void WeatherSensors::readAndParseWeatherFeeds( string & tWeatherFeedsFile )
-     throw( std::runtime_error ){
+/**
+
+ Desc: This should print all weather sensor related attribute per weather location.   
+ Arguments: Nothing, void
+ Returns: Nothing, void 
+   
+*/ 
+
+void WeatherSensors::printAllStationsData( void ){
   
+   /** Pull out all stations data from vectors and print it to console. */
+   for( int stationList = 0 ; stationList < (int) vectorStationSensorIndex.size() ; stationList++ ){
+   
+      printDebugMessages( "Station ID        : " + vectorStationSensorIndex[stationList].stationId );
+      printDebugMessages( "Station State     : " + vectorStationSensorIndex[stationList].stationState );
+      printDebugMessages( "Station Name      : " + vectorStationSensorIndex[stationList].stationName );
+      printDebugMessages( "Station Latitude  : " + vectorStationSensorIndex[stationList].stationLatitude );
+      printDebugMessages( "Station Longitude : " + vectorStationSensorIndex[stationList].stationLongitude );
+      printDebugMessages( "Station HTML URL  : " + vectorStationSensorIndex[stationList].stationHTMLUrl );
+      printDebugMessages( "Station RSS URL   : " + vectorStationSensorIndex[stationList].stationRSSUrl );
+      printDebugMessages( "Station XML URL   : " + vectorStationSensorIndex[stationList].stationXMLUrl );
+      printDebugMessages( "-------------------------------------------------------------------------" );
+   }
+
+   return; 
+}
+
+/**
+
+ Desc: This should read, parse and build vector base of a weather feeds file.    
+ Arguments: String, weather file name 
+ Returns: Bool, true if all vectors built correctly or false otherwise
+   
+*/ 
+
+bool WeatherSensors::readAndParseWeatherFeeds( string & tWeatherFeedsFile )
+     throw( std::runtime_error ){
+ 
+   bool tReturn = false;
+    
    /** Do some validation if weather feeds file is found in pointed out path */
    struct stat tFeedFileStatus;
 
    int returnFeedsFileStatus = stat( tWeatherFeedsFile.c_str(), &tFeedFileStatus );
-   if( returnFeedsFileStatus == ENOENT )
-      throw ( std::runtime_error( "Path file_name does not exist, or path is an empty string." ) );
-   else if( returnFeedsFileStatus == ENOTDIR )
-      throw ( std::runtime_error( "A component of the path is not a directory." ) );
-   else if( returnFeedsFileStatus == ELOOP )
-      throw ( std::runtime_error( "Too many symbolic links encountered while traversing the path." ) );
-   else if( returnFeedsFileStatus == EACCES )
-      throw ( std::runtime_error( "Permission denied." ) );
-   else if( returnFeedsFileStatus == ENAMETOOLONG )
-      throw ( std::runtime_error( "File can not be read.\n" ) );
+   if( returnFeedsFileStatus == 0 )
+       tReturn = true;  
+   else {
+    if( returnFeedsFileStatus == ENOENT )
+        printDebugMessages( "Path file_name does not exist, or path is an empty string." );
+    else if( returnFeedsFileStatus == ENOTDIR )
+        printDebugMessages( "A component of the path is not a directory." );
+    else if( returnFeedsFileStatus == ELOOP )
+        printDebugMessages( "Too many symbolic links encountered while traversing the path." );
+    else if( returnFeedsFileStatus == EACCES )
+        printDebugMessages( "Permission denied." );
+    else if( returnFeedsFileStatus == ENAMETOOLONG )
+        printDebugMessages( "File can not be read." );
+    else printDebugMessages( "Can not open the file!" );
+    return tReturn;  
+   }
 
    /** Configure the DOM parser */
 
@@ -201,18 +280,38 @@ void WeatherSensors::readAndParseWeatherFeeds( string & tWeatherFeedsFile )
                      DOMElement* tCurrentElementLevel2
                       = dynamic_cast< xercesc::DOMElement* >( tCurrentNodeLevel2 );
                     
-                     /* WIP! */ 
-                     cout << GetTextContentOfAnElement( tCurrentElementLevel2, string( "station_id") ); 
-                     cout << GetTextContentOfAnElement( tCurrentElementLevel2, string( "state") ); 
-                     cout << GetTextContentOfAnElement( tCurrentElementLevel2, string( "station_name") ); 
-                     cout << GetTextContentOfAnElement( tCurrentElementLevel2, string( "latitude") ); 
-                     cout << GetTextContentOfAnElement( tCurrentElementLevel2, string( "longitude") ); 
-                     cout << GetTextContentOfAnElement( tCurrentElementLevel2, string( "html_url") ); 
-                     cout << GetTextContentOfAnElement( tCurrentElementLevel2, string( "rss_url") ); 
-                     cout << GetTextContentOfAnElement( tCurrentElementLevel2, string( "xml_url") ); 
-   
+                     /* Now try to build vector array for all stations listed by NOAA */ 
+                     string tStringBuffer = "";
+                     tStringBuffer =  GetTextContentOfAnElement( tCurrentElementLevel2, string( "station_id") ); 
+                     if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                         stationSensorIndex.stationId.assign( tStringBuffer ); 
+                     tStringBuffer =  GetTextContentOfAnElement( tCurrentElementLevel2, string( "state") ); 
+                     if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                         stationSensorIndex.stationState.assign( tStringBuffer ); 
+                     tStringBuffer =  GetTextContentOfAnElement( tCurrentElementLevel2, string( "station_name") ); 
+                     if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                         stationSensorIndex.stationName.assign( tStringBuffer ); 
+                     tStringBuffer =  GetTextContentOfAnElement( tCurrentElementLevel2, string( "latitude") ); 
+                     if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                         stationSensorIndex.stationLatitude.assign( tStringBuffer ); 
+                     tStringBuffer =  GetTextContentOfAnElement( tCurrentElementLevel2, string( "longitude") ); 
+                     if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                         stationSensorIndex.stationLongitude.assign( tStringBuffer ); 
+                     tStringBuffer =  GetTextContentOfAnElement( tCurrentElementLevel2, string( "html_url") ); 
+                     if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                         stationSensorIndex.stationHTMLUrl.assign( tStringBuffer ); 
+                     tStringBuffer =  GetTextContentOfAnElement( tCurrentElementLevel2, string( "rss_url") ); 
+                     if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                         stationSensorIndex.stationRSSUrl.assign( tStringBuffer ); 
+                     tStringBuffer =  GetTextContentOfAnElement( tCurrentElementLevel2, string( "xml_url") ); 
+                     if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                         stationSensorIndex.stationXMLUrl.assign( tStringBuffer ); 
+      
                    }       
                  }  
+                     
+                 /** Now push one station at a time into station vector */
+                 vectorStationSensorIndex.push_back( stationSensorIndex );
          }
             XMLString::release( &TAG_STATION );
       }
@@ -226,21 +325,38 @@ void WeatherSensors::readAndParseWeatherFeeds( string & tWeatherFeedsFile )
       printDebugMessages( debugLineString ); 
       XMLString::release( &errorMessage );
    } 
-   return; 
+
+   return tReturn; 
 }
 
 #endif
 
+/**
+
+ Desc: Main for this code base.   
+ Arguments: Nothing, void
+ Returns: int, Program exit status. 
+   
+*/ 
+
 #ifdef WEATHER_MAIN 
 int main( void ){
 
-  /*ToDo: To write a makefile for : g++ -g -Wall -pedantic -lxerces-c software-weather-sensors.cpp -DWEATHER_MAIN -o weather; */
+  /** 
+   ToDo: To write a makefile for : 
+   g++ -g -Wall -pedantic -lxerces-c noaa-software-weather-sensors.cpp -DWEATHER_MAIN -o weather; 
+  */
+
   string weatherFeedsIndexFile = "index.xml"; /** Currently hardcoded */
- 
+    
   /** Parse and build weather feeds base into vectors */
   WeatherSensors NOAAWeatherFeeds;
-  NOAAWeatherFeeds.readAndParseWeatherFeeds( weatherFeedsIndexFile ); 
+  if( NOAAWeatherFeeds.readAndParseWeatherFeeds( weatherFeedsIndexFile ) ){
 
+    /** Print all stations attributes. Just for testing! */ 
+    NOAAWeatherFeeds.printAllStationsData();
+  }
+    
   return 0; 
 } 
 
