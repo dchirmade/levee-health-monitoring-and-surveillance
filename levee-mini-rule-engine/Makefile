@@ -25,6 +25,7 @@
 
 all: 
 	g++ -g -Wall -DMINI_RULE_ENGINE_MAIN mini-rule-engine.hpp mini-rule-engine.cpp -o mini-rule-engine
+	g++ -g -Wall -DSERIAL_MAIN -lserial serial-reader.hpp serial-reader.cpp -o serial-reader
 
 clean: 
-	rm -rf mini-rule-engine
+	rm -rf mini-rule-engine serial-reader
