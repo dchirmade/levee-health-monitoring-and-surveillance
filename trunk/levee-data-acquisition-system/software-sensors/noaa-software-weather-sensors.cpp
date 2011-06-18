@@ -158,6 +158,55 @@ void WeatherSensors::printDebugMessages( string debugLines ){
 }
 
 //
+// Desc: Parses xml URL and return station dump file name from URL   
+// Arguments: String, Full xml URL to be parsed  
+// Returns: string, Dump file's name as a token  
+//   
+ 
+string WeatherSensors::parseURLandPullOutStationName( string XMLUrl ){
+
+   string stationName = "";
+
+   // Do String-tok and pull out station name 
+   if( XMLUrl.length() != 0 )
+       stationName = XMLUrl.substr( XMLUrl.rfind( "/" ) + 1 ); 
+
+   return stationName; 
+}
+
+//
+// Desc: Crawl through all weather stations and download xml dump for each station  
+// Arguments: bool, Is there any need to update weather files? 
+// Returns: bool, true if downloda for all stations is good
+//   
+ 
+bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded ){
+
+   bool tReturn = false; 
+
+    
+   // Delete all old xml dump files if update needed
+   if( isUpdateNeeded == true ){ 
+       system( "/bin/rm *.xml 2>>/dev/null >>/dev/null" ); 
+       system( "/bin/rm *.xml.* 2>>/dev/null >>/dev/null" ); 
+   }
+   // Pull out all stations data from vectors and dump xml stations accordingly. 
+   for( int stationList = 0 ; stationList < (int) vectorStationSensorIndex.size() ; stationList++ ){
+  
+     if( isUpdateNeeded == true ) 
+         downloadXMLFeeds( vectorStationSensorIndex[stationList].stationXMLUrl );
+
+     string tStationName = parseURLandPullOutStationName( vectorStationSensorIndex[stationList].stationXMLUrl ); 
+     if( tStationName.length() != 0 )
+         readAndParsePerWeatherStationResponse( tStationName );
+     else printDebugMessages( "Opps! Couldn't fetch station name from XMLURL!" );
+   }
+
+   // Just assume all is good! 
+   return tReturn; 
+}
+
+//
 // Desc: This should print all weather sensor related attribute per weather location.   
 // Arguments: Nothing, void
 // Returns: Nothing, void 
@@ -176,9 +225,142 @@ void WeatherSensors::printAllStationsData( void ){
       printDebugMessages( "Station HTML URL  : " + vectorStationSensorIndex[stationList].stationHTMLUrl );
       printDebugMessages( "Station RSS URL   : " + vectorStationSensorIndex[stationList].stationRSSUrl );
       printDebugMessages( "Station XML URL   : " + vectorStationSensorIndex[stationList].stationXMLUrl );
+      printDebugMessages( "Station RFC time  : " + vectorStationSensorIndex[stationList].drilledDownParameters.observationTimeRfc822 );                   printDebugMessages( "Station Weather   : " + vectorStationSensorIndex[stationList].drilledDownParameters.weather );                
       printDebugMessages( "-------------------------------------------------------------------------" );
    }
 
+   return; 
+}
+
+//
+// Desc: This should read, parse and build vector base for each weather station.    
+// Arguments: String, XML file fetched from weather  
+// Returns: Bool, true if all vectors built correctly or false otherwise
+//   
+ 
+bool WeatherSensors::readAndParsePerWeatherStationResponse( string & tWeatherFeedsFile )
+     throw( std::runtime_error ){
+ 
+   bool tReturn = false;
+    
+   // Do some validation if weather feeds file is found in pointed out path 
+   struct stat tFeedFileStatus;
+
+   int returnFeedsFileStatus = stat( tWeatherFeedsFile.c_str(), &tFeedFileStatus );
+   if( returnFeedsFileStatus == 0 )
+       tReturn = true;  
+   else {
+    if( returnFeedsFileStatus == ENOENT )
+        printDebugMessages( "Path file_name does not exist, or path is an empty string." );
+    else if( returnFeedsFileStatus == ENOTDIR )
+        printDebugMessages( "A component of the path is not a directory." );
+    else if( returnFeedsFileStatus == ELOOP )
+        printDebugMessages( "Too many symbolic links encountered while traversing the path." );
+    else if( returnFeedsFileStatus == EACCES )
+        printDebugMessages( "Permission denied." );
+    else if( returnFeedsFileStatus == ENAMETOOLONG )
+        printDebugMessages( "File can not be read." );
+    else printDebugMessages( "Can not open the file!" );
+    return tReturn;  
+   }
+
+   // Configure the DOM parser 
+
+   weatherFeedsIndexParser->setValidationScheme( XercesDOMParser::Val_Never );
+   weatherFeedsIndexParser->setDoNamespaces( false );
+   weatherFeedsIndexParser->setDoSchema( false );
+   weatherFeedsIndexParser->setLoadExternalDTD( false );
+
+   try
+   {
+      weatherFeedsIndexParser->parse( tWeatherFeedsFile.c_str() );
+
+      // No need to free this pointer - owned by the parent parser object 
+      DOMDocument* tXMLDocument = weatherFeedsIndexParser->getDocument();
+
+      // Get the top-level element. 
+      DOMElement* tElementRoot = tXMLDocument->getDocumentElement();
+      if( !tElementRoot ) throw(std::runtime_error( "An empty XML document!" ));
+
+      // Parse XML file for tags of interest like "credit, station, image etc"
+      // Look one level nested within "current_observation"  
+
+      DOMNodeList* tChildren = tElementRoot->getChildNodes();
+      const  XMLSize_t tNodeCount = tChildren->getLength();
+
+      // Drilled down parameters for per weather station 
+      string tStringStationId( "" );      
+      string tStringObservationTime( "" );      
+      string tStringWeather( "" );      
+ 
+      // For all nodes, children of "current_observation" in the XML tree.  
+      for( XMLSize_t xx = 0; xx < tNodeCount; ++xx ){
+           DOMNode* tCurrentNode = tChildren->item( xx );
+
+         if( tCurrentNode->getNodeType() &&  // true is not NULL 
+             tCurrentNode->getNodeType() == DOMNode::ELEMENT_NODE ) // is element   
+         {
+             // Found node is an Element. Re-cast node as element  
+             DOMElement* tCurrentElement
+                        = dynamic_cast< xercesc::DOMElement* >( tCurrentNode );
+                     
+             string tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "station_id") ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 tStringStationId = tStringBuffer;
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "observation_time_rfc822") ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 tStringObservationTime = tStringBuffer;
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "weather") ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 tStringWeather = tStringBuffer;
+         }
+      }
+  
+      // Search and sub station parameters in vector list  
+      for( int stationList = 0 ; stationList < (int) vectorStationSensorIndex.size() ; stationList++ ){
+   
+           if( tStringStationId.compare( vectorStationSensorIndex[stationList].stationId ) == 0 ){
+           
+               // Initialize all sub weather parameters per station
+               vectorStationSensorIndex[stationList].drilledDownParameters.observationTimeRfc822.assign( tStringObservationTime );                
+               vectorStationSensorIndex[stationList].drilledDownParameters.weather.assign( tStringWeather );                
+               break;
+          }else continue;  
+     }
+   }
+   catch( xercesc::XMLException& error ) {
+  
+      char* errorMessage = xercesc::XMLString::transcode( error.getMessage() );
+      string debugLineString = "Error while parsing the XML:";
+      debugLineString.append ( errorMessage );         
+      printDebugMessages( debugLineString ); 
+      XMLString::release( &errorMessage );
+   } 
+
+   return tReturn; 
+}
+
+//
+// Desc: This method will download xml feeds given URL  
+// Arguments: String, Complete URL for XML feeds  
+// Returns: Nothing, void
+//  
+
+void WeatherSensors::downloadXMLFeeds( string tDownloadXMLFeeds ){
+
+   while( true ){  // non infinite loop! 
+  
+     if( tDownloadXMLFeeds.length() == 0 ) 
+         break; // An empty URL   
+      
+     // Build wget payload
+     printDebugMessages( "Downloading XML Feeds from: " + tDownloadXMLFeeds );
+     string tDownloadXMLFeedsstringBuffer = "/usr/bin/wget --tries=3 --wait=1 --quiet " + tDownloadXMLFeeds + 
+                                            " >>/dev/null" + " 2>>/dev/null"; 
+     system( tDownloadXMLFeedsstringBuffer.c_str() );
+    
+     break; 
+   }
    return; 
 }
 
@@ -303,6 +485,9 @@ bool WeatherSensors::readAndParseWeatherFeeds( string & tWeatherFeedsFile )
                      
                  // Now push one station at a time into station vector 
                  vectorStationSensorIndex.push_back( stationSensorIndex );
+
+                 // WIP: 
+                 break;
          }
             XMLString::release( &TAG_STATION );
       }
@@ -336,14 +521,20 @@ int main( void ){
   // g++ -g -Wall -pedantic -lxerces-c noaa-software-weather-sensors.cpp -DWEATHER_MAIN -o weather; 
   
 
-  string weatherFeedsIndexFile = "index.xml"; // Currently hardcoded 
+  string weatherFeedsIndexFile = "MAIN.LIST"; // Currently hardcoded 
     
   // Parse and build weather feeds base into vectors 
   WeatherSensors NOAAWeatherFeeds;
   if( NOAAWeatherFeeds.readAndParseWeatherFeeds( weatherFeedsIndexFile ) ){
 
     // Print all stations attributes. Just for testing!  
-    NOAAWeatherFeeds.printAllStationsData();
+    NOAAWeatherFeeds.printAllStationsData(); 
+   
+    // Get per station data
+    if( NOAAWeatherFeeds.crawlThroughStationsData( false ) == true ){
+       
+       // WIP! Do parsing stuff!
+    }
   }
     
   return 0; 

@@ -71,17 +71,43 @@ public:
         string stationHTMLUrl;    // HTML URL of a station   
         string stationRSSUrl;     // RSS feeds URL of a station  
         string stationXMLUrl;     // XML URL of a station 
+        
+        struct drilledDownWeatherParameters{
+        
+          string observationTimeRfc822;  // Observation Time in RFC822 format
+	  string weather;                // Weather type
+	  string temperatureString;      // Temperature both F and C 
+	  string tempF;                  // Temperature in fahrenheit
+	  string tempC;                  // Temperature in Celsus
+	  string relativeHumidity;       // Relative Humidity 
+	  string windString;             // Wind parameters ( Degrees, Mph and Kt )
+	  string windDirection;          // Wind flow direction
+	  string windDegrees;            // Wind flow degrees  
+	  string windMph;                // Wind speed in Mile per hour 
+	  string windKt;                 // Wind speed in Knot
+	  string dewpointString;         // Dew point in Both F and C 
+	  string dewpointF;              // Dew point in fahrenheit
+	  string dewpointC;              // Dew point in Celsus 
+	  string heatIndexString;        // Heat index in both F and C 
+      	  string heatIndexF;             // Heat index in fahrenheit 
+      	  string heatIndexC;             // Heat index in Celsus
+
+        }drilledDownParameters;    
       }stationSensorIndex;
 
       // Vector listing of all stations 
       vector< weatherStationSoftwareSensor > vectorStationSensorIndex; 
 
-      WeatherSensors( void );             // Initializes xerces-C libraries 	
-      ~WeatherSensors( void );            // Frees any memory allocated by xerces parser 
-      void printDebugMessages( string );  // Prints debug messages if enalbed 
+      WeatherSensors( void );                // Initializes xerces-C libraries 	
+      ~WeatherSensors( void );               // Frees any memory allocated by xerces parser 
+      void printDebugMessages( string );     // Prints debug messages if enalbed 
       string GetTextContentOfAnElement ( DOMElement *, string ); // Get the text contect of given dom element 
-      bool readAndParseWeatherFeeds ( string & ) throw(std::runtime_error); // Reads and parse feeds per desire needs        
-      void printAllStationsData( void ); // Prints all fetched stations and substation data 
+      bool readAndParseWeatherFeeds ( string & ) throw( std::runtime_error ); // Read and parse feeds per desire needs        
+      bool readAndParsePerWeatherStationResponse( string & ) throw( std::runtime_error ); // Read and parse xml response obtained from station
+      void printAllStationsData( void );     // Prints all fetched stations and substation data 
+      void downloadXMLFeeds( string );       // Download XML feeds and store them for parsing  
+      bool crawlThroughStationsData( bool ); // Crawl through all stations and lookout for all stations   
+      string parseURLandPullOutStationName( string );
 
 private:
       // Handle for Xerces DOM Parser 
