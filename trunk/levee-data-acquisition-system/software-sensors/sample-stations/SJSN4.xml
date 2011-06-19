@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>8537121 - Ship John Shoal, NJ</location>
+	<station_id>SJSN4</station_id>
+	<latitude>39.305</latitude>
+	<longitude>-75.375</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 8:30 am EST</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 08:30:00 -0500</observation_time_rfc822>
+	<temperature_string>80.4 F (26.9 C)</temperature_string>
+	<temp_f>80.4</temp_f>
+	<temp_c>26.9</temp_c>
+	<water_temp_f>74.3</water_temp_f>
+	<water_temp_c>23.5</water_temp_c>
+	<wind_string>from the Southwest at 13.9 gusting to 16.1 MPH (12.05 gusting to 13.99 KT)</wind_string>
+	<wind_dir>Southwest</wind_dir>
+	<wind_degrees>220</wind_degrees>
+	<wind_mph>13.9</wind_mph>
+	<wind_gust_mph>16.1</wind_gust_mph>
+	<wind_kt>12.05</wind_kt>
+	<wind_gust_kt>13.99</wind_gust_kt>
+	<pressure_string>1020.4 mb</pressure_string>
+	<pressure_mb>1020.4</pressure_mb>
+	<mean_wave_dir>Northeast</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

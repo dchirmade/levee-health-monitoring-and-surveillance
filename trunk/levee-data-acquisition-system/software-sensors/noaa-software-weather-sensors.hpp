@@ -76,6 +76,9 @@ public:
         
           string observationTimeRfc822;  // Observation Time in RFC822 format
 	  string weather;                // Weather type
+    
+          /* Following parameters are not used for far!  
+
 	  string temperatureString;      // Temperature both F and C 
 	  string tempF;                  // Temperature in fahrenheit
 	  string tempC;                  // Temperature in Celsus
@@ -91,6 +94,8 @@ public:
 	  string heatIndexString;        // Heat index in both F and C 
       	  string heatIndexF;             // Heat index in fahrenheit 
       	  string heatIndexC;             // Heat index in Celsus
+
+          */ 
 
         }drilledDownParameters;    
       }stationSensorIndex;

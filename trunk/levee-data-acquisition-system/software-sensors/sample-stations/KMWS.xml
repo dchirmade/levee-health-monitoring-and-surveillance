@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Mount Wilson, CA</location>
+	<station_id>KMWS</station_id>
+	<latitude>34.233</latitude>
+	<longitude>-118.067</longitude>
+	<observation_time>Last Updated on Jun 18 2011, 9:30 pm PDT</observation_time>
+        <observation_time_rfc822>Sat, 18 Jun 2011 21:30:00 -0700</observation_time_rfc822>
+	<temperature_string>57.0 F (14.0 C)</temperature_string>
+	<temp_f>57.0</temp_f>
+	<temp_c>14.0</temp_c>
+	<relative_humidity>36</relative_humidity>
+	<wind_string>from the Southwest at 6.9 gusting to 8.1 MPH (6 gusting to 7 KT)</wind_string>
+	<wind_dir>Southwest</wind_dir>
+	<wind_degrees>240</wind_degrees>
+	<wind_mph>6.9</wind_mph>
+	<wind_gust_mph>8.1</wind_gust_mph>
+	<wind_kt>6</wind_kt>
+	<wind_gust_kt>7</wind_gust_kt>
+	<dewpoint_string>30.2 F (-1.0 C)</dewpoint_string>
+	<dewpoint_f>30.2</dewpoint_f>
+	<dewpoint_c>-1.0</dewpoint_c>
+	<windchill_string>56 F (13 C)</windchill_string>
+      	<windchill_f>56</windchill_f>
+      	<windchill_c>13</windchill_c>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KMWS.html</two_day_history_url>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/KMWS.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

@@ -280,7 +280,11 @@ bool WeatherSensors::readAndParsePerWeatherStationResponse( string & tWeatherFee
 
       // Get the top-level element. 
       DOMElement* tElementRoot = tXMLDocument->getDocumentElement();
-      if( !tElementRoot ) throw(std::runtime_error( "An empty XML document!" ));
+      if( !tElementRoot ){
+  
+          printDebugMessages( "Well, Looks like this weather station has changed it's xml response! " );         
+          return tReturn;  
+      }
 
       // Parse XML file for tags of interest like "credit, station, image etc"
       // Look one level nested within "current_observation"  
@@ -412,7 +416,11 @@ bool WeatherSensors::readAndParseWeatherFeeds( string & tWeatherFeedsFile )
 
       // Get the top-level element. 
       DOMElement* tElementRoot = tXMLDocument->getDocumentElement();
-      if( !tElementRoot ) throw(std::runtime_error( "An empty XML document!" ));
+      if( !tElementRoot ){
+  
+          printDebugMessages( "Well, Looks like weather station listing is not good! " );         
+          return tReturn;  
+      }
 
       // Parse XML file for tags of interest like "credit, station, image etc"
       // Look one level nested within "wx_station_index"  
@@ -485,9 +493,6 @@ bool WeatherSensors::readAndParseWeatherFeeds( string & tWeatherFeedsFile )
                      
                  // Now push one station at a time into station vector 
                  vectorStationSensorIndex.push_back( stationSensorIndex );
-
-                 // WIP: 
-                 break;
          }
             XMLString::release( &TAG_STATION );
       }
@@ -527,17 +532,17 @@ int main( void ){
   WeatherSensors NOAAWeatherFeeds;
   if( NOAAWeatherFeeds.readAndParseWeatherFeeds( weatherFeedsIndexFile ) ){
 
-    // Print all stations attributes. Just for testing!  
-    NOAAWeatherFeeds.printAllStationsData(); 
    
     // Get per station data
     if( NOAAWeatherFeeds.crawlThroughStationsData( false ) == true ){
-       
-       // WIP! Do parsing stuff!
+       // WIP! Do some actions if needed
     }
+
+    // Print all stations attributes. Just for testing!  
+    NOAAWeatherFeeds.printAllStationsData(); 
   }
     
-  return 0; 
+  return EXIT_SUCCESS; 
 } 
 
 #endif

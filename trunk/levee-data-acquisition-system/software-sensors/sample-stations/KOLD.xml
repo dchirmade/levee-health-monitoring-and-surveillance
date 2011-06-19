@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KOLD.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KELD.xml">/xml/current_obs/KELD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFLD.xml">/xml/current_obs/KFLD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGLD.xml">/xml/current_obs/KGLD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KOGD.xml">/xml/current_obs/KOGD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KOLF.xml">/xml/current_obs/KOLF.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KOLM.xml">/xml/current_obs/KOLM.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KOLS.xml">/xml/current_obs/KOLS.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KOLU.xml">/xml/current_obs/KOLU.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KOLV.xml">/xml/current_obs/KOLV.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KOLY.xml">/xml/current_obs/KOLY.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KOLZ.xml">/xml/current_obs/KOLZ.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KORD.xml">/xml/current_obs/KORD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KOWD.xml">/xml/current_obs/KOWD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KVLD.xml">/xml/current_obs/KVLD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KWLD.xml">/xml/current_obs/KWLD.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Alamosa Muni(awos), CO</location>
+	<station_id>KALS</station_id>
+	<latitude>37.46</latitude>
+	<longitude>-105.87</longitude>
+	<observation_time>Last Updated on Jun 18 2011, 11:52 pm MDT</observation_time>
+        <observation_time_rfc822>Sat, 18 Jun 2011 23:52:00 -0600</observation_time_rfc822>
+	<weather>Fair</weather>
+	<temperature_string>50.0 F (10.0 C)</temperature_string>
+	<temp_f>50.0</temp_f>
+	<temp_c>10.0</temp_c>
+	<relative_humidity>44</relative_humidity>
+	<wind_string>Southwest at 6.9 MPH (6 KT)</wind_string>
+	<wind_dir>Southwest</wind_dir>
+	<wind_degrees>220</wind_degrees>
+	<wind_mph>6.9</wind_mph>
+	<wind_kt>6</wind_kt>
+	<pressure_string>1006.7 mb</pressure_string>
+	<pressure_mb>1006.7</pressure_mb>
+	<pressure_in>30.01</pressure_in>
+	<dewpoint_string>28.9 F (-1.7 C)</dewpoint_string>
+	<dewpoint_f>28.9</dewpoint_f>
+	<dewpoint_c>-1.7</dewpoint_c>
+	<windchill_string>47 F (8 C)</windchill_string>
+      	<windchill_f>47</windchill_f>
+      	<windchill_c>8</windchill_c>
+	<visibility_mi>10.00</visibility_mi>
+ 	<icon_url_base>http://weather.gov/weather/images/fcicons/</icon_url_base>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KALS.html</two_day_history_url>
+	<icon_url_name>nskc.jpg</icon_url_name>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/KALS.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

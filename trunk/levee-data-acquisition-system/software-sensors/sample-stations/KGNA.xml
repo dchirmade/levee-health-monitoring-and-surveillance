@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>The Bay of Grand Marais, MN</location>
+	<station_id>KGNA</station_id>
+	<latitude>47.75</latitude>
+	<longitude>-90.34</longitude>
+	<observation_time>Last Updated on Jun 19 2011, 12:56 am CDT</observation_time>
+        <observation_time_rfc822>Sun, 19 Jun 2011 00:56:00 -0500</observation_time_rfc822>
+	<temperature_string>52.0 F (11.1 C)</temperature_string>
+	<temp_f>52.0</temp_f>
+	<temp_c>11.1</temp_c>
+	<relative_humidity>61</relative_humidity>
+	<wind_string>Northeast at 9.2 MPH (8 KT)</wind_string>
+	<wind_dir>Northeast</wind_dir>
+	<wind_degrees>60</wind_degrees>
+	<wind_mph>9.2</wind_mph>
+	<wind_kt>8</wind_kt>
+	<pressure_string>1014.0 mb</pressure_string>
+	<pressure_mb>1014.0</pressure_mb>
+	<pressure_in>29.94</pressure_in>
+	<dewpoint_string>39.0 F (3.9 C)</dewpoint_string>
+	<dewpoint_f>39.0</dewpoint_f>
+	<dewpoint_c>3.9</dewpoint_c>
+	<windchill_string>49 F (9 C)</windchill_string>
+      	<windchill_f>49</windchill_f>
+      	<windchill_c>9</windchill_c>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KGNA.html</two_day_history_url>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/KGNA.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

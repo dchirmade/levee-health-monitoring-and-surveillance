@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>W ERIE 28NM Northwest of Cleveland, OH</location>
+	<station_id>45005</station_id>
+	<latitude>41.677</latitude>
+	<longitude>-82.398</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 8:50 am EDT</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 08:50:00 -0400</observation_time_rfc822>
+	<temperature_string>68.2 F (20.1 C)</temperature_string>
+	<temp_f>68.2</temp_f>
+	<temp_c>20.1</temp_c>
+	<water_temp_f>62.6</water_temp_f>
+	<water_temp_c>17.0</water_temp_c>
+	<wind_string>from the Southwest at 15.7 gusting to 17.9 MPH (13.6 gusting to 15.55 KT)</wind_string>
+	<wind_dir>Southwest</wind_dir>
+	<wind_degrees>240</wind_degrees>
+	<wind_mph>15.7</wind_mph>
+	<wind_gust_mph>17.9</wind_gust_mph>
+	<wind_kt>13.6</wind_kt>
+	<wind_gust_kt>15.55</wind_gust_kt>
+	<pressure_string>1020.0 mb</pressure_string>
+	<pressure_mb>1020.0</pressure_mb>
+	<pressure_tendency_mb>1.3</pressure_tendency_mb>
+	<wave_height_m>0.4</wave_height_m>
+	<wave_height_ft>1.31</wave_height_ft>
+	<dominant_period_sec>3</dominant_period_sec>
+	<average_period_sec>2.7</average_period_sec>
+	<mean_wave_dir>West</mean_wave_dir>
+	<mean_wave_degrees>259</mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

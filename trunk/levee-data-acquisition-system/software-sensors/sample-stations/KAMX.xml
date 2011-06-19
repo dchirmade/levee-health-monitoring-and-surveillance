@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KAMX.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KAEX.xml">/xml/current_obs/KAEX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KALX.xml">/xml/current_obs/KALX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KAMA.xml">/xml/current_obs/KAMA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KAMG.xml">/xml/current_obs/KAMG.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KAMN.xml">/xml/current_obs/KAMN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KAMW.xml">/xml/current_obs/KAMW.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KASX.xml">/xml/current_obs/KASX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KAVX.xml">/xml/current_obs/KAVX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KAXX.xml">/xml/current_obs/KAXX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KCMX.xml">/xml/current_obs/KCMX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KSMX.xml">/xml/current_obs/KSMX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/PAMX.xml">/xml/current_obs/PAMX.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

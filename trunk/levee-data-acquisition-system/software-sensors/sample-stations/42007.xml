@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/42007.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/42001.xml">/xml/current_obs/42001.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/42002.xml">/xml/current_obs/42002.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/42003.xml">/xml/current_obs/42003.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/42047.xml">/xml/current_obs/42047.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/42057.xml">/xml/current_obs/42057.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/42067.xml">/xml/current_obs/42067.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/42407.xml">/xml/current_obs/42407.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/44007.xml">/xml/current_obs/44007.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/45007.xml">/xml/current_obs/45007.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

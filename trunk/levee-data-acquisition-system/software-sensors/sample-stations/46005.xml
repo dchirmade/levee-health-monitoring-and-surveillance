@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>WASHINGTON 315NM West of Aberdeen, WA</location>
+	<station_id>46005</station_id>
+	<latitude>46.1</latitude>
+	<longitude>-131.001</longitude>
+	<observation_time>Last Updated on Nov 17 2010, 9:50 am AKST</observation_time>
+        <observation_time_rfc822>Wed, 17 Nov 2010 09:50:00 -0900</observation_time_rfc822>
+	<temperature_string>46.6 F (8.1 C)</temperature_string>
+	<temp_f>46.6</temp_f>
+	<temp_c>8.1</temp_c>
+	<water_temp_f>52.9</water_temp_f>
+	<water_temp_c>11.6</water_temp_c>
+	<wind_string>from the West at 29.1 gusting to 35.8 MPH (25.26 gusting to 31.1 KT)</wind_string>
+	<wind_dir>West</wind_dir>
+	<wind_degrees>270</wind_degrees>
+	<wind_mph>29.1</wind_mph>
+	<wind_gust_mph>35.8</wind_gust_mph>
+	<wind_kt>25.26</wind_kt>
+	<wind_gust_kt>31.1</wind_gust_kt>
+	<pressure_string>1007.9 mb</pressure_string>
+	<pressure_mb>1007.9</pressure_mb>
+	<pressure_tendency_mb>-0.3</pressure_tendency_mb>
+	<windchill_string>38 F (3 C)</windchill_string>
+      	<windchill_f>38</windchill_f>
+      	<windchill_c>3</windchill_c>
+	<wave_height_m>5.3</wave_height_m>
+	<wave_height_ft>17.39</wave_height_ft>
+	<dominant_period_sec>11</dominant_period_sec>
+	<average_period_sec>8.1</average_period_sec>
+	<mean_wave_dir>West</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

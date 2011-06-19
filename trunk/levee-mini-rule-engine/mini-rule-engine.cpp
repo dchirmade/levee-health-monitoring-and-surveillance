@@ -32,8 +32,17 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <unistd.h>
+#include <cstdlib>
 
 #include "mini-rule-engine.hpp"
+#include "serial-reader.hpp"
+#include "knowledge-base.hpp"
+
+// Define rule actions 
+#define __nothing 		     0 
+#define __ADXL335HardwareSensorHook  1 
+#define __NOAASoftwareSensorHook     2 
 
 using namespace std;
 
@@ -99,7 +108,7 @@ void LeveeMiniRuleEngine::appendNewRule(
                                         bool tIsRuleActive,
                                         string tRuleName, 
                                         string tRuleDescription, 
-                                        string tRuleAction, 
+                                        unsigned int tRuleAction, 
                                         string tRulePayLoad,
                                         int tRuleDelay, 
                                         int tNextRuleIndex 
@@ -137,13 +146,25 @@ void LeveeMiniRuleEngine::initializeRuleBase( void ){
                   true,
                   "Start Point!",
                   "This is a start point for rule executer.",
-                  "nothing",
+                  __nothing,
                   "nothing",
                   1, 
                   vectorCrudeRuleDefinition.size() + 1  // Jump index is auto generated. Please do not modify. 
                  );
       
     // Always add rules in between start and end points to aviod infinite rule dead lock 
+
+    // Step 1. Try to fetch events from ADXL335 hardware sensor  
+    appendNewRule(
+                  vectorCrudeRuleDefinition.size(), // Indix is auto generated. Please do not modify. 
+                  true,
+                  "ADXL335",
+                  "This will hook-up ADXL335 sensor to rule engine.",
+                  __ADXL335HardwareSensorHook,
+                  "nothing",
+                  1, 
+                  vectorCrudeRuleDefinition.size() + 1  // Jump index is auto generated. Please do not modify. 
+                 );
   
     // End point
     // Rule to either stop or loop!     
@@ -152,7 +173,7 @@ void LeveeMiniRuleEngine::initializeRuleBase( void ){
                   true,
                   "End Point!",
                   "This is a end point for rule executer.",
-                  "nothing",
+                  __nothing,
                   "nothing",
                   1, 
                   0  // This index always be 0 to form a loop. Please do not modify.         
@@ -179,6 +200,22 @@ void LeveeMiniRuleEngine::executeRuleEngine( void ){
                          "Next rule in queue     : " + 
                          vectorCrudeRuleDefinition[vectorCrudeRuleDefinition[tCurrentRuleIndex].nextRuleIndex].ruleName 
                        );       
+  
+      // Decide what action to be taken!
+      switch( vectorCrudeRuleDefinition[tCurrentRuleIndex].ruleAction ){
+ 
+      case __nothing:
+              // Execute action attached to nothing!  
+              voidAction( vectorCrudeRuleDefinition[tCurrentRuleIndex].rulePayload );
+              break;            
+      case __ADXL335HardwareSensorHook:
+              // Execute action attached to ADXL335HardwareSensorHook!  
+              hookupADXL335Sensor( vectorCrudeRuleDefinition[tCurrentRuleIndex].rulePayload );
+              break;            
+      default: 
+              printDebugMessages( "No valid action assigned. Sliding to next rule by skipping this one!" );
+              break;
+      } 
    
       // Wait for some time per defined in rule
       sleep( vectorCrudeRuleDefinition[tCurrentRuleIndex].ruleDelay ); 
@@ -195,6 +232,47 @@ void LeveeMiniRuleEngine::executeRuleEngine( void ){
     return; 
 }
 
+//
+// Desc: Rule Action: voidAction, actually it does nothing! 
+// Arguments: string, Payload to action if any!  
+// Returns: Nothing, void 
+//  
+
+void LeveeMiniRuleEngine::voidAction( string tPayLoad ){
+ 
+    printDebugMessages( "Executing void action with payload: " + tPayLoad );
+    return;  
+} 
+
+//
+// Desc: Rule Action: voidAction, actually it does nothing! 
+// Arguments: string, Payload to action if any!  
+// Returns: Nothing, void 
+//  
+
+void LeveeMiniRuleEngine::hookupADXL335Sensor( string tPayLoad ){
+ 
+    printDebugMessages( "Executing 'hooking up ADXL335' sensor with payload: " + tPayLoad );
+
+    // All right, start operating hardware sensors here
+    // Fixme! Perform operating on knowledge-base here
+    
+    // Fetch events from hardware sensors over serial terminal 
+    SerialCommunicator serialChatTerminal;
+
+    // Open Serial terminal and initialize the same
+    // Fixme: Remove hardcoded terminal path
+    if( serialChatTerminal.openSerialTerminal( "/dev/ttyUSB0" ) ){
+
+    if( serialChatTerminal.initializeSerialTerminal( ) ) // Start reading some data over serial 
+         serialChatTerminal.printDebugMessages( serialChatTerminal.readFromSerialOverUSB( ));
+    else serialChatTerminal.printDebugMessages( "Some is wrong with serial port settings!" );
+    }
+    else serialChatTerminal.printDebugMessages( "Well. It looks like something is wrong with serial port!" ); 
+    
+    return;  
+} 
+
 #endif
 
 //
@@ -207,8 +285,7 @@ void LeveeMiniRuleEngine::executeRuleEngine( void ){
 int main( void ){
 
    LeveeMiniRuleEngine RuleEgnine; 
-
-   return 0; 
+   return EXIT_SUCCESS;
 }
 #endif 
 

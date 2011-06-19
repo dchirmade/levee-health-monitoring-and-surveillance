@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KBIT.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KAIT.xml">/xml/current_obs/KAIT.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBCT.xml">/xml/current_obs/KBCT.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBID.xml">/xml/current_obs/KBID.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBIE.xml">/xml/current_obs/KBIE.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBIH.xml">/xml/current_obs/KBIH.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBIJ.xml">/xml/current_obs/KBIJ.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBIL.xml">/xml/current_obs/KBIL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBIS.xml">/xml/current_obs/KBIS.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBIV.xml">/xml/current_obs/KBIV.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBIX.xml">/xml/current_obs/KBIX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBMT.xml">/xml/current_obs/KBMT.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBPT.xml">/xml/current_obs/KBPT.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFIT.xml">/xml/current_obs/KFIT.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KLIT.xml">/xml/current_obs/KLIT.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPIT.xml">/xml/current_obs/KPIT.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

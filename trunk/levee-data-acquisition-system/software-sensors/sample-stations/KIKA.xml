@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KIKA.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KFKA.xml">/xml/current_obs/KFKA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHKA.xml">/xml/current_obs/KHKA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KIDA.xml">/xml/current_obs/KIDA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KIFA.xml">/xml/current_obs/KIFA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KIKK.xml">/xml/current_obs/KIKK.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KIKV.xml">/xml/current_obs/KIKV.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KIKW.xml">/xml/current_obs/KIKW.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KIWA.xml">/xml/current_obs/KIWA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KIXA.xml">/xml/current_obs/KIXA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KIZA.xml">/xml/current_obs/KIZA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KJKA.xml">/xml/current_obs/KJKA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KSKA.xml">/xml/current_obs/KSKA.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Kosrae Island Airport, FM</location>
+	<station_id>PTSA</station_id>
+	<latitude>5.333</latitude>
+	<longitude>163.033</longitude>
+	<observation_time>Last Updated on Jun 18 2011, 10:50 am LST</observation_time>
+        <observation_time_rfc822>Sat, 18 Jun 2011 10:50:00 +1100</observation_time_rfc822>
+	<weather>Mostly Cloudy</weather>
+	<temperature_string>88.0 F (31.0 C)</temperature_string>
+	<temp_f>88.0</temp_f>
+	<temp_c>31.0</temp_c>
+	<relative_humidity>70</relative_humidity>
+	<wind_string>Northeast at 17.3 MPH (15 KT)</wind_string>
+	<wind_dir>Northeast</wind_dir>
+	<wind_degrees>40</wind_degrees>
+	<wind_mph>17.3</wind_mph>
+	<wind_kt>15</wind_kt>
+	<pressure_in>29.81</pressure_in>
+	<dewpoint_string>77.0 F (25.0 C)</dewpoint_string>
+	<dewpoint_f>77.0</dewpoint_f>
+	<dewpoint_c>25.0</dewpoint_c>
+	<heat_index_string>100 F (38 C)</heat_index_string>
+      	<heat_index_f>100</heat_index_f>
+      	<heat_index_c>38</heat_index_c>
+	<visibility_mi>10.00</visibility_mi>
+ 	<icon_url_base>http://weather.gov/weather/images/fcicons/</icon_url_base>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/PTSA.html</two_day_history_url>
+	<icon_url_name>bkn.jpg</icon_url_name>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/PTSA.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

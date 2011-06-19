@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Dryden Terrell County Airport, TX</location>
+	<station_id>K6R6</station_id>
+	<latitude>30.422</latitude>
+	<longitude>-102.278</longitude>
+	<observation_time>Last Updated on Jun 19 2011, 1:53 am CDT</observation_time>
+        <observation_time_rfc822>Sun, 19 Jun 2011 01:53:00 -0500</observation_time_rfc822>
+	<temperature_string>90.0 F (32.2 C)</temperature_string>
+	<temp_f>90.0</temp_f>
+	<temp_c>32.2</temp_c>
+	<relative_humidity>25</relative_humidity>
+	<wind_string>Southeast at 12.7 MPH (11 KT)</wind_string>
+	<wind_dir>Southeast</wind_dir>
+	<wind_degrees>120</wind_degrees>
+	<wind_mph>12.7</wind_mph>
+	<wind_kt>11</wind_kt>
+	<pressure_string>1003.9 mb</pressure_string>
+	<pressure_mb>1003.9</pressure_mb>
+	<pressure_in>29.79</pressure_in>
+	<dewpoint_string>50.0 F (10.0 C)</dewpoint_string>
+	<dewpoint_f>50.0</dewpoint_f>
+	<dewpoint_c>10.0</dewpoint_c>
+	<heat_index_string>87 F (31 C)</heat_index_string>
+      	<heat_index_f>87</heat_index_f>
+      	<heat_index_c>31</heat_index_c>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/K6R6.html</two_day_history_url>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/K6R6.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

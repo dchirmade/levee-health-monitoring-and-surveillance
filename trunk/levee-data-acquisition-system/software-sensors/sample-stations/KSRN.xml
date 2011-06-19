@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Ruston Regional Airport, LA</location>
+	<station_id>KRSN</station_id>
+	<latitude>32.5144</latitude>
+	<longitude>-92.5883</longitude>
+	<observation_time>Last Updated on Jun 19 2011, 1:15 am CDT</observation_time>
+        <observation_time_rfc822>Sun, 19 Jun 2011 01:15:00 -0500</observation_time_rfc822>
+	<weather>Fair</weather>
+	<temperature_string>84.0 F (29.0 C)</temperature_string>
+	<temp_f>84.0</temp_f>
+	<temp_c>29.0</temp_c>
+	<relative_humidity>70</relative_humidity>
+	<wind_string>from the South at 9.2 gusting to 16.1 MPH (8 gusting to 14 KT)</wind_string>
+	<wind_dir>South</wind_dir>
+	<wind_degrees>200</wind_degrees>
+	<wind_mph>9.2</wind_mph>
+	<wind_gust_mph>16.1</wind_gust_mph>
+	<wind_kt>8</wind_kt>
+	<wind_gust_kt>14</wind_gust_kt>
+	<pressure_in>29.92</pressure_in>
+	<dewpoint_string>73.4 F (23.0 C)</dewpoint_string>
+	<dewpoint_f>73.4</dewpoint_f>
+	<dewpoint_c>23.0</dewpoint_c>
+	<heat_index_string>91 F (33 C)</heat_index_string>
+      	<heat_index_f>91</heat_index_f>
+      	<heat_index_c>33</heat_index_c>
+	<visibility_mi>10.00</visibility_mi>
+ 	<icon_url_base>http://weather.gov/weather/images/fcicons/</icon_url_base>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KRSN.html</two_day_history_url>
+	<icon_url_name>nskc.jpg</icon_url_name>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/KRSN.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

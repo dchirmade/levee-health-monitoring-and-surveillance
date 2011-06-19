@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Drift River Terminal, AK</location>
+	<station_id>DRFA2</station_id>
+	<latitude>60.553</latitude>
+	<longitude>-152.137</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 4:30 am AKST</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 04:30:00 -0900</observation_time_rfc822>
+	<temperature_string>48.4 F (9.1 C)</temperature_string>
+	<temp_f>48.4</temp_f>
+	<temp_c>9.1</temp_c>
+	<wind_string>from the Northwest at 13.9 gusting to 15.0 MPH (12.05 gusting to 13.02 KT)</wind_string>
+	<wind_dir>Northwest</wind_dir>
+	<wind_degrees>310</wind_degrees>
+	<wind_mph>13.9</wind_mph>
+	<wind_gust_mph>15.0</wind_gust_mph>
+	<wind_kt>12.05</wind_kt>
+	<wind_gust_kt>13.02</wind_gust_kt>
+	<pressure_string>1007.3 mb</pressure_string>
+	<pressure_mb>1007.3</pressure_mb>
+	<windchill_string>43 F (6 C)</windchill_string>
+      	<windchill_f>43</windchill_f>
+      	<windchill_c>6</windchill_c>
+	<mean_wave_dir>Northeast</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KPUM.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KAUM.xml">/xml/current_obs/KAUM.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHUM.xml">/xml/current_obs/KHUM.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KLUM.xml">/xml/current_obs/KLUM.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPAM.xml">/xml/current_obs/KPAM.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPCM.xml">/xml/current_obs/KPCM.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPNM.xml">/xml/current_obs/KPNM.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPSM.xml">/xml/current_obs/KPSM.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPUB.xml">/xml/current_obs/KPUB.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPUC.xml">/xml/current_obs/KPUC.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPUJ.xml">/xml/current_obs/KPUJ.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPUW.xml">/xml/current_obs/KPUW.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPWM.xml">/xml/current_obs/KPWM.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPYM.xml">/xml/current_obs/KPYM.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

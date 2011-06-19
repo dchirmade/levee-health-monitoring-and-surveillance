@@ -24,8 +24,8 @@
  ## :
 
 all: 
-	g++ -g -Wall -DMINI_RULE_ENGINE_MAIN mini-rule-engine.hpp mini-rule-engine.cpp -o mini-rule-engine
-	g++ -g -Wall -DSERIAL_MAIN -lserial serial-reader.hpp serial-reader.cpp -o serial-reader
-
+	g++ -g -Wall -DMINI_RULE_ENGINE_MAIN mini-rule-engine.cpp serial-reader.cpp knowledge-base.cpp -lserial -o mini-rule-engine
+	g++ -g -Wall -DSERIAL_MAIN -lserial serial-reader.cpp -o serial-reader
+	g++ -g -Wall -DKNOWLEDGE_BASE_MAIN knowledge-base.cpp -o knowledge-base
 clean: 
-	rm -rf mini-rule-engine serial-reader
+	rm -rf mini-rule-engine serial-reader knowledge-base

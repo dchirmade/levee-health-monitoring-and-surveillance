@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>ST GEORGES - 8NM West Northwest of Crescent City, CA</location>
+	<station_id>46027</station_id>
+	<latitude>41.85</latitude>
+	<longitude>-124.381</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 5:50 am PDT</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 05:50:00 -0700</observation_time_rfc822>
+	<temperature_string>49.8 F (9.9 C)</temperature_string>
+	<temp_f>49.8</temp_f>
+	<temp_c>9.9</temp_c>
+	<water_temp_f>52.2</water_temp_f>
+	<water_temp_c>11.2</water_temp_c>
+	<wind_string>from the East at 6.7 gusting to 8.9 MPH (5.83 gusting to 7.77 KT)</wind_string>
+	<wind_dir>East</wind_dir>
+	<wind_degrees>100</wind_degrees>
+	<wind_mph>6.7</wind_mph>
+	<wind_gust_mph>8.9</wind_gust_mph>
+	<wind_kt>5.83</wind_kt>
+	<wind_gust_kt>7.77</wind_gust_kt>
+	<pressure_string>1015.1 mb</pressure_string>
+	<pressure_mb>1015.1</pressure_mb>
+	<pressure_tendency_mb>0.0</pressure_tendency_mb>
+	<windchill_string>47 F (8 C)</windchill_string>
+      	<windchill_f>47</windchill_f>
+      	<windchill_c>8</windchill_c>
+	<wave_height_m>2.4</wave_height_m>
+	<wave_height_ft>7.87</wave_height_ft>
+	<dominant_period_sec>13</dominant_period_sec>
+	<average_period_sec>8.3</average_period_sec>
+	<mean_wave_dir>West</mean_wave_dir>
+	<mean_wave_degrees>291</mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

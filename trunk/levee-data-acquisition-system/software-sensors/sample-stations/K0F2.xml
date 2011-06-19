@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Bowie Municipal Airport, TX</location>
+	<station_id>K0F2</station_id>
+	<latitude>33.6017</latitude>
+	<longitude>-97.7756</longitude>
+	<observation_time>Last Updated on Jun 19 2011, 2:55 am CDT</observation_time>
+        <observation_time_rfc822>Sun, 19 Jun 2011 02:55:00 -0500</observation_time_rfc822>
+	<weather>Fair</weather>
+	<temperature_string>86.0 F (30.0 C)</temperature_string>
+	<temp_f>86.0</temp_f>
+	<temp_c>30.0</temp_c>
+	<relative_humidity>46</relative_humidity>
+	<wind_string>from the South at 17.3 gusting to 25.3 MPH (15 gusting to 22 KT)</wind_string>
+	<wind_dir>South</wind_dir>
+	<wind_degrees>170</wind_degrees>
+	<wind_mph>17.3</wind_mph>
+	<wind_gust_mph>25.3</wind_gust_mph>
+	<wind_kt>15</wind_kt>
+	<wind_gust_kt>22</wind_gust_kt>
+	<pressure_in>29.73</pressure_in>
+	<dewpoint_string>62.6 F (17.0 C)</dewpoint_string>
+	<dewpoint_f>62.6</dewpoint_f>
+	<dewpoint_c>17.0</dewpoint_c>
+	<heat_index_string>87 F (31 C)</heat_index_string>
+      	<heat_index_f>87</heat_index_f>
+      	<heat_index_c>31</heat_index_c>
+	<visibility_mi>10.00</visibility_mi>
+ 	<icon_url_base>http://weather.gov/weather/images/fcicons/</icon_url_base>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/K0F2.html</two_day_history_url>
+	<icon_url_name>nskc.jpg</icon_url_name>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/K0F2.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

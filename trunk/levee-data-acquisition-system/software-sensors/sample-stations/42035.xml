@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>GALVESTON  22NM East of Galveston, TX</location>
+	<station_id>42035</station_id>
+	<latitude>29.232</latitude>
+	<longitude>-94.413</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 7:50 am CDT</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 07:50:00 -0500</observation_time_rfc822>
+	<temperature_string>78.6 F (25.9 C)</temperature_string>
+	<temp_f>78.6</temp_f>
+	<temp_c>25.9</temp_c>
+	<water_temp_f>81.0</water_temp_f>
+	<water_temp_c>27.2</water_temp_c>
+	<wind_string>from the North at 6.7 gusting to 8.9 MPH (5.83 gusting to 7.77 KT)</wind_string>
+	<wind_dir>North</wind_dir>
+	<wind_degrees>360</wind_degrees>
+	<wind_mph>6.7</wind_mph>
+	<wind_gust_mph>8.9</wind_gust_mph>
+	<wind_kt>5.83</wind_kt>
+	<wind_gust_kt>7.77</wind_gust_kt>
+	<pressure_string>1022.7 mb</pressure_string>
+	<pressure_mb>1022.7</pressure_mb>
+	<pressure_tendency_mb>0.4</pressure_tendency_mb>
+	<dewpoint_string>72.7 F (22.6 C)</dewpoint_string>
+	<dewpoint_f>72.7</dewpoint_f>
+	<dewpoint_c>22.6</dewpoint_c>
+	<wave_height_m>0.7</wave_height_m>
+	<wave_height_ft>2.30</wave_height_ft>
+	<dominant_period_sec>6</dominant_period_sec>
+	<average_period_sec>5.0</average_period_sec>
+	<mean_wave_dir>Southeast</mean_wave_dir>
+	<mean_wave_degrees>148</mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

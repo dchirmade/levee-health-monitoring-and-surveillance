@@ -62,7 +62,9 @@ SerialCommunicator::SerialCommunicator( void ){
 //  
 
 SerialCommunicator::~SerialCommunicator( void ){
-  
+
+   // Close serial handle if any! 
+   serialHandle.Close(  );
 }
 
 //
@@ -184,19 +186,16 @@ string SerialCommunicator::readFromSerialOverUSB( void ){
     {
         char next_byte;
         serialHandle.get(next_byte);
-        //std::cerr << std::hex << static_cast<int>(next_byte) << " ";
         cout << next_byte;
         usleep(100) ;
     } 
 
    // WIP! Program will never come upto here! 
 
-   printDebugMessages( "Reading from serial terminal: \n" + stringBuffer );
    // Start reading the serial port and redirect into char buffer
    serialHandle.read( readCharBuffer, 
                       charBlockOfDataSize );
-   cout << readCharBuffer;
-   stringBuffer = readCharBuffer; 
+   //stringBuffer = readCharBuffer; 
    printDebugMessages( "Reading from serial terminal: \n" + stringBuffer );
 
    // Delete allocated memory 
@@ -218,17 +217,17 @@ string SerialCommunicator::readFromSerialOverUSB( void ){
 int main( void ){
 
    SerialCommunicator serialChatTerminal;
-   
+
    // Open Serial terminal and initialize the same
    // Fixme: Remove hardcoded terminal path
    if( serialChatTerminal.openSerialTerminal( "/dev/ttyUSB0" ) ){
     
     if( serialChatTerminal.initializeSerialTerminal( ) ) // Start reading some data over serial 
-         serialChatTerminal.readFromSerialOverUSB( );
+         serialChatTerminal.printDebugMessages( serialChatTerminal.readFromSerialOverUSB( ));
     else serialChatTerminal.printDebugMessages( "Some is wrong with serial port settings!" );
    } 
    else serialChatTerminal.printDebugMessages( "Well. It looks like something is wrong with serial port!" ); 
 
-   return 0; 
+   return EXIT_SUCCESS; 
 }
 #endif 

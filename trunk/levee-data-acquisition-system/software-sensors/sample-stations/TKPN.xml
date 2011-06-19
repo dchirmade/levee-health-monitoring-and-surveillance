@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Charlestown/Newcast, AG</location>
+	<station_id>TKPN</station_id>
+	<latitude>17.2</latitude>
+	<longitude>-62.583</longitude>
+	<observation_time>Last Updated on Jun 18 2011, 7:00 pm AST</observation_time>
+        <observation_time_rfc822>Sat, 18 Jun 2011 19:00:00 -0400</observation_time_rfc822>
+	<weather>Mostly Cloudy and Breezy</weather>
+	<temperature_string>84.0 F (29.0 C)</temperature_string>
+	<temp_f>84.0</temp_f>
+	<temp_c>29.0</temp_c>
+	<relative_humidity>79</relative_humidity>
+	<wind_string>East at 20.7 MPH (18 KT)</wind_string>
+	<wind_dir>East</wind_dir>
+	<wind_degrees>100</wind_degrees>
+	<wind_mph>20.7</wind_mph>
+	<wind_kt>18</wind_kt>
+	<dewpoint_string>77.0 F (25.0 C)</dewpoint_string>
+	<dewpoint_f>77.0</dewpoint_f>
+	<dewpoint_c>25.0</dewpoint_c>
+	<heat_index_string>94 F (34 C)</heat_index_string>
+      	<heat_index_f>94</heat_index_f>
+      	<heat_index_c>34</heat_index_c>
+ 	<icon_url_base>http://weather.gov/weather/images/fcicons/</icon_url_base>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/TKPN.html</two_day_history_url>
+	<icon_url_name>nbkn.jpg</icon_url_name>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/TKPN.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

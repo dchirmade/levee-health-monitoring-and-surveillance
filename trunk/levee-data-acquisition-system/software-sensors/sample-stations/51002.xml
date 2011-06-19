@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>SW HAWAII 215 NM South SouthWest of Hilo, HI</location>
+	<station_id>51002</station_id>
+	<latitude>17.094</latitude>
+	<longitude>-157.808</longitude>
+	<observation_time>Last Updated on May 29 2011, 1:50 pm HDT</observation_time>
+        <observation_time_rfc822>Sun, 29 May 2011 13:50:00 -0900</observation_time_rfc822>
+	<temperature_string>76.6 F (24.8 C)</temperature_string>
+	<temp_f>76.6</temp_f>
+	<temp_c>24.8</temp_c>
+	<water_temp_f>77.2</water_temp_f>
+	<water_temp_c>25.1</water_temp_c>
+	<wind_string>from the East at 20.1 gusting to 26.8 MPH (17.49 gusting to 23.32 KT)</wind_string>
+	<wind_dir>East</wind_dir>
+	<wind_degrees>70</wind_degrees>
+	<wind_mph>20.1</wind_mph>
+	<wind_gust_mph>26.8</wind_gust_mph>
+	<wind_kt>17.49</wind_kt>
+	<wind_gust_kt>23.32</wind_gust_kt>
+	<pressure_string>1017.9 mb</pressure_string>
+	<pressure_mb>1017.9</pressure_mb>
+	<pressure_tendency_mb>-0.8</pressure_tendency_mb>
+	<wave_height_m>2.7</wave_height_m>
+	<wave_height_ft>8.86</wave_height_ft>
+	<dominant_period_sec>9</dominant_period_sec>
+	<average_period_sec>6.5</average_period_sec>
+	<mean_wave_dir>East</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

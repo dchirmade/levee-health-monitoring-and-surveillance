@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KILL.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KCLL.xml">/xml/current_obs/KCLL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KDLL.xml">/xml/current_obs/KDLL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFLL.xml">/xml/current_obs/KFLL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KICL.xml">/xml/current_obs/KICL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KILE.xml">/xml/current_obs/KILE.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KILG.xml">/xml/current_obs/KILG.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KILM.xml">/xml/current_obs/KILM.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KILN.xml">/xml/current_obs/KILN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KIML.xml">/xml/current_obs/KIML.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KINL.xml">/xml/current_obs/KINL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KIPL.xml">/xml/current_obs/KIPL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KVLL.xml">/xml/current_obs/KVLL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KXLL.xml">/xml/current_obs/KXLL.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>8413320 - Bar Harbor, ME</location>
+	<station_id>ATGM1</station_id>
+	<latitude>44.392</latitude>
+	<longitude>-68.205</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 8:42 am EST</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 08:42:00 -0500</observation_time_rfc822>
+	<temperature_string>67.3 F (19.6 C)</temperature_string>
+	<temp_f>67.3</temp_f>
+	<temp_c>19.6</temp_c>
+	<water_temp_f>56.5</water_temp_f>
+	<water_temp_c>13.6</water_temp_c>
+	<wind_string>from the South at 15.0 gusting to 32.2 MPH (13.02 gusting to 27.99 KT)</wind_string>
+	<wind_dir>South</wind_dir>
+	<wind_degrees>170</wind_degrees>
+	<wind_mph>15.0</wind_mph>
+	<wind_gust_mph>32.2</wind_gust_mph>
+	<wind_kt>13.02</wind_kt>
+	<wind_gust_kt>27.99</wind_gust_kt>
+	<pressure_string>1015.4 mb</pressure_string>
+	<pressure_mb>1015.4</pressure_mb>
+	<mean_wave_dir>Northeast</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

@@ -51,7 +51,7 @@ public:
         bool isRuleActive;        // If rule is active or inactive   
         string ruleName;          // Human readable rule name 
         string ruleDescription;   // Rule description if any 
-        string ruleAction;        // Action attached with rule   
+        unsigned int ruleAction;  // Action attached with rule   
         string rulePayload;       // Any payload params needed by rule 
         int ruleDelay;            // Wait time in rule execution sequence 
         int nextRuleIndex;        // Next rule to be executed 
@@ -60,17 +60,22 @@ public:
        // Vectors of Crude rules 
        vector< CrudeRuleBase > vectorCrudeRuleDefinition; 
 
+       // Core rule engine 
        LeveeMiniRuleEngine( void );        // Initiate rule engine  
        ~LeveeMiniRuleEngine( void );       // Reset and clean rule enigne  
        void printDebugMessages( string );  // Prints debug messages if enalbed 
        void initializeRuleBase ( void );   // Initializes and build rules     
        void appendNewRule ( int, bool,     // Insert rules to rule engines execution path 
                             string, string, 
-                            string, string, 
+                            unsigned int, string, 
                             int, int 
                           );
        void executeRuleEngine( void );     // Execute the rules per their definitions 
-   
+
+       // Actions thrown by Core rule engine    
+       void voidAction( string );            // Void action. Do nothing!  
+       void hookupADXL335Sensor( string );   // This will attach hardware sensors to mini rule engine
+
 private: 
         // Is debugger enabled?  
         bool isDebugEnabled; 

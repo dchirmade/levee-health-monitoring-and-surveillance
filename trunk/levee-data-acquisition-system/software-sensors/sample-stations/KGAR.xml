@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KGAR.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KCAR.xml">/xml/current_obs/KCAR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KEAR.xml">/xml/current_obs/KEAR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFAR.xml">/xml/current_obs/KFAR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGAD.xml">/xml/current_obs/KGAD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGAF.xml">/xml/current_obs/KGAF.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGAG.xml">/xml/current_obs/KGAG.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGAI.xml">/xml/current_obs/KGAI.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGAO.xml">/xml/current_obs/KGAO.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGLR.xml">/xml/current_obs/KGLR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGNR.xml">/xml/current_obs/KGNR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGRR.xml">/xml/current_obs/KGRR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGTR.xml">/xml/current_obs/KGTR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGWR.xml">/xml/current_obs/KGWR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGYR.xml">/xml/current_obs/KGYR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KLAR.xml">/xml/current_obs/KLAR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KSAR.xml">/xml/current_obs/KSAR.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

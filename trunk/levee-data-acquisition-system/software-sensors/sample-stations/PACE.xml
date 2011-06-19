@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Central Airport, AK</location>
+	<station_id>PACE</station_id>
+	<latitude>65.5739</latitude>
+	<longitude>-144.781</longitude>
+	<observation_time>Last Updated on Jun 8 2011, 2:47 pm AKDT</observation_time>
+        <observation_time_rfc822>Wed, 08 Jun 2011 14:47:00 -0800</observation_time_rfc822>
+	<weather>Mostly Cloudy</weather>
+	<temperature_string>59.0 F (15.0 C)</temperature_string>
+	<temp_f>59.0</temp_f>
+	<temp_c>15.0</temp_c>
+	<relative_humidity>39</relative_humidity>
+	<wind_string>South at 11.5 MPH (10 KT)</wind_string>
+	<wind_dir>South</wind_dir>
+	<wind_degrees>180</wind_degrees>
+	<wind_mph>11.5</wind_mph>
+	<wind_kt>10</wind_kt>
+	<pressure_in>29.90</pressure_in>
+	<dewpoint_string>33.8 F (1.0 C)</dewpoint_string>
+	<dewpoint_f>33.8</dewpoint_f>
+	<dewpoint_c>1.0</dewpoint_c>
+	<windchill_string>57 F (14 C)</windchill_string>
+      	<windchill_f>57</windchill_f>
+      	<windchill_c>14</windchill_c>
+	<visibility_mi>30.00</visibility_mi>
+ 	<icon_url_base>http://weather.gov/weather/images/fcicons/</icon_url_base>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/PACE.html</two_day_history_url>
+	<icon_url_name>bkn.jpg</icon_url_name>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/PACE.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

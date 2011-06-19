@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Jersey Buoy, English Channel - 5 nm south of Jerse, UK</location>
+	<station_id>62027</station_id>
+	<latitude>49.082</latitude>
+	<longitude>-2.218</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 12:00 pm ST </observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 12:00:00 +0000</observation_time_rfc822>
+	<water_temp_f>57.4</water_temp_f>
+	<water_temp_c>14.1</water_temp_c>
+	<wind_string>West at 9.2 MPH (7.96 KT)</wind_string>
+	<wind_dir>West</wind_dir>
+	<wind_degrees>280</wind_degrees>
+	<wind_mph>9.2</wind_mph>
+	<wind_kt>7.96</wind_kt>
+	<pressure_string>1033.2 mb</pressure_string>
+	<pressure_mb>1033.2</pressure_mb>
+	<pressure_tendency_mb>0.2</pressure_tendency_mb>
+	<windchill_string>56 F (13 C)</windchill_string>
+      	<windchill_f>56</windchill_f>
+      	<windchill_c>13</windchill_c>
+	<wave_height_m>1.1</wave_height_m>
+	<wave_height_ft>3.61</wave_height_ft>
+	<mean_wave_dir>Northeast</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Lake Yellowstone, WY</location>
+	<station_id>KP60</station_id>
+	<latitude>44.55</latitude>
+	<longitude>-110.42</longitude>
+	<observation_time>Last Updated on Jun 19 2011, 1:56 am MDT</observation_time>
+        <observation_time_rfc822>Sun, 19 Jun 2011 01:56:00 -0600</observation_time_rfc822>
+	<temperature_string>38.0 F (3.3 C)</temperature_string>
+	<temp_f>38.0</temp_f>
+	<temp_c>3.3</temp_c>
+	<relative_humidity>93</relative_humidity>
+	<wind_string>Calm</wind_string>
+	<wind_dir>North</wind_dir>
+	<wind_degrees>0</wind_degrees>
+	<wind_mph>0.0</wind_mph>
+	<wind_kt>0</wind_kt>
+	<pressure_string>1006.6 mb</pressure_string>
+	<pressure_mb>1006.6</pressure_mb>
+	<pressure_in>29.88</pressure_in>
+	<dewpoint_string>36.0 F (2.2 C)</dewpoint_string>
+	<dewpoint_f>36.0</dewpoint_f>
+	<dewpoint_c>2.2</dewpoint_c>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KP60.html</two_day_history_url>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/KP60.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

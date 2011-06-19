@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>9414769 - Oakland MiddleHarbor Met, CA</location>
+	<station_id>OMHC1</station_id>
+	<latitude>37.8</latitude>
+	<longitude>-122.33</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 5:30 am PST</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 05:30:00 -0800</observation_time_rfc822>
+	<wind_string>from the South at 8.0 gusting to 10.3 MPH (6.99 gusting to 8.94 KT)</wind_string>
+	<wind_dir>South</wind_dir>
+	<wind_degrees>180</wind_degrees>
+	<wind_mph>8.0</wind_mph>
+	<wind_gust_mph>10.3</wind_gust_mph>
+	<wind_kt>6.99</wind_kt>
+	<wind_gust_kt>8.94</wind_gust_kt>
+	<windchill_string>36 F (2 C)</windchill_string>
+      	<windchill_f>36</windchill_f>
+      	<windchill_c>2</windchill_c>
+	<mean_wave_dir>Northeast</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

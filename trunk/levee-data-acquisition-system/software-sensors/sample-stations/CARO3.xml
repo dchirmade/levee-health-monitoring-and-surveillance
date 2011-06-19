@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Cape Arago, OR</location>
+	<station_id>CARO3</station_id>
+	<latitude>43.342</latitude>
+	<longitude>-124.375</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 5:00 am PST</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 05:00:00 -0800</observation_time_rfc822>
+	<temperature_string>45.5 F (7.5 C)</temperature_string>
+	<temp_f>45.5</temp_f>
+	<temp_c>7.5</temp_c>
+	<wind_string>from the Southeast at 9.2 gusting to 11.4 MPH (7.96 gusting to 9.91 KT)</wind_string>
+	<wind_dir>Southeast</wind_dir>
+	<wind_degrees>140</wind_degrees>
+	<wind_mph>9.2</wind_mph>
+	<wind_gust_mph>11.4</wind_gust_mph>
+	<wind_kt>7.96</wind_kt>
+	<wind_gust_kt>9.91</wind_gust_kt>
+	<pressure_string>1017.0 mb</pressure_string>
+	<pressure_mb>1017.0</pressure_mb>
+	<pressure_tendency_mb>0.0</pressure_tendency_mb>
+	<dewpoint_string>44.2 F (6.8 C)</dewpoint_string>
+	<dewpoint_f>44.2</dewpoint_f>
+	<dewpoint_c>6.8</dewpoint_c>
+	<windchill_string>41 F (5 C)</windchill_string>
+      	<windchill_f>41</windchill_f>
+      	<windchill_c>5</windchill_c>
+	<mean_wave_dir>Northeast</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

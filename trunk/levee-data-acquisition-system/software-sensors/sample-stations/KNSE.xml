@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Milton, Whiting Field North, FL</location>
+	<station_id>KNSE</station_id>
+	<latitude>30.72</latitude>
+	<longitude>-87.02</longitude>
+	<observation_time>Last Updated on Jun 19 2011, 12:56 am CDT</observation_time>
+        <observation_time_rfc822>Sun, 19 Jun 2011 00:56:00 -0500</observation_time_rfc822>
+	<weather>Fair</weather>
+	<temperature_string>81.0 F (27.2 C)</temperature_string>
+	<temp_f>81.0</temp_f>
+	<temp_c>27.2</temp_c>
+	<relative_humidity>77</relative_humidity>
+	<wind_string>Southwest at 5.8 MPH (5 KT)</wind_string>
+	<wind_dir>Southwest</wind_dir>
+	<wind_degrees>210</wind_degrees>
+	<wind_mph>5.8</wind_mph>
+	<wind_kt>5</wind_kt>
+	<pressure_string>1014.2 mb</pressure_string>
+	<pressure_mb>1014.2</pressure_mb>
+	<pressure_in>30.00</pressure_in>
+	<dewpoint_string>73.0 F (22.8 C)</dewpoint_string>
+	<dewpoint_f>73.0</dewpoint_f>
+	<dewpoint_c>22.8</dewpoint_c>
+	<heat_index_string>86 F (30 C)</heat_index_string>
+      	<heat_index_f>86</heat_index_f>
+      	<heat_index_c>30</heat_index_c>
+	<visibility_mi>10.00</visibility_mi>
+ 	<icon_url_base>http://weather.gov/weather/images/fcicons/</icon_url_base>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KNSE.html</two_day_history_url>
+	<icon_url_name>nskc.jpg</icon_url_name>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/KNSE.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

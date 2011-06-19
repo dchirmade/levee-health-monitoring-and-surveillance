@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>8771510 - Galveston Pleasure Pier, TX</location>
+	<station_id>GPST2</station_id>
+	<latitude>29.285</latitude>
+	<longitude>-94.788</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 7:42 am CST</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 07:42:00 -0600</observation_time_rfc822>
+	<temperature_string>80.1 F (26.7 C)</temperature_string>
+	<temp_f>80.1</temp_f>
+	<temp_c>26.7</temp_c>
+	<water_temp_f>82.8</water_temp_f>
+	<water_temp_c>28.2</water_temp_c>
+	<wind_string>from the North at 8.0 gusting to 10.3 MPH (6.99 gusting to 8.94 KT)</wind_string>
+	<wind_dir>North</wind_dir>
+	<wind_degrees>20</wind_degrees>
+	<wind_mph>8.0</wind_mph>
+	<wind_gust_mph>10.3</wind_gust_mph>
+	<wind_kt>6.99</wind_kt>
+	<wind_gust_kt>8.94</wind_gust_kt>
+	<mean_wave_dir>Northeast</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

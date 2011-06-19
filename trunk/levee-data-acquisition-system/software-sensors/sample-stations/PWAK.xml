@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Wake Island Airfield, HI</location>
+	<station_id>PWAK</station_id>
+	<latitude>19.283</latitude>
+	<longitude>166.5</longitude>
+	<observation_time>Last Updated on Jun 19 2011, 4:55 pm LST</observation_time>
+        <observation_time_rfc822>Sun, 19 Jun 2011 16:55:00 +1200</observation_time_rfc822>
+	<weather>Partly Cloudy</weather>
+	<temperature_string>86.0 F (30.0 C)</temperature_string>
+	<temp_f>86.0</temp_f>
+	<temp_c>30.0</temp_c>
+	<relative_humidity>62</relative_humidity>
+	<wind_string>East at 16.1 MPH (14 KT)</wind_string>
+	<wind_dir>East</wind_dir>
+	<wind_degrees>70</wind_degrees>
+	<wind_mph>16.1</wind_mph>
+	<wind_kt>14</wind_kt>
+	<dewpoint_string>71.6 F (22.0 C)</dewpoint_string>
+	<dewpoint_f>71.6</dewpoint_f>
+	<dewpoint_c>22.0</dewpoint_c>
+	<heat_index_string>92 F (33 C)</heat_index_string>
+      	<heat_index_f>92</heat_index_f>
+      	<heat_index_c>33</heat_index_c>
+	<visibility_mi>10.00</visibility_mi>
+ 	<icon_url_base>http://weather.gov/weather/images/fcicons/</icon_url_base>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/PWAK.html</two_day_history_url>
+	<icon_url_name>sct.jpg</icon_url_name>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/PWAK.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

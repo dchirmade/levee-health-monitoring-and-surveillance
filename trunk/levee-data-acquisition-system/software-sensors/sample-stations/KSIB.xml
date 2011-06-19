@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KSIB.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KHIB.xml">/xml/current_obs/KHIB.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KIIB.xml">/xml/current_obs/KIIB.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMIB.xml">/xml/current_obs/KMIB.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPIB.xml">/xml/current_obs/KPIB.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KSDB.xml">/xml/current_obs/KSDB.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KSFB.xml">/xml/current_obs/KSFB.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KSIF.xml">/xml/current_obs/KSIF.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KSIY.xml">/xml/current_obs/KSIY.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KSLB.xml">/xml/current_obs/KSLB.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KSPB.xml">/xml/current_obs/KSPB.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>
