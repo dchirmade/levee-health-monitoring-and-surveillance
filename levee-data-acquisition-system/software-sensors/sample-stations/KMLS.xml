@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Miles City, MT</location>
+	<station_id>KMLS</station_id>
+	<latitude>46.44</latitude>
+	<longitude>-105.87</longitude>
+	<observation_time>Last Updated on Jun 18 2011, 11:53 pm MDT</observation_time>
+        <observation_time_rfc822>Sat, 18 Jun 2011 23:53:00 -0600</observation_time_rfc822>
+	<temperature_string>62.0 F (16.7 C)</temperature_string>
+	<temp_f>62.0</temp_f>
+	<temp_c>16.7</temp_c>
+	<relative_humidity>62</relative_humidity>
+	<wind_string>from the Variable at 5.8 gusting to 19.6 MPH (5 gusting to 17 KT)</wind_string>
+	<wind_dir>Variable</wind_dir>
+	<wind_degrees>999</wind_degrees>
+	<wind_mph>5.8</wind_mph>
+	<wind_gust_mph>19.6</wind_gust_mph>
+	<wind_kt>5</wind_kt>
+	<wind_gust_kt>17</wind_gust_kt>
+	<pressure_string>1003.7 mb</pressure_string>
+	<pressure_mb>1003.7</pressure_mb>
+	<pressure_in>29.68</pressure_in>
+	<dewpoint_string>48.9 F (9.4 C)</dewpoint_string>
+	<dewpoint_f>48.9</dewpoint_f>
+	<dewpoint_c>9.4</dewpoint_c>
+	<windchill_string>62 F (17 C)</windchill_string>
+      	<windchill_f>62</windchill_f>
+      	<windchill_c>17</windchill_c>
+	<visibility_mi>10.00</visibility_mi>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KMLS.html</two_day_history_url>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/KMLS.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

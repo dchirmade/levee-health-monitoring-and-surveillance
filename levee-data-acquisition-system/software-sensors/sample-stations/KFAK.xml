@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KFAK.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KAFK.xml">/xml/current_obs/KAFK.xml</a> (transposed characters)
+<li><a href="/xml/current_obs/KFKA.xml">/xml/current_obs/KFKA.xml</a> (transposed characters)
+<li><a href="/xml/current_obs/KBAK.xml">/xml/current_obs/KBAK.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KCAK.xml">/xml/current_obs/KCAK.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFAF.xml">/xml/current_obs/KFAF.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFAM.xml">/xml/current_obs/KFAM.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFAR.xml">/xml/current_obs/KFAR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFAT.xml">/xml/current_obs/KFAT.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFAY.xml">/xml/current_obs/KFAY.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFDK.xml">/xml/current_obs/KFDK.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFOK.xml">/xml/current_obs/KFOK.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFPK.xml">/xml/current_obs/KFPK.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFTK.xml">/xml/current_obs/KFTK.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KNAK.xml">/xml/current_obs/KNAK.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KOAK.xml">/xml/current_obs/KOAK.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

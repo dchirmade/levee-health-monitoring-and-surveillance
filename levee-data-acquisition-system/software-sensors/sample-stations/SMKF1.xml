@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Sombrero Key, FL</location>
+	<station_id>SMKF1</station_id>
+	<latitude>24.627</latitude>
+	<longitude>-81.11</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 8:00 am EST</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 08:00:00 -0500</observation_time_rfc822>
+	<temperature_string>78.3 F (25.7 C)</temperature_string>
+	<temp_f>78.3</temp_f>
+	<temp_c>25.7</temp_c>
+	<wind_string>from the Northeast at 18.3 gusting to 19.7 MPH (15.93 gusting to 17.1 KT)</wind_string>
+	<wind_dir>Northeast</wind_dir>
+	<wind_degrees>40</wind_degrees>
+	<wind_mph>18.3</wind_mph>
+	<wind_gust_mph>19.7</wind_gust_mph>
+	<wind_kt>15.93</wind_kt>
+	<wind_gust_kt>17.1</wind_gust_kt>
+	<pressure_string>1017.0 mb</pressure_string>
+	<pressure_mb>1017.0</pressure_mb>
+	<pressure_tendency_mb>1.1</pressure_tendency_mb>
+	<dewpoint_string>64.9 F (18.3 C)</dewpoint_string>
+	<dewpoint_f>64.9</dewpoint_f>
+	<dewpoint_c>18.3</dewpoint_c>
+	<mean_wave_dir>Northeast</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<tide_ft>1.63</tide_ft>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

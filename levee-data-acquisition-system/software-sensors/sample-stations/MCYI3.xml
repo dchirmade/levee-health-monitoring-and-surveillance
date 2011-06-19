@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Michigan City, IN</location>
+	<station_id>MCYI3</station_id>
+	<latitude>41.729</latitude>
+	<longitude>-86.913</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 7:30 am CST</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 07:30:00 -0600</observation_time_rfc822>
+	<temperature_string>64.6 F (18.1 C)</temperature_string>
+	<temp_f>64.6</temp_f>
+	<temp_c>18.1</temp_c>
+	<wind_string>from the Southwest at 18.3 gusting to 20.8 MPH (15.93 gusting to 18.07 KT)</wind_string>
+	<wind_dir>Southwest</wind_dir>
+	<wind_degrees>230</wind_degrees>
+	<wind_mph>18.3</wind_mph>
+	<wind_gust_mph>20.8</wind_gust_mph>
+	<wind_kt>15.93</wind_kt>
+	<wind_gust_kt>18.07</wind_gust_kt>
+	<mean_wave_dir>Northeast</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

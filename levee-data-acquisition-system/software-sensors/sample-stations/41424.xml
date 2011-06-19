@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>370 NM East of Charleston, SC</location>
+	<station_id>41424</station_id>
+	<latitude>32.93</latitude>
+	<longitude>-72.497</longitude>
+	<observation_time>Last Updated on Oct 12 2010, 3:00 pm EDT</observation_time>
+        <observation_time_rfc822>Tue, 12 Oct 2010 15:00:00 -0400</observation_time_rfc822>
+	<mean_wave_dir>East</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<water_column_height>5252.791</water_column_height>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

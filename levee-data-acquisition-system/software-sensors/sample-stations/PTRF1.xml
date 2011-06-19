@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>PAS -Port Richey, FL</location>
+	<station_id>PTRF1</station_id>
+	<latitude>28.285</latitude>
+	<longitude>-82.733</longitude>
+	<observation_time>Last Updated on Aug 20 2010, 2:54 pm EST</observation_time>
+        <observation_time_rfc822>Fri, 20 Aug 2010 14:54:00 -0500</observation_time_rfc822>
+	<temperature_string>87.3 F (30.7 C)</temperature_string>
+	<temp_f>87.3</temp_f>
+	<temp_c>30.7</temp_c>
+	<water_temp_f>93.4</water_temp_f>
+	<water_temp_c>34.1</water_temp_c>
+	<wind_string>from the West at 9.2 gusting to 11.4 MPH (7.96 gusting to 9.91 KT)</wind_string>
+	<wind_dir>West</wind_dir>
+	<wind_degrees>290</wind_degrees>
+	<wind_mph>9.2</wind_mph>
+	<wind_gust_mph>11.4</wind_gust_mph>
+	<wind_kt>7.96</wind_kt>
+	<wind_gust_kt>9.91</wind_gust_kt>
+	<pressure_string>1014.1 mb</pressure_string>
+	<pressure_mb>1014.1</pressure_mb>
+	<mean_wave_dir>East</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<tide_ft>1.46</tide_ft>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

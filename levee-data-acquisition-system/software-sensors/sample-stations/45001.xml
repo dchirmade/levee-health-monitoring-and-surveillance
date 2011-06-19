@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>MID SUPERIOR 60NM North Northeast Hancock, MI</location>
+	<station_id>45001</station_id>
+	<latitude>48.064</latitude>
+	<longitude>-87.777</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 8:50 am EDT</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 08:50:00 -0400</observation_time_rfc822>
+	<temperature_string>42.1 F (5.6 C)</temperature_string>
+	<temp_f>42.1</temp_f>
+	<temp_c>5.6</temp_c>
+	<water_temp_f>37.0</water_temp_f>
+	<water_temp_c>2.8</water_temp_c>
+	<wind_string>from the West at 26.8 gusting to 33.5 MPH (23.32 gusting to 29.15 KT)</wind_string>
+	<wind_dir>West</wind_dir>
+	<wind_degrees>250</wind_degrees>
+	<wind_mph>26.8</wind_mph>
+	<wind_gust_mph>33.5</wind_gust_mph>
+	<wind_kt>23.32</wind_kt>
+	<wind_gust_kt>29.15</wind_gust_kt>
+	<pressure_string>1005.5 mb</pressure_string>
+	<pressure_mb>1005.5</pressure_mb>
+	<pressure_tendency_mb>1.7</pressure_tendency_mb>
+	<windchill_string>32 F (0 C)</windchill_string>
+      	<windchill_f>32</windchill_f>
+      	<windchill_c>0</windchill_c>
+	<wave_height_m>3</wave_height_m>
+	<wave_height_ft>9.84</wave_height_ft>
+	<dominant_period_sec>8</dominant_period_sec>
+	<average_period_sec>6.1</average_period_sec>
+	<mean_wave_dir>Southwest</mean_wave_dir>
+	<mean_wave_degrees>245</mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

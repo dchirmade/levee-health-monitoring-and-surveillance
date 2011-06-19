@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KUKL.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KBKL.xml">/xml/current_obs/KBKL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFKL.xml">/xml/current_obs/KFKL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KJKL.xml">/xml/current_obs/KJKL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMKL.xml">/xml/current_obs/KMKL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KUIL.xml">/xml/current_obs/KUIL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KUKF.xml">/xml/current_obs/KUKF.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KUKI.xml">/xml/current_obs/KUKI.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KUKT.xml">/xml/current_obs/KUKT.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KUXL.xml">/xml/current_obs/KUXL.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

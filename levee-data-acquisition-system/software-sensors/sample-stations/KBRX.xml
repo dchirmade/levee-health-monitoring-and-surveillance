@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KBRX.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KBAX.xml">/xml/current_obs/KBAX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBIX.xml">/xml/current_obs/KBIX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBKX.xml">/xml/current_obs/KBKX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBQX.xml">/xml/current_obs/KBQX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBRD.xml">/xml/current_obs/KBRD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBRL.xml">/xml/current_obs/KBRL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBRO.xml">/xml/current_obs/KBRO.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBVX.xml">/xml/current_obs/KBVX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KCRX.xml">/xml/current_obs/KCRX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHRX.xml">/xml/current_obs/KHRX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPRX.xml">/xml/current_obs/KPRX.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

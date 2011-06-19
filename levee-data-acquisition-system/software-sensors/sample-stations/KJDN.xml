@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Jordan (ramos), MT</location>
+	<station_id>KJDN</station_id>
+	<latitude>47.33</latitude>
+	<longitude>-106.93</longitude>
+	<observation_time>Last Updated on Jun 19 2011, 12:48 am MDT</observation_time>
+        <observation_time_rfc822>Sun, 19 Jun 2011 00:48:00 -0600</observation_time_rfc822>
+	<temperature_string>57.0 F (13.9 C)</temperature_string>
+	<temp_f>57.0</temp_f>
+	<temp_c>13.9</temp_c>
+	<relative_humidity>81</relative_humidity>
+	<wind_string>Calm</wind_string>
+	<wind_dir>North</wind_dir>
+	<wind_degrees>0</wind_degrees>
+	<wind_mph>0.0</wind_mph>
+	<wind_kt>0</wind_kt>
+	<pressure_string>1003.6 mb</pressure_string>
+	<pressure_mb>1003.6</pressure_mb>
+	<pressure_in>29.66</pressure_in>
+	<dewpoint_string>51.1 F (10.6 C)</dewpoint_string>
+	<dewpoint_f>51.1</dewpoint_f>
+	<dewpoint_c>10.6</dewpoint_c>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KJDN.html</two_day_history_url>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/KJDN.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

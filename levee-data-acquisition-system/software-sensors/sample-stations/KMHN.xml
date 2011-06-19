@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KMHN.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KHMN.xml">/xml/current_obs/KHMN.xml</a> (transposed characters)
+<li><a href="/xml/current_obs/KMNH.xml">/xml/current_obs/KMNH.xml</a> (transposed characters)
+<li><a href="/xml/current_obs/KAHN.xml">/xml/current_obs/KAHN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KDHN.xml">/xml/current_obs/KDHN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMAN.xml">/xml/current_obs/KMAN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMCN.xml">/xml/current_obs/KMCN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMGN.xml">/xml/current_obs/KMGN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMHE.xml">/xml/current_obs/KMHE.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMHK.xml">/xml/current_obs/KMHK.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMHR.xml">/xml/current_obs/KMHR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMHS.xml">/xml/current_obs/KMHS.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMHT.xml">/xml/current_obs/KMHT.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMHV.xml">/xml/current_obs/KMHV.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMKN.xml">/xml/current_obs/KMKN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMNN.xml">/xml/current_obs/KMNN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMRN.xml">/xml/current_obs/KMRN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMSN.xml">/xml/current_obs/KMSN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMTN.xml">/xml/current_obs/KMTN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMVN.xml">/xml/current_obs/KMVN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMWN.xml">/xml/current_obs/KMWN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KPHN.xml">/xml/current_obs/KPHN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KSHN.xml">/xml/current_obs/KSHN.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KBNY.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KBNA.xml">/xml/current_obs/KBNA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBNL.xml">/xml/current_obs/KBNL.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBNO.xml">/xml/current_obs/KBNO.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBNW.xml">/xml/current_obs/KBNW.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBUY.xml">/xml/current_obs/KBUY.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBVY.xml">/xml/current_obs/KBVY.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KBYY.xml">/xml/current_obs/KBYY.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KCNY.xml">/xml/current_obs/KCNY.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KSNY.xml">/xml/current_obs/KSNY.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KVNY.xml">/xml/current_obs/KVNY.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>VIRGINIA BEACH 64 NM East of Virginia Beach, VA</location>
+	<station_id>44014</station_id>
+	<latitude>36.611</latitude>
+	<longitude>-74.836</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 8:50 am EDT</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 08:50:00 -0400</observation_time_rfc822>
+	<temperature_string>73.4 F (23.0 C)</temperature_string>
+	<temp_f>73.4</temp_f>
+	<temp_c>23.0</temp_c>
+	<water_temp_f>75.0</water_temp_f>
+	<water_temp_c>23.9</water_temp_c>
+	<wind_string>from the North at 6.7 gusting to 8.9 MPH (5.83 gusting to 7.77 KT)</wind_string>
+	<wind_dir>North</wind_dir>
+	<wind_degrees>20</wind_degrees>
+	<wind_mph>6.7</wind_mph>
+	<wind_gust_mph>8.9</wind_gust_mph>
+	<wind_kt>5.83</wind_kt>
+	<wind_gust_kt>7.77</wind_gust_kt>
+	<pressure_string>1021.8 mb</pressure_string>
+	<pressure_mb>1021.8</pressure_mb>
+	<pressure_tendency_mb>0.8</pressure_tendency_mb>
+	<dewpoint_string>72.7 F (22.6 C)</dewpoint_string>
+	<dewpoint_f>72.7</dewpoint_f>
+	<dewpoint_c>22.6</dewpoint_c>
+	<wave_height_m>0.9</wave_height_m>
+	<wave_height_ft>2.95</wave_height_ft>
+	<dominant_period_sec>10</dominant_period_sec>
+	<average_period_sec>6.6</average_period_sec>
+	<mean_wave_dir>East</mean_wave_dir>
+	<mean_wave_degrees>95</mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KMLD.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KELD.xml">/xml/current_obs/KELD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFLD.xml">/xml/current_obs/KFLD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGLD.xml">/xml/current_obs/KGLD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMCD.xml">/xml/current_obs/KMCD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMDD.xml">/xml/current_obs/KMDD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMFD.xml">/xml/current_obs/KMFD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMLB.xml">/xml/current_obs/KMLB.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMLC.xml">/xml/current_obs/KMLC.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMLE.xml">/xml/current_obs/KMLE.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMLF.xml">/xml/current_obs/KMLF.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMLI.xml">/xml/current_obs/KMLI.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMLJ.xml">/xml/current_obs/KMLJ.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMLP.xml">/xml/current_obs/KMLP.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMLS.xml">/xml/current_obs/KMLS.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMLT.xml">/xml/current_obs/KMLT.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMLU.xml">/xml/current_obs/KMLU.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KMOD.xml">/xml/current_obs/KMOD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KVLD.xml">/xml/current_obs/KVLD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KWLD.xml">/xml/current_obs/KWLD.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

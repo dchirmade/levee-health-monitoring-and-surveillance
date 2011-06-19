@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Sapelo Island Reserve, GA</location>
+	<station_id>SAXG1</station_id>
+	<latitude>31.418</latitude>
+	<longitude>-81.295</longitude>
+	<observation_time>Last Updated on May 31 2011, 4:00 pm EST</observation_time>
+        <observation_time_rfc822>Tue, 31 May 2011 16:00:00 -0500</observation_time_rfc822>
+	<temperature_string>90.1 F (32.3 C)</temperature_string>
+	<temp_f>90.1</temp_f>
+	<temp_c>32.3</temp_c>
+	<wind_string>Southeast at 6.9 MPH (6.02 KT)</wind_string>
+	<wind_dir>Southeast</wind_dir>
+	<wind_degrees>130</wind_degrees>
+	<wind_mph>6.9</wind_mph>
+	<wind_kt>6.02</wind_kt>
+	<pressure_string>1021.0 mb</pressure_string>
+	<pressure_mb>1021.0</pressure_mb>
+	<pressure_tendency_mb>-1.0</pressure_tendency_mb>
+	<dewpoint_string>71.2 F (21.8 C)</dewpoint_string>
+	<dewpoint_f>71.2</dewpoint_f>
+	<dewpoint_c>21.8</dewpoint_c>
+	<mean_wave_dir>Northeast</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

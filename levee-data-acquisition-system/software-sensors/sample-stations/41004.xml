@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>EDISTO - 41 NM Southeast of Charleston, SC</location>
+	<station_id>41004</station_id>
+	<latitude>32.501</latitude>
+	<longitude>-79.099</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 8:50 am EDT</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 08:50:00 -0400</observation_time_rfc822>
+	<temperature_string>78.3 F (25.7 C)</temperature_string>
+	<temp_f>78.3</temp_f>
+	<temp_c>25.7</temp_c>
+	<water_temp_f>78.8</water_temp_f>
+	<water_temp_c>26.0</water_temp_c>
+	<wind_string>from the Northeast at 13.4 gusting to 15.7 MPH (11.66 gusting to 13.6 KT)</wind_string>
+	<wind_dir>Northeast</wind_dir>
+	<wind_degrees>30</wind_degrees>
+	<wind_mph>13.4</wind_mph>
+	<wind_gust_mph>15.7</wind_gust_mph>
+	<wind_kt>11.66</wind_kt>
+	<wind_gust_kt>13.6</wind_gust_kt>
+	<pressure_string>1020.0 mb</pressure_string>
+	<pressure_mb>1020.0</pressure_mb>
+	<pressure_tendency_mb>0.9</pressure_tendency_mb>
+	<dewpoint_string>73.6 F (23.1 C)</dewpoint_string>
+	<dewpoint_f>73.6</dewpoint_f>
+	<dewpoint_c>23.1</dewpoint_c>
+	<wave_height_m>0.7</wave_height_m>
+	<wave_height_ft>2.30</wave_height_ft>
+	<dominant_period_sec>9</dominant_period_sec>
+	<average_period_sec>4.4</average_period_sec>
+	<mean_wave_dir>South</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

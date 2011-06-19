@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>8741094 - Range A rear, Pascagoula, MS</location>
+	<station_id>RARM6</station_id>
+	<latitude>30.343</latitude>
+	<longitude>-88.512</longitude>
+	<observation_time>Last Updated on Jun 1 2011, 7:30 am CST</observation_time>
+        <observation_time_rfc822>Wed, 01 Jun 2011 07:30:00 -0600</observation_time_rfc822>
+	<temperature_string>83.3 F (28.5 C)</temperature_string>
+	<temp_f>83.3</temp_f>
+	<temp_c>28.5</temp_c>
+	<wind_string>from the North at 4.7 gusting to 5.8 MPH (4.08 gusting to 5.05 KT)</wind_string>
+	<wind_dir>North</wind_dir>
+	<wind_degrees>360</wind_degrees>
+	<wind_mph>4.7</wind_mph>
+	<wind_gust_mph>5.8</wind_gust_mph>
+	<wind_kt>4.08</wind_kt>
+	<wind_gust_kt>5.05</wind_gust_kt>
+	<pressure_string>1021.4 mb</pressure_string>
+	<pressure_mb>1021.4</pressure_mb>
+	<mean_wave_dir>Northeast</mean_wave_dir>
+	<mean_wave_degrees></mean_wave_degrees>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

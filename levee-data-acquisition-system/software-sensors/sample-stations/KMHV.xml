@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet href="latest_ob.xsl" type="text/xsl"?>
+<current_observation version="1.0"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+	<credit>NOAA's National Weather Service</credit>
+	<credit_URL>http://weather.gov/</credit_URL>
+	<image>
+		<url>http://weather.gov/images/xml_logo.gif</url>
+		<title>NOAA's National Weather Service</title>
+		<link>http://weather.gov</link>
+	</image>
+	<suggested_pickup>15 minutes after the hour</suggested_pickup>
+	<suggested_pickup_period>60</suggested_pickup_period>
+	<location>Mojave, CA</location>
+	<station_id>KMHV</station_id>
+	<latitude>35.07</latitude>
+	<longitude>-118.16</longitude>
+	<observation_time>Last Updated on Jun 18 2011, 9:55 pm PDT</observation_time>
+        <observation_time_rfc822>Sat, 18 Jun 2011 21:55:00 -0700</observation_time_rfc822>
+	<weather>Fair and Windy</weather>
+	<temperature_string>73.0 F (23.0 C)</temperature_string>
+	<temp_f>73.0</temp_f>
+	<temp_c>23.0</temp_c>
+	<relative_humidity>36</relative_humidity>
+	<wind_string>from the Northwest at 32.2 gusting to 42.6 MPH (28 gusting to 37 KT)</wind_string>
+	<wind_dir>Northwest</wind_dir>
+	<wind_degrees>310</wind_degrees>
+	<wind_mph>32.2</wind_mph>
+	<wind_gust_mph>42.6</wind_gust_mph>
+	<wind_kt>28</wind_kt>
+	<wind_gust_kt>37</wind_gust_kt>
+	<pressure_in>29.78</pressure_in>
+	<dewpoint_string>44.6 F (7.0 C)</dewpoint_string>
+	<dewpoint_f>44.6</dewpoint_f>
+	<dewpoint_c>7.0</dewpoint_c>
+	<visibility_mi>10.00</visibility_mi>
+ 	<icon_url_base>http://weather.gov/weather/images/fcicons/</icon_url_base>
+	<two_day_history_url>http://www.weather.gov/data/obhistory/KMHV.html</two_day_history_url>
+	<icon_url_name>nwind.jpg</icon_url_name>
+	<ob_url>http://www.nws.noaa.gov/data/METAR/KMHV.1.txt</ob_url>
+	<disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+	<copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+	<privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

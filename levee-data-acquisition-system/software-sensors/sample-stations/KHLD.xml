@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KHLD.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KELD.xml">/xml/current_obs/KELD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFLD.xml">/xml/current_obs/KFLD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KGLD.xml">/xml/current_obs/KGLD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHCD.xml">/xml/current_obs/KHCD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHFD.xml">/xml/current_obs/KHFD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHLC.xml">/xml/current_obs/KHLC.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHLG.xml">/xml/current_obs/KHLG.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHLN.xml">/xml/current_obs/KHLN.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHLR.xml">/xml/current_obs/KHLR.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHLX.xml">/xml/current_obs/KHLX.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHND.xml">/xml/current_obs/KHND.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHWD.xml">/xml/current_obs/KHWD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KHXD.xml">/xml/current_obs/KHXD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KVLD.xml">/xml/current_obs/KVLD.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KWLD.xml">/xml/current_obs/KWLD.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>

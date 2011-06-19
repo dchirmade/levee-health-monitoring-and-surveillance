@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+The document name you requested (<code>/xml/current_obs/KFCA.xml</code>) could not be found on this server.
+However, we found documents with names similar to the one you requested.<p>Available documents:
+<ul>
+<li><a href="/xml/current_obs/KCCA.xml">/xml/current_obs/KCCA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KDCA.xml">/xml/current_obs/KDCA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFCI.xml">/xml/current_obs/KFCI.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFCM.xml">/xml/current_obs/KFCM.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFCS.xml">/xml/current_obs/KFCS.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFFA.xml">/xml/current_obs/KFFA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFKA.xml">/xml/current_obs/KFKA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFOA.xml">/xml/current_obs/KFOA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KFWA.xml">/xml/current_obs/KFWA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KNCA.xml">/xml/current_obs/KNCA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KQCA.xml">/xml/current_obs/KQCA.xml</a> (mistyped character)
+<li><a href="/xml/current_obs/KRCA.xml">/xml/current_obs/KRCA.xml</a> (mistyped character)
+</ul>
+<hr>
+<address>Apache Server at www.weather.gov Port 80</address>
+</body></html>
