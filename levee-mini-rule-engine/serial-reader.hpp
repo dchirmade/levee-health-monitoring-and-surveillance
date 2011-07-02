@@ -48,6 +48,7 @@ public:
       bool openSerialTerminal( string );      // Open serial communication and return  a handle  
       bool initializeSerialTerminal( void );  // Initialize serial port settings 
       string readFromSerialOverUSB( void );   // Read data from serial port over USB 
+      void writeToSerialOverUSB( string );    // Write data to serial port over USB 
 
 private: 
       bool isDebugEnabled;                    // Is debugging enabled?   
