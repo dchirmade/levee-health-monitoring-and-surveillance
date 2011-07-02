@@ -229,10 +229,31 @@ String tSensorMountPorts /* Port numbers where the sensor is mounted */
   Serial.print(XMLResponseToDA);
   XMLResponseToDA = String( "<sensormountports>" ) + tSensorMountPorts + String("</sensormountports>\n" );
   Serial.print(XMLResponseToDA);
-  XMLResponseToDA = String( "</hardwaresensor>\n" );
+  XMLResponseToDA = String( "</hardwaresensor> \n\n" );
   Serial.print(XMLResponseToDA);
 
   return; 
+}
+
+/**
+ * Desc: This method will check if reading is asked by Main Leeve engine or not.   
+ * Params: void, nothing 
+ * Returns: boolean, true or false
+ */
+
+boolean didLeveeMainEngineAskForTheReading( void )
+{
+     boolean didLeveeMainEngineAskForTheReading = false;
+     int incomingByteFromLeeveMainEngine = 0; 
+     
+     if( Serial.available() > 0 ) /* Incoming data detected on serial port */
+     {
+        incomingByteFromLeeveMainEngine = Serial.read();
+        if( incomingByteFromLeeveMainEngine == 49 ) /* '1' in CHAR */ 
+            didLeveeMainEngineAskForTheReading = true;  
+     }
+     
+   return didLeveeMainEngineAskForTheReading;
 }
 
 /**
@@ -363,42 +384,23 @@ void setup( void )
 
 void loop( void )
 {
-
+  
+  if( !didLeveeMainEngineAskForTheReading() )
+  {
+  
+  /** Fetch reading from ADXL335 sensor */
+  if( !fetchADXL3353AxisAccelerometerReading() )
+     if( ISONBOARDDEBUGENABLE ) 
+      Serial.print( "Error! Arduino board couldn't fetch desire reading from ADXL335 sensor.\n" );
+   
+  /* Keep the speaker at low */
+  digitalWrite(speakerPin, LOW);
+  } 
+  
+  delay(MEDIUMDELAY);
+  
   /**
    * Flush the serial buffer if any (optional) and start reading serial data
    */
-
-  Serial.flush();
-
-
-  /** Fetch reading from ADXL335 sensor */
-  if( !fetchADXL3353AxisAccelerometerReading() )
-    if( ISONBOARDDEBUGENABLE ) 
-      Serial.print( "Error! Arduino board couldn't fetch desire reading from ADXL335 sensor.\n" );
-
-
-  /* Keep the speaker at low */
-  digitalWrite(speakerPin, LOW); 
-  delay(MEDIUMDELAY);
+   Serial.flush();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

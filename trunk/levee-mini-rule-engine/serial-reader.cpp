@@ -172,10 +172,8 @@ void SerialCommunicator::printDebugMessages( string debugLines ){
 
 string SerialCommunicator::readFromSerialOverUSB( void ){
     
-   string stringBuffer = "\0"; 
-   // Allocate and initiate new read buffer
-   char *readCharBuffer = new char[ charBlockOfDataSize ];
-   readCharBuffer = NULL; 
+   string stringBuffer = "\0";
+   string tStopTag = "</hardwaresensor>"; 
 
    // Wait for some data to be available at the serial port.
    while( serialHandle.rdbuf()->in_avail() == 0 ) 
@@ -186,23 +184,24 @@ string SerialCommunicator::readFromSerialOverUSB( void ){
     {
         char next_byte;
         serialHandle.get(next_byte);
-        cout << next_byte;
+        stringBuffer += next_byte;
+        if( stringBuffer.size() > tStopTag.size() )
+        if( stringBuffer.compare( stringBuffer.size() - tStopTag.size(), tStopTag.size(), tStopTag )== 0 )
+           break;
         usleep(100) ;
     } 
-
-   // WIP! Program will never come upto here! 
-
-   // Start reading the serial port and redirect into char buffer
-   serialHandle.read( readCharBuffer, 
-                      charBlockOfDataSize );
-   //stringBuffer = readCharBuffer; 
-   printDebugMessages( "Reading from serial terminal: \n" + stringBuffer );
-
-   // Delete allocated memory 
-   if( readCharBuffer )
-       delete [] readCharBuffer;
-   
    return stringBuffer;
+} 
+
+//
+// Desc: This should write data to serial port in blocks.   
+// Arguments: String, Data that need to write on serial port
+// Returns: Nothing, void 
+//  
+
+void SerialCommunicator::writeToSerialOverUSB( string tWriteDataBuffer ){
+   
+   serialHandle << tWriteDataBuffer.c_str();
 } 
 
 #endif

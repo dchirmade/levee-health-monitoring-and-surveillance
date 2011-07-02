@@ -264,8 +264,12 @@ void LeveeMiniRuleEngine::hookupADXL335Sensor( string tPayLoad ){
     // Fixme: Remove hardcoded terminal path
     if( serialChatTerminal.openSerialTerminal( "/dev/ttyUSB0" ) ){
 
-    if( serialChatTerminal.initializeSerialTerminal( ) ) // Start reading some data over serial 
+    if( serialChatTerminal.initializeSerialTerminal( ) ){ // Start reading some data over serial 
+
+         // Ask for the data first then read
+         serialChatTerminal.writeToSerialOverUSB( "1" );  
          serialChatTerminal.printDebugMessages( serialChatTerminal.readFromSerialOverUSB( ));
+    }
     else serialChatTerminal.printDebugMessages( "Some is wrong with serial port settings!" );
     }
     else serialChatTerminal.printDebugMessages( "Well. It looks like something is wrong with serial port!" ); 
