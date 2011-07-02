@@ -34,6 +34,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <cstdlib>
+#include <time.h>
 
 #include "mini-rule-engine.hpp"
 #include "serial-reader.hpp"
@@ -83,9 +84,16 @@ LeveeMiniRuleEngine::~LeveeMiniRuleEngine( void ){
  
 void LeveeMiniRuleEngine::printDebugMessages( string debugLines ){
 
+   // Get current time and stamp it with logs 
+   time_t tRawTime;
+   time ( &tRawTime );
+ 
+   string tLocaltime = asctime( localtime( &tRawTime ) );
+   tLocaltime.replace( tLocaltime.find( "\n" ), 1 ,"\0" ); // Replace \n at the end of time string
+  
    // Print debug messages to standard console. 
    if( isDebugEnabled )
-       cout << debugLines << endl; 
+       cout << tLocaltime << " : " << debugLines << endl; 
 
    return; 
 }
