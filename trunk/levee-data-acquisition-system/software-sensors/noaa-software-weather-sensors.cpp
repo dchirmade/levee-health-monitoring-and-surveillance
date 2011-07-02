@@ -225,7 +225,8 @@ void WeatherSensors::printAllStationsData( void ){
       printDebugMessages( "Station HTML URL  : " + vectorStationSensorIndex[stationList].stationHTMLUrl );
       printDebugMessages( "Station RSS URL   : " + vectorStationSensorIndex[stationList].stationRSSUrl );
       printDebugMessages( "Station XML URL   : " + vectorStationSensorIndex[stationList].stationXMLUrl );
-      printDebugMessages( "Station RFC time  : " + vectorStationSensorIndex[stationList].drilledDownParameters.observationTimeRfc822 );                   printDebugMessages( "Station Weather   : " + vectorStationSensorIndex[stationList].drilledDownParameters.weather );                
+      printDebugMessages( "Station RFC time  : " + vectorStationSensorIndex[stationList].drilledDownParameters.observationTimeRfc822 ); 
+      printDebugMessages( "Station Weather   : " + vectorStationSensorIndex[stationList].drilledDownParameters.weather );                
       printDebugMessages( "-------------------------------------------------------------------------" );
    }
 
@@ -282,7 +283,7 @@ bool WeatherSensors::readAndParsePerWeatherStationResponse( string & tWeatherFee
       DOMElement* tElementRoot = tXMLDocument->getDocumentElement();
       if( !tElementRoot ){
   
-          printDebugMessages( "Well, Looks like this weather station has changed it's xml response! " );         
+          printDebugMessages( "Well, Looks like this weather station has changed it's xml response!" );         
           return tReturn;  
       }
 
@@ -418,7 +419,7 @@ bool WeatherSensors::readAndParseWeatherFeeds( string & tWeatherFeedsFile )
       DOMElement* tElementRoot = tXMLDocument->getDocumentElement();
       if( !tElementRoot ){
   
-          printDebugMessages( "Well, Looks like weather station listing is not good! " );         
+          printDebugMessages( "Well, Looks like weather station listing is not good!" );         
           return tReturn;  
       }
 

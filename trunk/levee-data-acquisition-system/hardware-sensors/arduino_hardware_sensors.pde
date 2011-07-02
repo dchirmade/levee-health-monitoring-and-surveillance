@@ -257,6 +257,25 @@ boolean didLeveeMainEngineAskForTheReading( void )
 }
 
 /**
+ * Desc: This method should generate an alert based on onboard GPIO! 
+ * Params: void, Nothing 
+ * Retuens: void, Nothing 
+ */ 
+void generateAnAlertUsingOnboardGPIO( void )
+{
+   
+   /* Perform some actions upon detected event like flash LED or Buzz the speaker */
+      digitalWrite(speakerPin, HIGH);
+      delay(MEDIUMDELAY);
+      digitalWrite(LEDPin, HIGH);
+      digitalWrite(speakerPin, LOW);
+      delay(MEDIUMDELAY);
+      digitalWrite(LEDPin, LOW);
+
+  return; 
+} 
+
+/**
  * Desc: This method should fetch reading from ADXL335 sensor. These 3-axis reading will be used by Levee D,A. Module 
  *       to detect if there is any change in levee-infrastructure's co-ordinate because of any break-down.  
  * Params: void, nothing 
@@ -311,14 +330,8 @@ boolean fetchADXL3353AxisAccelerometerReading( void )
       ((tSensorsZReading - tSensorsZReading) > tolerance || (tSensorsZReading - tSensorsZReading) < ( tolerance * -1 ))  
       )
     {
-
-      /* Perform some actions upon detected event like flash LED or Buzz the speaker */
-      digitalWrite(speakerPin, HIGH);
-      delay(MEDIUMDELAY);
-      digitalWrite(LEDPin, HIGH);
-      digitalWrite(speakerPin, LOW);
-      delay(MEDIUMDELAY);
-      digitalWrite(LEDPin, LOW);
+       /* Trigger onboard alert! */
+       generateAnAlertUsingOnboardGPIO();     
     }
   }
   else 
