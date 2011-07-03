@@ -54,7 +54,7 @@ using namespace std;
 WeatherSensors::WeatherSensors( void ){
 
    // Do initialization neeed for weather sensor 
-   isDebugEnabled = true;
+   isDebugEnabled = false;
    weatherFeedsIndexParser = NULL; 
   
    // Initialize Xerces libraries  
@@ -65,7 +65,7 @@ WeatherSensors::WeatherSensors( void ){
    catch( XMLException & error ){ // Throw and exception if any 
        
        char * errorMessage = XMLString::transcode( error.getMessage() ); // Get an error message  
-       printDebugMessages( errorMessage );  
+       printDebugMessages( errorMessage, false );  
        XMLString::release( &errorMessage ); 
    }
 
@@ -94,7 +94,7 @@ WeatherSensors::~WeatherSensors( void ){
    }
    catch( xercesc::XMLException & error ){
        char * errorMessage = XMLString::transcode( error.getMessage() ); // Get an error message  
-       printDebugMessages( errorMessage );  
+       printDebugMessages( errorMessage, false );  
        XMLString::release( &errorMessage );
    } 
   
@@ -137,7 +137,7 @@ string WeatherSensors::GetTextContentOfAnElement (
      }
      catch( ... )
      {
-       printDebugMessages( "Exception encountered in getting text content." ); 
+       printDebugMessages( "Exception encountered in getting text content.", false ); 
      }
 
      return tStringAttribute;  
@@ -145,11 +145,15 @@ string WeatherSensors::GetTextContentOfAnElement (
 
 //
 // Desc: This should print debug messages only if it is enabled.   
-// Arguments: String, Lines which needs to be printed on standard console. 
+// Arguments: String, Lines which needs to be printed on standard console.
+//            Bool, Show debug messages forcefully 
 // Returns: Nothing, void 
 //   
  
-void WeatherSensors::printDebugMessages( string debugLines ){
+void WeatherSensors::printDebugMessages( 
+                                         string debugLines,
+                                         bool isDebugForced = false
+                                       ){
 
    // Get current time and stamp it with logs 
    time_t tRawTime;
@@ -160,7 +164,7 @@ void WeatherSensors::printDebugMessages( string debugLines ){
 
 
    // Print debug messages to standard console. 
-   if( isDebugEnabled )
+   if( isDebugEnabled || isDebugForced )
        cout << tLocaltime << " :" << debugLines << endl; 
 
    return; 
@@ -213,6 +217,45 @@ bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded ){
 
    // Just assume all is good! 
    return tReturn; 
+}
+
+//
+// This method is implemented for testing! This should go away soon once vector will sorted out... 
+//
+// Desc: This should print all weather station data per perticular location.   
+// Arguments: String, Location name in which levee is built
+// Returns: Nothing, void 
+//   
+ 
+void WeatherSensors::printAllStationsDataPerLocation( string tLocationName ){
+ 
+   bool isStationFound = false; 
+    
+   // Pull out all stations data from vectors whoes location name matches with given location name 
+   for( int stationList = 0 ; stationList < (int) vectorStationSensorIndex.size() ; stationList++ ){
+  
+     if( vectorStationSensorIndex[stationList].stationName.find( tLocationName ) != string::npos ){ 
+
+      printDebugMessages( "Station ID        : " + vectorStationSensorIndex[stationList].stationId, true );
+      printDebugMessages( "Station State     : " + vectorStationSensorIndex[stationList].stationState, true );
+      printDebugMessages( "Station Name      : " + vectorStationSensorIndex[stationList].stationName, true );
+      printDebugMessages( "Station Latitude  : " + vectorStationSensorIndex[stationList].stationLatitude, true );
+      printDebugMessages( "Station Longitude : " + vectorStationSensorIndex[stationList].stationLongitude, true );
+      printDebugMessages( "Station HTML URL  : " + vectorStationSensorIndex[stationList].stationHTMLUrl, true );
+      printDebugMessages( "Station RSS URL   : " + vectorStationSensorIndex[stationList].stationRSSUrl, true );
+      printDebugMessages( "Station XML URL   : " + vectorStationSensorIndex[stationList].stationXMLUrl, true );
+      printDebugMessages( "Station RFC time  : " + vectorStationSensorIndex[stationList].drilledDownParameters.observationTimeRfc822, true ); 
+      printDebugMessages( "Station Weather   : " + vectorStationSensorIndex[stationList].drilledDownParameters.weather, true );                
+      printDebugMessages( "-------------------------------------------------------------------------", true );
+
+      // Set the flag
+      isStationFound = true;
+     }
+   }
+
+   if( !isStationFound ) printDebugMessages( "No weather station found by querying:" + tLocationName );
+
+   return; 
 }
 
 //
@@ -292,7 +335,7 @@ bool WeatherSensors::readAndParsePerWeatherStationResponse( string & tWeatherFee
       DOMElement* tElementRoot = tXMLDocument->getDocumentElement();
       if( !tElementRoot ){
   
-          printDebugMessages( "Well, Looks like this weather station has changed it's xml response!" );         
+          printDebugMessages( "Well, Looks like " + tWeatherFeedsFile + " weather station has changed it's xml response!" );         
           return tReturn;  
       }
 
@@ -536,7 +579,7 @@ int main( void ){
   // g++ -g -Wall -pedantic -lxerces-c noaa-software-weather-sensors.cpp -DWEATHER_MAIN -o weather; 
   
 
-  string weatherFeedsIndexFile = "MAIN.LIST"; // Currently hardcoded 
+  string weatherFeedsIndexFile = "./dump/MAIN.LIST"; // Fixme: Currently hardcoded 
     
   // Parse and build weather feeds base into vectors 
   WeatherSensors NOAAWeatherFeeds;
@@ -550,6 +593,9 @@ int main( void ){
 
     // Print all stations attributes. Just for testing!  
     NOAAWeatherFeeds.printAllStationsData(); 
+
+    // Print all stations located in New Orleans
+    NOAAWeatherFeeds.printAllStationsDataPerLocation("New Orleans"); 
   }
     
   return EXIT_SUCCESS; 

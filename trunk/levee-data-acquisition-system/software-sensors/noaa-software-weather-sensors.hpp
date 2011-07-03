@@ -105,11 +105,12 @@ public:
 
       WeatherSensors( void );                // Initializes xerces-C libraries 	
       ~WeatherSensors( void );               // Frees any memory allocated by xerces parser 
-      void printDebugMessages( string );     // Prints debug messages if enalbed 
+      void printDebugMessages( string, bool ); // Prints debug messages if enalbed 
       string GetTextContentOfAnElement ( DOMElement *, string ); // Get the text contect of given dom element 
       bool readAndParseWeatherFeeds ( string & ) throw( std::runtime_error ); // Read and parse feeds per desire needs        
       bool readAndParsePerWeatherStationResponse( string & ) throw( std::runtime_error ); // Read and parse xml response obtained from station
       void printAllStationsData( void );     // Prints all fetched stations and substation data 
+      void printAllStationsDataPerLocation( string ); // Prints all fetched stations and substation per givin location
       void downloadXMLFeeds( string );       // Download XML feeds and store them for parsing  
       bool crawlThroughStationsData( bool ); // Crawl through all stations and lookout for all stations   
       string parseURLandPullOutStationName( string );
