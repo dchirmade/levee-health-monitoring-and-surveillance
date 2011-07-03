@@ -73,8 +73,9 @@ public:
        void executeRuleEngine( void );     // Execute the rules per their definitions 
 
        // Actions thrown by Core rule engine    
-       void voidAction( string );            // Void action. Do nothing!  
-       void hookupADXL335Sensor( string );   // This will attach hardware sensors to mini rule engine
+       void voidAction( string );                // Void action. Do nothing!  
+       void hookupADXL335Sensor( string );       // This will attach hardware sensors to mini rule engine
+       void hookupNOAAWeatherSensor( string );   // This will attach software sensors to mini rule engine
 
 private: 
         // Is debugger enabled?  
