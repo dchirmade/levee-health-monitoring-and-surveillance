@@ -38,6 +38,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <errno.h>
+#include <time.h>
 
 #include "noaa-software-weather-sensors.hpp"
 
@@ -150,9 +151,17 @@ string WeatherSensors::GetTextContentOfAnElement (
  
 void WeatherSensors::printDebugMessages( string debugLines ){
 
+   // Get current time and stamp it with logs 
+   time_t tRawTime;
+   time ( &tRawTime );
+
+   string tLocaltime = asctime( localtime( &tRawTime ) );
+   tLocaltime.replace( tLocaltime.find( "\n" ), 1 ,"\0" ); // Replace \n at the end of time string
+
+
    // Print debug messages to standard console. 
    if( isDebugEnabled )
-       cout << debugLines << endl; 
+       cout << tLocaltime << " :" << debugLines << endl; 
 
    return; 
 }
@@ -187,8 +196,8 @@ bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded ){
     
    // Delete all old xml dump files if update needed
    if( isUpdateNeeded == true ){ 
-       system( "/bin/rm *.xml 2>>/dev/null >>/dev/null" ); 
-       system( "/bin/rm *.xml.* 2>>/dev/null >>/dev/null" ); 
+       system( "/bin/rm ./dump/*.xml 2>>/dev/null >>/dev/null" ); 
+       system( "/bin/rm ./dump/*.xml.* 2>>/dev/null >>/dev/null" ); 
    }
    // Pull out all stations data from vectors and dump xml stations accordingly. 
    for( int stationList = 0 ; stationList < (int) vectorStationSensorIndex.size() ; stationList++ ){
@@ -196,7 +205,7 @@ bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded ){
      if( isUpdateNeeded == true ) 
          downloadXMLFeeds( vectorStationSensorIndex[stationList].stationXMLUrl );
 
-     string tStationName = parseURLandPullOutStationName( vectorStationSensorIndex[stationList].stationXMLUrl ); 
+     string tStationName = "./dump/" + parseURLandPullOutStationName( vectorStationSensorIndex[stationList].stationXMLUrl ); 
      if( tStationName.length() != 0 )
          readAndParsePerWeatherStationResponse( tStationName );
      else printDebugMessages( "Opps! Couldn't fetch station name from XMLURL!" );
@@ -359,8 +368,8 @@ void WeatherSensors::downloadXMLFeeds( string tDownloadXMLFeeds ){
          break; // An empty URL   
       
      // Build wget payload
-     printDebugMessages( "Downloading XML Feeds from: " + tDownloadXMLFeeds );
-     string tDownloadXMLFeedsstringBuffer = "/usr/bin/wget --tries=3 --wait=1 --quiet " + tDownloadXMLFeeds + 
+     printDebugMessages( "Downloading XML feeds from: " + tDownloadXMLFeeds );
+     string tDownloadXMLFeedsstringBuffer = "/usr/bin/wget --tries=3 --wait=1 --quiet --directory-prefix=dump " + tDownloadXMLFeeds + 
                                             " >>/dev/null" + " 2>>/dev/null"; 
      system( tDownloadXMLFeedsstringBuffer.c_str() );
     
