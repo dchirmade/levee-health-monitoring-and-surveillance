@@ -3,34 +3,33 @@
 
 
 #!/bin/sh
-
-#unmount iso image
+# Unmount iso image
 umount /dev/loop0
 
-#unmount device
+# Unmount device
 umount /dev/sdb1
 
-#mounting iso image
-mount -t iso9660 -o loop <path to ubutnu installation iso> /mnt/iso/
+# Mounting iso image
+mount -t iso9660 -o loop <Path To Ubutnu Installation Iso> /mnt/iso/
 
-#mounting cf card
-mount /dev/sdb1 /mnt/cf
+# Mounting cf card
+mount /dev/<Your Device Handle> /mnt/cf
 
-#Installing core system
-debootstrap --arch=i386 lucid /mnt/cf file:///mnt/iso/
+# Installing core system
+debootstrap --arch=i386 natty /mnt/cf file:///mnt/iso/
 
-#switching to new file system
+# Switching to new file system
 mount -o bind /dev /mnt/cf/dev
 mount -o bind /dev/pts /mnt/cf/dev/pts
 mount -o bind /sys /mnt/cf/sys
 mount -o bind /proc /mnt/cf/proc
 chroot /mnt/cf /bin/bash
 
-#configuring hostname 
+# Configuring hostname 
 echo 'levee-monitoring' > /etc/hostname
 
 
-#configuring hosts
+# Configuring hosts
 echo "127.0.0.1               localhost
 127.0.1.1               levee-monitoring.example.com levee-monitoring
 
@@ -42,11 +41,11 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ff02::3 ip6-allhosts" > /etc/hosts
 
-#configuring dns servers
+# Configuring dns servers
 echo "nameserver 8.8.8.8
 nameserver 8.8.4.4" > /etc/resolv.conf
 
-#configuring fs-tab
+# Configuring fs-tab
 echo "# /etc/fstab: static file system information.
 #
 # <file system>                 <mount point>   <type>  <options>                       <dump>  <pass>
@@ -59,14 +58,14 @@ tmpfs                           /tmp            tmpfs   defaults,noatime        
 tmpfs                           /var/tmp        tmpfs   defaults,noatime                0       0" > /etc/fstab
 
 
-#protect flash memory
+# Protect flash memory
 echo "vm.dirty_writeback_centisecs = 1500" >> /etc/sysctl.conf
 
-#further flash memory protection
+# Further flash memory protection
 echo "RAMRUN=yes
 RAMLOCK=yes" >> /etc/default/rcS
 
-#network settings
+# Network settings
 echo "# Used by ifup(8) and ifdown(8). See the interfaces(5) manpage or
 # /usr/share/doc/ifupdown/examples for more information.
 
@@ -86,37 +85,40 @@ iface eth0 inet static
         post-up         ip addr add 169.254.19.65/16 dev eth0
         pre-down        ip addr del 169.254.19.65/16 dev eth0" > /etc/network/interfaces
 
-#configuring apt-get source list
-echo "# See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to
-# newer versions of the distribution.
+# Configuring apt-get source list
+echo "
+# Generated at http://repogen.simplylinux.ch/ 
 
-## Primary distribution source
-deb http://de.archive.ubuntu.com/ubuntu/ lucid main universe
-#deb-src http://de.archive.ubuntu.com/ubuntu/ lucid main universe
+###### Ubuntu Main Repos
+deb http://in.archive.ubuntu.com/ubuntu/ natty main restricted universe multiverse 
+deb-src http://in.archive.ubuntu.com/ubuntu/ natty main restricted universe multiverse 
 
-## Major bug fix updates produced after the final release of the
-## distribution.
-deb http://de.archive.ubuntu.com/ubuntu/ lucid-updates main universe
-#deb-src http://de.archive.ubuntu.com/ubuntu/ lucid-updates main universe
+###### Ubuntu Update Repos
+deb http://in.archive.ubuntu.com/ubuntu/ natty-security main restricted universe multiverse 
+deb http://in.archive.ubuntu.com/ubuntu/ natty-updates main restricted universe multiverse 
+deb http://in.archive.ubuntu.com/ubuntu/ natty-proposed main restricted universe multiverse 
+deb http://in.archive.ubuntu.com/ubuntu/ natty-backports main restricted universe multiverse 
+deb-src http://in.archive.ubuntu.com/ubuntu/ natty-security main restricted universe multiverse 
+deb-src http://in.archive.ubuntu.com/ubuntu/ natty-updates main restricted universe multiverse 
+deb-src http://in.archive.ubuntu.com/ubuntu/ natty-proposed main restricted universe multiverse 
+deb-src http://in.archive.ubuntu.com/ubuntu/ natty-backports main restricted universe multiverse 
 
-## Security updates
-deb http://security.ubuntu.com/ubuntu lucid-security main universe
-#deb-src http://security.ubuntu.com/ubuntu lucid-security main universe" > /etc/apt/sources.list
+" > /etc/apt/sources.list
 
-#configuring apt-get dependencies
+# Configuring apt-get dependencies
 echo "APT::Install-Recommends \"0\";
 APT::Install-Suggests \"0\";" >  /etc/apt/apt.conf.d/00onlydepends
 
-#update apt-get repository
+# Update apt-get repository
 apt-get update
 
-#configuring Regional support
+# Configuring Regional support
 echo en_US.UTF-8 UTF-8> /var/lib/locales/supported.d/local
 
-#install language package 
+# Install language package 
 apt-get -y install language-pack-en
 
-#configure kernel image 
+# Configure kernel image 
 echo "# Kernel image management overrides
 # See kernel-img.conf(5) for details
 do_symlinks = yes
@@ -126,13 +128,13 @@ do_bootfloppy = no
 do_initrd = yes
 link_in_boot = no" > /etc/kernel-img.conf
 
-#install kernel image 
+# Install kernel image 
 apt-get -y install linux-image-386
 
-#install grub-pc
+# Install grub-pc
 apt-get -y install grub-pc
 
-#configure grub
+# Configure grub
 echo "# If you change this file, run 'update-grub' afterwards to update
 # /boot/grub/grub.cfg.
 
@@ -144,7 +146,7 @@ GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
 GRUB_CMDLINE_LINUX_DEFAULT=\"verbose console=ttyS0,9600n8 reboot=bios\"  # Set \"quiet splash\" in production.
 GRUB_CMDLINE_LINUX=\"\"
 
-#Remove serial support in production. 
+# Remove serial support in production. 
 GRUB_SERIAL_COMMAND=\"serial --unit=0 --speed=9600\"
 GRUB_TERMINAL=serial
 
@@ -171,32 +173,32 @@ echo "# ttyS0 - getty
 start on stopped rc RUNLEVEL=[2345]
 stop on runlevel [!2345] " > /etc/init/ttyS0.conf
 
-#configure device map
+# Configure device map
 echo "(hd0)   /dev/sdb" > /boot/grub/devices.map
 
-#update grub
+# Update grub
 update-grub
 
-#kernel configuration to update grub
+# Kernel configuration to update grub
 echo "postinst_hook = update-grub
 postrm_hook = update-grub" >> /etc/kernel-img.conf
 
-#set root password
+# Set root password
 passwd
 
-#install ssh server
+# Install ssh server
 apt-get -y install ssh
 
-#install cryptsetupi [Only needed if case if you're using encrypted filesystem]
+# Install cryptsetupi [Only needed if case if you're using encrypted filesystem]
 aptitude install cryptsetup
 
-#install ldconfig
+# Install ldconfig
 ldconfig
 
-#install VIM,as by default tiny VI is installed.
+# Install VIM,as by default tiny VI is installed.
 apt-get install vim
 
-#exit from the target and unmount
+# Exit from the target and unmount
 exit
 umount /mnt/cf/proc
 umount /mnt/cf/sys
@@ -204,7 +206,3 @@ umount /mnt/cf/dev/pts
 umount /mnt/cf/dev
 umount /dev/sdb1
 umount /dev/loop0
-
-#install subversion
-apt-get install subversion
-
