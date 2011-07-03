@@ -37,6 +37,7 @@
 #include <time.h>
 
 #include "mini-rule-engine.hpp"
+#include "noaa-software-weather-sensors.hpp"
 #include "serial-reader.hpp"
 #include "knowledge-base.hpp"
 
@@ -281,6 +282,24 @@ void LeveeMiniRuleEngine::hookupNOAAWeatherSensor( string tPayLoad ){
  
     printDebugMessages( "Executing 'NOAA Weather sensor' action with payload: " + tPayLoad );
 
+    string weatherFeedsIndexFile = "./dump/MAIN.LIST"; // Fixme: Currently hardcoded 
+
+    // Parse and build weather feeds base into vectors 
+    WeatherSensors NOAAWeatherFeeds;
+    if( NOAAWeatherFeeds.readAndParseWeatherFeeds( weatherFeedsIndexFile ) ){
+
+
+     // Get per station data
+     if( NOAAWeatherFeeds.crawlThroughStationsData( false ) == true ){
+        // WIP! Do some actions if needed
+     }
+
+     // Print all stations attributes. Just for testing!  
+     NOAAWeatherFeeds.printAllStationsData();
+
+     // Print all stations located in New Orleans
+     NOAAWeatherFeeds.printAllStationsDataPerLocation("New Orleans");
+    }
     return;  
 } 
 

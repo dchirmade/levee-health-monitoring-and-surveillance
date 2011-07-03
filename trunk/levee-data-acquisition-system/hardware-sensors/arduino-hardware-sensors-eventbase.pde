@@ -398,7 +398,7 @@ void setup( void )
 void loop( void )
 {
   
-  if( !didLeveeMainEngineAskForTheReading() )
+  if( didLeveeMainEngineAskForTheReading() )
   {
   
   /** Fetch reading from ADXL335 sensor */
@@ -414,6 +414,7 @@ void loop( void )
   
   /**
    * Flush the serial buffer if any (optional) and start reading serial data
-   */
-   Serial.flush();
+   * 
+   * Serial.flush();
+   */ 
 }
