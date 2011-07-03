@@ -160,7 +160,7 @@ void LeveeMiniRuleEngine::initializeRuleBase( void ){
                   vectorCrudeRuleDefinition.size() + 1  // Jump index is auto generated. Please do not modify. 
                  );
       
-    // Always add rules in between start and end points to aviod infinite rule dead lock 
+    // Always add rules in between start and end points to avoid infinite rule dead lock 
 
     // Step 1. Try to fetch events from ADXL335 hardware sensor  
     appendNewRule(
@@ -175,6 +175,20 @@ void LeveeMiniRuleEngine::initializeRuleBase( void ){
                  );
   
     // End point
+
+    // Step 2. Try to fetch raw data from weather station (software sensors)
+    appendNewRule(
+                  vectorCrudeRuleDefinition.size(), // Indix is auto generated. Please do not modify. 
+                  true,
+                  "NOAA Weather feeds",
+                  "This will hook-up NOAA Weather feeds (kind of software sensor!) to rule engine.",
+                  __NOAASoftwareSensorHook,
+                  "nothing",
+                  1, 
+                  vectorCrudeRuleDefinition.size() + 1  // Jump index is auto generated. Please do not modify. 
+                 );
+  
+
     // Rule to either stop or loop!     
     appendNewRule(
                   vectorCrudeRuleDefinition.size(),
@@ -220,6 +234,10 @@ void LeveeMiniRuleEngine::executeRuleEngine( void ){
               // Execute action attached to ADXL335HardwareSensorHook!  
               hookupADXL335Sensor( vectorCrudeRuleDefinition[tCurrentRuleIndex].rulePayload );
               break;            
+      case __NOAASoftwareSensorHook:
+              // Execute action attached to NOAASoftwareSensorHook!  
+              hookupNOAAWeatherSensor( vectorCrudeRuleDefinition[tCurrentRuleIndex].rulePayload );
+              break;            
       default: 
               printDebugMessages( "No valid action assigned. Sliding to next rule by skipping this one!" );
               break;
@@ -252,15 +270,29 @@ void LeveeMiniRuleEngine::voidAction( string tPayLoad ){
     return;  
 } 
 
+
 //
-// Desc: Rule Action: voidAction, actually it does nothing! 
+// Desc: NOAA Weather sensor's execution procedure.   
+// Arguments: string, Payload to action if any!  
+// Returns: Nothing, void 
+//  
+
+void LeveeMiniRuleEngine::hookupNOAAWeatherSensor( string tPayLoad ){
+ 
+    printDebugMessages( "Executing 'NOAA Weather sensor' action with payload: " + tPayLoad );
+
+    return;  
+} 
+
+//
+// Desc: ADXL335 sensor's execution procedure.   
 // Arguments: string, Payload to action if any!  
 // Returns: Nothing, void 
 //  
 
 void LeveeMiniRuleEngine::hookupADXL335Sensor( string tPayLoad ){
  
-    printDebugMessages( "Executing 'hooking up ADXL335' sensor with payload: " + tPayLoad );
+    printDebugMessages( "Executing 'ADXL335' sensor action with payload: " + tPayLoad );
 
     // All right, start operating hardware sensors here
     // Fixme! Perform operating on knowledge-base here
