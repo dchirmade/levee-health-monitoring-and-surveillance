@@ -44,21 +44,6 @@ using namespace std;
 class LeveeMiniRuleEngine {
 
 public:
-       // Crude rule attributes  
-       struct CrudeRuleBase{
-       
-        int ruleIndex;            // Rule index number 
-        bool isRuleActive;        // If rule is active or inactive   
-        string ruleName;          // Human readable rule name 
-        string ruleDescription;   // Rule description if any 
-        unsigned int ruleAction;  // Action attached with rule   
-        string rulePayload;       // Any payload params needed by rule 
-        int ruleDelay;            // Wait time in rule execution sequence 
-        int nextRuleIndex;        // Next rule to be executed 
-       }crudeRuleDefinition;   
-
-       // Vectors of Crude rules 
-       vector< CrudeRuleBase > vectorCrudeRuleDefinition; 
 
        // Core rule engine 
        LeveeMiniRuleEngine( void );        // Initiate rule engine  
@@ -78,8 +63,25 @@ public:
        void hookupNOAAWeatherSensor( string );   // This will attach software sensors to mini rule engine
 
 private: 
-        // Is debugger enabled?  
-        bool isDebugEnabled; 
+
+       // Crude rule attributes  
+       struct CrudeRuleBase{
+       
+        int ruleIndex;            // Rule index number 
+        bool isRuleActive;        // If rule is active or inactive   
+        string ruleName;          // Human readable rule name 
+        string ruleDescription;   // Rule description if any 
+        unsigned int ruleAction;  // Action attached with rule   
+        string rulePayload;       // Any payload params needed by rule 
+        int ruleDelay;            // Wait time in rule execution sequence 
+        int nextRuleIndex;        // Next rule to be executed 
+       }crudeRuleDefinition;   
+
+       // Vectors of Crude rules 
+       vector< CrudeRuleBase > vectorCrudeRuleDefinition; 
+        
+       // Is debugger enabled?  
+       bool isDebugEnabled; 
 };
 
 #endif 

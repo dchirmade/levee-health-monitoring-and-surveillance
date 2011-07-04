@@ -51,6 +51,7 @@ public:
       void writeToSerialOverUSB( string );    // Write data to serial port over USB 
 
 private: 
+
       bool isDebugEnabled;                    // Is debugging enabled?   
       int charBlockOfDataSize;                // Char Block size for reading or writing data over serial 
       SerialStream serialHandle;              // Serial stream handle 
