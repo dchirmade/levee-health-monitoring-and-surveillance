@@ -1,0 +1,7 @@
+1. To integrate NOAA's water level / Hydrograph into software sensors  
+
+# Issue : 5 @code.google.com  
+
+http://water.weather.gov/ahps2/hydrograph.php?wfo=lix&gage=nwcl1&view=1,1,1,1,1,1,1,1%22
+http://water.weather.gov/ahps2/hydrograph.php?wfo=lix&gage=labl1&view=1,1,1,1,1,1,1,1%22
+http://water.weather.gov/ahps2/hydrograph.php?wfo=lix&gage=shbl1&view=1,1,1,1,1,1,1,1%22
