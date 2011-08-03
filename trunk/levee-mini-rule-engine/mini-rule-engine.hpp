@@ -37,7 +37,7 @@
 using namespace std;
 
 //
-// Class, Mini Rule engine for levee monitoring, This will reposible for building and executing rules
+// Class, Mini Rule engine for levee monitoring, This will responsible for building and executing rules
 // which will perform desire action(s).  
 //
 
@@ -59,9 +59,9 @@ public:
 
        // Actions thrown by Core rule engine    
        void voidAction( string );                // Void action. Do nothing!  
-       void hookupADXL335Sensor( string );       // This will attach hardware sensors to mini rule engine
-       void hookupNOAAWeatherSensor( string );   // This will attach software sensors to mini rule engine
-
+       void hookupADXL335Sensor( string );       // This will attach hardware sensor to mini rule engine
+       void hookupNOAAWeatherSensor( string );   // This will attach software sensor (weather) to mini rule engine
+       void hookupNOAAWaterSensor( string );     // This will attach software sensor (water) to mini rule engine
 private: 
 
        // Crude rule attributes  

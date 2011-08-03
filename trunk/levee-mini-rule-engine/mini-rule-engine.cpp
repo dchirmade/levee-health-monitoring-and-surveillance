@@ -38,13 +38,15 @@
 
 #include "mini-rule-engine.hpp"
 #include "noaa-software-weather-sensors.hpp"
+#include "noaa-software-water-sensors.hpp"
 #include "serial-reader.hpp"
 #include "knowledge-base.hpp"
 
 // Define rule actions 
-#define __nothing 		     0 
-#define __ADXL335HardwareSensorHook  1 
-#define __NOAASoftwareSensorHook     2 
+#define __nothing 		            0 
+#define __ADXL335HardwareSensorHook         1 
+#define __NOAASoftwareWeatherSensorHook     2 
+#define __NOAASoftwareWaterSensorHook       3 
 
 using namespace std;
 
@@ -183,12 +185,23 @@ void LeveeMiniRuleEngine::initializeRuleBase( void ){
                   true,
                   "NOAA Weather feeds",
                   "This will hook-up NOAA Weather feeds (kind of software sensor!) to rule engine.",
-                  __NOAASoftwareSensorHook,
+                  __NOAASoftwareWeatherSensorHook,
                   "nothing",
                   1, 
                   vectorCrudeRuleDefinition.size() + 1  // Jump index is auto generated. Please do not modify. 
                  );
   
+    // Step 3. Try to fetch raw data from water station (software sensors)
+    appendNewRule(
+                  vectorCrudeRuleDefinition.size(), // Indix is auto generated. Please do not modify. 
+                  true,
+                  "NOAA Water feeds",
+                  "This will hook-up NOAA Water RSS feeds (kind of software sensor!) to rule engine.",
+                  __NOAASoftwareWaterSensorHook,
+                  "nothing",
+                  1, 
+                  vectorCrudeRuleDefinition.size() + 1  // Jump index is auto generated. Please do not modify. 
+                 );
 
     // Rule to either stop or loop!     
     appendNewRule(
@@ -235,9 +248,13 @@ void LeveeMiniRuleEngine::executeRuleEngine( void ){
               // Execute action attached to ADXL335HardwareSensorHook!  
               hookupADXL335Sensor( vectorCrudeRuleDefinition[tCurrentRuleIndex].rulePayload );
               break;            
-      case __NOAASoftwareSensorHook:
-              // Execute action attached to NOAASoftwareSensorHook!  
+      case __NOAASoftwareWeatherSensorHook:
+              // Execute action attached to NOAASoftwareWeatherSensorHook!  
               hookupNOAAWeatherSensor( vectorCrudeRuleDefinition[tCurrentRuleIndex].rulePayload );
+              break;            
+      case __NOAASoftwareWaterSensorHook:
+              // Execute action attached to NOAASoftwareWaterSensorHook!  
+              hookupNOAAWaterSensor( vectorCrudeRuleDefinition[tCurrentRuleIndex].rulePayload );
               break;            
       default: 
               printDebugMessages( "No valid action assigned. Sliding to next rule by skipping this one!" );
@@ -300,6 +317,23 @@ void LeveeMiniRuleEngine::hookupNOAAWeatherSensor( string tPayLoad ){
      // Print all stations located in New Orleans
      NOAAWeatherFeeds.printAllStationsDataPerLocation("New Orleans");
     }
+    return;  
+} 
+
+//
+// Desc: NOAA Water sensor's execution procedure.   
+// Arguments: string, Payload to action if any!  
+// Returns: Nothing, void 
+//  
+
+void LeveeMiniRuleEngine::hookupNOAAWaterSensor( string tPayLoad ){
+ 
+    printDebugMessages( "Executing 'NOAA Water sensor' action with payload: " + tPayLoad );
+ 
+    // Create water sensor's instance and see if it is fetching the reading or not... 
+    WaterSensors waterSensor;
+    waterSensor.crawlThroughStationsData( "true" );
+
     return;  
 } 
 
