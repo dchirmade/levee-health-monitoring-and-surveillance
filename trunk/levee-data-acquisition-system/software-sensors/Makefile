@@ -20,11 +20,12 @@
  # GSoC11 Dashboard: http://www.google-melange.com/gsoc/project/google/gsoc2011/q1w2e3r4/12001
  # GSoC11 Mentor   : Dr.Raju Gottumukkala and Crawford Comeaux
  # 
- # This is a makefile for software weather sensor based on NOAA (www.noaa.gov)'s feeds.  
+ # This is a makefile for software weather and water sensor based on NOAA (www.noaa.gov and water.weather.gov)'s feeds.  
  ## :
 
 all: 
 	g++ -g -Wall -pedantic -lxerces-c -DWEATHER_MAIN noaa-software-weather-sensors.cpp -o noaa-weather-sensor
+	g++ -g -Wall -pedantic -DWATER_MAIN noaa-software-water-sensors.cpp -o noaa-water-sensor
 
 clean: 
-	rm -rf noaa-weather-sensor 
+	rm -rf noaa-weather-sensor noaa-water-sensor 

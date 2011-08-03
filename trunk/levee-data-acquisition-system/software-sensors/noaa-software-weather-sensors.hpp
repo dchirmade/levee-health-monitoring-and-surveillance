@@ -51,7 +51,7 @@ using namespace std;
 
 //
 //
-// Desc: Class, Weather Sensor, This is reposible for fetching, building vector base of all 
+// Desc: Class, Weather Sensor, This class is responsible for fetching, building vector base of all 
 // latest ( upto a delay of an hour ) weather feeds located in USA.         
 // 
  

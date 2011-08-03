@@ -193,7 +193,7 @@ string WeatherSensors::parseURLandPullOutStationName( string XMLUrl ){
 // Returns: bool, true if downloda for all stations is good
 //   
  
-bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded ){
+bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded = "false" ){
 
    bool tReturn = false; 
 
