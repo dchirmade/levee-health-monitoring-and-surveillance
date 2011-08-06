@@ -33,11 +33,12 @@
 // Include files for string and io operations 
 #include <string>
 #include <iostream>
-#include <iostream>
 #include <unistd.h>
 #include <cstdlib>
 
 #include "knowledge-base.hpp"
+
+using namespace std;
 
 //
 // Desc: This should initialize the knowledge base.    
@@ -97,8 +98,6 @@ void KnowledgeBase::setADXL335axisPosition(
      ADXL335Zposition = tZposition;  
      return; 
 }
-
-using namespace std;
 
 #endif
 
