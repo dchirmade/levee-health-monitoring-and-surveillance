@@ -96,7 +96,7 @@ void LeveeMiniRuleEngine::printDebugMessages( string debugLines ){
   
    // Print debug messages to standard console. 
    if( isDebugEnabled )
-       cout << tLocaltime << " : " << debugLines << endl; 
+       cout << "<br>" << tLocaltime << " : " << debugLines << endl; 
 
    return; 
 }
@@ -173,7 +173,7 @@ void LeveeMiniRuleEngine::initializeRuleBase( void ){
                   "This will hook-up ADXL335 sensor to rule engine.",
                   __ADXL335HardwareSensorHook,
                   "nothing",
-                  1, 
+                  3, 
                   vectorCrudeRuleDefinition.size() + 1  // Jump index is auto generated. Please do not modify. 
                  );
   
@@ -187,7 +187,7 @@ void LeveeMiniRuleEngine::initializeRuleBase( void ){
                   "This will hook-up NOAA Weather feeds (kind of software sensor!) to rule engine.",
                   __NOAASoftwareWeatherSensorHook,
                   "nothing",
-                  1, 
+                  3, 
                   vectorCrudeRuleDefinition.size() + 1  // Jump index is auto generated. Please do not modify. 
                  );
   
@@ -332,7 +332,7 @@ void LeveeMiniRuleEngine::hookupNOAAWaterSensor( string tPayLoad ){
  
     // Create water sensor's instance and see if it is fetching the reading or not... 
     WaterSensors waterSensor;
-    waterSensor.crawlThroughStationsData( "true" );
+    waterSensor.crawlThroughStationsData( false );
 
     return;  
 } 

@@ -165,7 +165,7 @@ void WeatherSensors::printDebugMessages(
 
    // Print debug messages to standard console. 
    if( isDebugEnabled || isDebugForced )
-       cout << tLocaltime << " :" << debugLines << endl; 
+       cout << "<br>" << tLocaltime << " :" << debugLines << endl; 
 
    return; 
 }
@@ -582,7 +582,7 @@ int main( void ){
 
    
     // Get per station data
-    if( NOAAWeatherFeeds.crawlThroughStationsData( false ) == true ){
+    if( NOAAWeatherFeeds.crawlThroughStationsData( true ) == true ){
        // WIP! Do some actions if needed
     }
 
