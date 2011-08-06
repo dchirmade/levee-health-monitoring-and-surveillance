@@ -98,7 +98,7 @@ void WaterSensors::printDebugMessages(
 
    // Print debug messages to standard console. 
    if( isDebugEnabled || isDebugForced )
-       cout << tLocaltime << " :" << debugLines << endl; 
+       cout << "<br>" << tLocaltime << " :" << debugLines << endl; 
 
    return; 
 }
@@ -152,7 +152,7 @@ string WaterSensors::parseURLandPullOutStationName( string RSSUrl ){
 // Returns: bool, true if all is well otherwise false
 // 
 
-bool WaterSensors::crawlThroughStationsData( bool isUpdateNeeded = "false" ){
+bool WaterSensors::crawlThroughStationsData( bool isUpdateNeeded = false ){
 
    bool tReturn = false;
 
@@ -162,24 +162,26 @@ bool WaterSensors::crawlThroughStationsData( bool isUpdateNeeded = "false" ){
        system( "/bin/rm ./dump/*.rss.* 2>>/dev/null >>/dev/null" );
 
       // Download RSS feeds only for few locations for the time being. 
-      downloadWaterRSSfeeds( __Lakefront );
+      downloadWaterRSSfeeds( __Lakefront );  
+      downloadWaterRSSfeeds( __LaBranche );
+      downloadWaterRSSfeeds( __ShellBeach );
+      
+    }
+
       string tStationName = "./dump/" + parseURLandPullOutStationName( __Lakefront );
       if( tStationName.length() != 0 )
          readAndParsePerWaterStationResponse( tStationName );
       else printDebugMessages( "Opps! Couldn't fetch station name from RSSURL!" );
 
-      downloadWaterRSSfeeds( __LaBranche );
       tStationName = "./dump/" + parseURLandPullOutStationName( __LaBranche );
       if( tStationName.length() != 0 )
          readAndParsePerWaterStationResponse( tStationName );
       else printDebugMessages( "Opps! Couldn't fetch station name from RSSURL!" );
 
-      downloadWaterRSSfeeds( __ShellBeach );
       tStationName = "./dump/" + parseURLandPullOutStationName( __ShellBeach );
       if( tStationName.length() != 0 )
          readAndParsePerWaterStationResponse( tStationName );
       else printDebugMessages( "Opps! Couldn't fetch station name from RSSURL!" );
-    }
      
    // Just assume all is good! 
    return tReturn;
@@ -234,7 +236,10 @@ void WaterSensors::readAndParsePerWaterStationResponse( string waterStationRssFe
     fileHandle.read ( tStringBuffer, tRssTextLength );
 
     // Fixme! Process extracted out put to cross verify with knowledge base at later state 
-    cout.write ( tStringBuffer, tRssTextLength );
+    // cout.write ( tStringBuffer, tRssTextLength );
+    if( tRssTextLength )
+        tStringBuffer[ tRssTextLength + 1 ] = '\0' ;
+    printDebugMessages( tStringBuffer );
 
     delete[] tStringBuffer;
     fileHandle.close();
@@ -254,7 +259,7 @@ int main( void ){
 
   // Create water sensor's instance and see if it is fetching the reading or not... 
   WaterSensors waterSensor;    
-  waterSensor.crawlThroughStationsData( "true" );
+  waterSensor.crawlThroughStationsData( true );
   return EXIT_SUCCESS; 
 } 
 
