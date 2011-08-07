@@ -41,6 +41,7 @@
 #include "noaa-software-water-sensors.hpp"
 #include "serial-reader.hpp"
 #include "knowledge-base.hpp"
+#include "configuration-file.hpp"
 
 // Define rule actions 
 #define __nothing 		            0 
@@ -60,6 +61,9 @@ LeveeMiniRuleEngine::LeveeMiniRuleEngine( void ){
 
     // Do initialization neeed for weather sensor 
     isDebugEnabled = true;
+
+    // Initialize knowledge-base
+    KnowledgeBase knowledge;
 
     // Initialize the rule base 
     initializeRuleBase();

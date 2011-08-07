@@ -37,6 +37,7 @@
 #include <cstdlib>
 
 #include "knowledge-base.hpp"
+#include "configuration-file.hpp"
 
 using namespace std;
 
@@ -47,9 +48,44 @@ using namespace std;
 //
    
 KnowledgeBase::KnowledgeBase( void ){
+ 
+     // Enable debug  mode 
+     isDebugEnabled = true;  
+  
+     // Read the confiuration file and intialize static knowledge base accordingly 
+     ConfigurationFile configurationFile;
 
-    // Initialize the x,y,z positions while deploying ADXL335 3-axis accelerometer into levees
-    setADXL335axisPosition( 10, 20, 30);  
+    if( !configurationFile.readConfigurationFile( "configuration.conf" ) ){
+        
+        printDebugMessages( "Opps! There is an error while reading configuration file." );
+    }
+    else{
+
+         // Form a vector of configuration key-values pair
+         knowledgeKeyValueIndex.key = "ADXL335-X-position"; 
+         knowledgeKeyValueIndex.value = configurationFile.getValueOfGivenKey( knowledgeKeyValueIndex.key ); 
+         vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
+         knowledgeKeyValueIndex.key = "ADXL335-Y-position"; 
+         knowledgeKeyValueIndex.value = configurationFile.getValueOfGivenKey( knowledgeKeyValueIndex.key ); 
+         vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
+         knowledgeKeyValueIndex.key = "ADXL335-Z-position"; 
+         knowledgeKeyValueIndex.value = configurationFile.getValueOfGivenKey( knowledgeKeyValueIndex.key ); 
+         vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
+         knowledgeKeyValueIndex.key = "ADXL335-alerting-trigger"; 
+         knowledgeKeyValueIndex.value = configurationFile.getValueOfGivenKey( knowledgeKeyValueIndex.key ); 
+         vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
+         knowledgeKeyValueIndex.key = "noaa-alerting-water-level"; 
+         knowledgeKeyValueIndex.value = configurationFile.getValueOfGivenKey( knowledgeKeyValueIndex.key ); 
+         vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
+         knowledgeKeyValueIndex.key = "noaa-alerting-weather-type"; 
+         knowledgeKeyValueIndex.value = configurationFile.getValueOfGivenKey( knowledgeKeyValueIndex.key ); 
+         vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
+         knowledgeKeyValueIndex.key = "noaa-alerting-weather-location"; 
+         knowledgeKeyValueIndex.value = configurationFile.getValueOfGivenKey( knowledgeKeyValueIndex.key ); 
+         vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
+          
+    }
+
 }
 
 //
@@ -57,47 +93,73 @@ KnowledgeBase::KnowledgeBase( void ){
 // Arguments: Nothing, void 
 // Returns: Nothing, void 
 //   
+
 KnowledgeBase::~KnowledgeBase( void ){
 
 }
 
-//
-// Desc: This should fetch x, y, z values for ADXL335 sensor    
-// Arguments: unisgned int, x, y, z parameters 
-// Returns: Nothing, void 
-// 
-  
-void KnowledgeBase::getADXL335axisPosition(
-                                               unsigned int &tXposition, 
-                                               unsigned int &tYposition, 
-                                               unsigned int &tZposition 
-                                             ){
 
-     // Set the position accordingly 
-     tXposition = ADXL335Xposition;  
-     tYposition = ADXL335Yposition;  
-     tZposition = ADXL335Zposition;  
-     return; 
+//
+// Desc: Fetches value of a given  configuration key
+// Arguments: string, Key of which value need to be fetched  
+// Returns: string, returns R value of a key  
+//
+   
+string KnowledgeBase::getValueOfaKey( string key ){
+
+     string tValue = "";
+   
+     for( int keyList = 0 ; keyList < (int) vectorKnowledgeKeyValueIndex.size() ; keyList++ ){
+      
+      // For multiple entries of a same key, only last occurance of key will be considered. 
+      if( vectorKnowledgeKeyValueIndex[keyList].key.find( key ) != string::npos )
+          tValue = vectorKnowledgeKeyValueIndex[keyList].value;    
+      else continue;    
+      }
+
+     return tValue;
+}
+
+void KnowledgeBase::printAllKeyValuePair( void ){
+
+   for( int keyList = 0 ; keyList < (int) vectorKnowledgeKeyValueIndex.size() ; keyList++ ){
+
+     // if( vectorStationSensorIndex[stationList].stationName.find( tLocationName ) != string::npos ){
+
+      printDebugMessages( 
+                         "Configuration Key \"" + vectorKnowledgeKeyValueIndex[keyList].key + "\" = " +
+                         vectorKnowledgeKeyValueIndex[keyList].value
+                        );
+   }
+
+   return; 
 }
 
 //
-// Desc: This should set x, y, z values for ADXL335 sensor while deploying the sensor into levees    
-// Arguments: unisgned int, x, y, z parameters 
-// Returns: Nothing, void 
-// 
-  
-void KnowledgeBase::setADXL335axisPosition(
-                                               unsigned int tXposition = 0, 
-                                               unsigned int tYposition = 0, 
-                                               unsigned int tZposition = 0 
-                                             ){
+// Desc: This should print debug messages only if it is enabled.
+// Arguments: String, Lines which needs to be printed on standard console.
+// Returns: Nothing, void
+//
 
-     // Set the position accordingly 
-     ADXL335Xposition = tXposition;  
-     ADXL335Yposition = tYposition;  
-     ADXL335Zposition = tZposition;  
-     return; 
+void KnowledgeBase::printDebugMessages(
+                                       string debugLines
+                                     ){
+
+   // Get current time and stamp it with logs
+   time_t tRawTime;
+   time ( &tRawTime );
+
+   string tLocaltime = asctime( localtime( &tRawTime ) );
+   tLocaltime.replace( tLocaltime.find( "\n" ), 1 ,"\0" ); // Replace \n at the end of time string
+
+
+   // Print debug messages to standard console.
+   if( isDebugEnabled )
+       cout << "<br>" << tLocaltime << " :" << debugLines << endl;
+
+   return;
 }
+
 
 #endif
 
@@ -111,6 +173,8 @@ void KnowledgeBase::setADXL335axisPosition(
 int main( void ){
 
     KnowledgeBase knowledge; 
+    knowledge.printAllKeyValuePair();    
+
     return EXIT_SUCCESS; 
 }
 #endif 
