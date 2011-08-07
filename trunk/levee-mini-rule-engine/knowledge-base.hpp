@@ -32,6 +32,7 @@
 // Include files for string and io operations 
 #include <string>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -43,24 +44,25 @@ class KnowledgeBase{
 
 public: 
 
-       KnowledgeBase( void );              // Initialization procedure 
-       ~KnowledgeBase( void );             // Cleanup procedure
-       void getADXL335axisPosition(        // Get x,y,z values for ADXL335 
-                                       unsigned int &,  
-                                       unsigned int &, 
-                                       unsigned int & 
-                                     ); 
+       KnowledgeBase( void );                  // Initialization procedure 
+       ~KnowledgeBase( void );                 // Cleanup procedure
+       void printDebugMessages( string );      // Prints debug messages 
+       void printAllKeyValuePair( void );      // Prints all configuration key values 
+       string getValueOfaKey( string );        // Get a value of a configuration key
 
-       void setADXL335axisPosition(       // Set x,y,z values at the time of deployment
-                                       unsigned int , 
-                                       unsigned int , 
-                                       unsigned int  
-                                     ); 
 private:
-    
-       // Position values of ADXL335 3-axis accelerometer while deploying sensors into levees.
-       unsigned int ADXL335Xposition;        
-       unsigned int ADXL335Yposition;        
-       unsigned int ADXL335Zposition;        
+
+       // Debug mode 
+       bool isDebugEnabled;    
+ 
+       // Key-Value holder
+       struct knowledgeKeyValues{
+           string key; 
+           string value;  
+       }knowledgeKeyValueIndex;
+
+       // Key-value vector
+       vector< knowledgeKeyValues > vectorKnowledgeKeyValueIndex; 
+ 
 };
 #endif 

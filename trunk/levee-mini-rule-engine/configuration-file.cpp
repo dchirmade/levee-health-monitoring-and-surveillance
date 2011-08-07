@@ -160,9 +160,34 @@ int main( void ){
     if( !configurationFile.readConfigurationFile( "configuration.conf" ) ) 
         return EXIT_FAILURE;
     else{ 
-         // Get some demo key value pair...
-         configurationFile.printDebugMessages( "Value for Key 'ADXL335i-X-position' is " + 
-                                               configurationFile.getValueOfGivenKey( "ADXL335i-X-position" ) 
+         // Get default key value configuration pair...
+         configurationFile.printDebugMessages( 
+                                               "Value for Key 'ADXL335-X-position' is " + 
+                                               configurationFile.getValueOfGivenKey( "ADXL335-X-position" ) 
+                                             );
+         configurationFile.printDebugMessages( 
+                                               "Value for Key 'ADXL335-Y-position' is " + 
+                                               configurationFile.getValueOfGivenKey( "ADXL335-Y-position" ) 
+                                             );
+         configurationFile.printDebugMessages( 
+                                               "Value for Key 'ADXL335-Z-position' is " + 
+                                               configurationFile.getValueOfGivenKey( "ADXL335-Z-position" ) 
+                                             );
+         configurationFile.printDebugMessages( 
+                                               "Value for Key 'ADXL335-alerting-trigger' is " + 
+                                               configurationFile.getValueOfGivenKey( "ADXL335-alerting-trigger" ) 
+                                             );
+         configurationFile.printDebugMessages( 
+                                               "Value for Key 'nooa-alerting-water-level' is " + 
+                                               configurationFile.getValueOfGivenKey( "noaa-alerting-water-level" ) 
+                                             );
+         configurationFile.printDebugMessages( 
+                                               "Value for Key 'noaa-alerting-weather-type' is " + 
+                                               configurationFile.getValueOfGivenKey( "noaa-alerting-weather-type" ) 
+                                             );
+         configurationFile.printDebugMessages( 
+                                               "Value for Key 'noaa-alerting-weather-location' is " + 
+                                               configurationFile.getValueOfGivenKey( "noaa-alerting-weather-location" ) 
                                              );
     }
 
