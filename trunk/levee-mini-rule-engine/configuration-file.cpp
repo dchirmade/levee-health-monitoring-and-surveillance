@@ -178,6 +178,10 @@ int main( void ){
                                                configurationFile.getValueOfGivenKey( "ADXL335-alerting-trigger" ) 
                                              );
          configurationFile.printDebugMessages( 
+                                               "Value for Key 'ADXL335-serial-port' is " + 
+                                               configurationFile.getValueOfGivenKey( "ADXL335-serial-port" ) 
+                                             );
+         configurationFile.printDebugMessages( 
                                                "Value for Key 'nooa-alerting-water-level' is " + 
                                                configurationFile.getValueOfGivenKey( "noaa-alerting-water-level" ) 
                                              );
