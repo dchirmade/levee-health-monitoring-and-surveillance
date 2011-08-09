@@ -31,8 +31,8 @@
 #include <string>
 #include <vector>
 
-// Move this include to .cpp file
 #include <iostream>
+#include "knowledge-base.hpp"
 
 using namespace std;
 
@@ -82,6 +82,9 @@ private:
         
        // Is debugger enabled?  
        bool isDebugEnabled; 
+
+       // Knowledge base 
+       KnowledgeBase *knowledge;
 };
 
 #endif 

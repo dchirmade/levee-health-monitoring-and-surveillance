@@ -40,7 +40,6 @@
 #include "noaa-software-weather-sensors.hpp"
 #include "noaa-software-water-sensors.hpp"
 #include "serial-reader.hpp"
-#include "knowledge-base.hpp"
 #include "configuration-file.hpp"
 
 // Define rule actions 
@@ -63,13 +62,18 @@ LeveeMiniRuleEngine::LeveeMiniRuleEngine( void ){
     isDebugEnabled = true;
 
     // Initialize knowledge-base
-    KnowledgeBase knowledge;
+    knowledge = NULL;  
+    knowledge = new KnowledgeBase [ 1 ];
+   
+    if( knowledge ){
 
-    // Initialize the rule base 
-    initializeRuleBase();
+     // Initialize the rule base 
+     initializeRuleBase();
      
-    // Execute the Rule Engine 
-    executeRuleEngine(); 
+     // Execute the Rule Engine 
+     executeRuleEngine(); 
+
+    }else printDebugMessages( "Opps! Invalid configurations!" );
 }
 
 //
@@ -79,6 +83,9 @@ LeveeMiniRuleEngine::LeveeMiniRuleEngine( void ){
 //  
 
 LeveeMiniRuleEngine::~LeveeMiniRuleEngine( void ){
+
+    if( knowledge )
+        delete [ ] knowledge;     
 
     return;
 }
@@ -358,8 +365,7 @@ void LeveeMiniRuleEngine::hookupADXL335Sensor( string tPayLoad ){
     SerialCommunicator serialChatTerminal;
 
     // Open Serial terminal and initialize the same
-    // Fixme: Remove hardcoded terminal path
-    if( serialChatTerminal.openSerialTerminal( "/dev/ttyUSB0" ) ){
+    if( serialChatTerminal.openSerialTerminal( knowledge->getValueOfaKey( "ADXL335-serial-port" ) ) ){
 
     if( serialChatTerminal.initializeSerialTerminal( ) ){ // Start reading some data over serial 
 
@@ -367,7 +373,7 @@ void LeveeMiniRuleEngine::hookupADXL335Sensor( string tPayLoad ){
          serialChatTerminal.writeToSerialOverUSB( "1" );  
          serialChatTerminal.printDebugMessages( serialChatTerminal.readFromSerialOverUSB( ));
     }
-    else serialChatTerminal.printDebugMessages( "Some is wrong with serial port settings!" );
+    else serialChatTerminal.printDebugMessages( "Something is wrong with serial port settings!" );
     }
     else serialChatTerminal.printDebugMessages( "Well. It looks like something is wrong with serial port!" ); 
     

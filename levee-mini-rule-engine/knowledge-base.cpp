@@ -70,6 +70,8 @@ KnowledgeBase::KnowledgeBase( void ){
          vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
          knowledgeKeyValueIndex.key = "ADXL335-Z-position"; 
          knowledgeKeyValueIndex.value = configurationFile.getValueOfGivenKey( knowledgeKeyValueIndex.key ); 
+         knowledgeKeyValueIndex.key = "ADXL335-serial-port"; 
+         knowledgeKeyValueIndex.value = configurationFile.getValueOfGivenKey( knowledgeKeyValueIndex.key ); 
          vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
          knowledgeKeyValueIndex.key = "ADXL335-alerting-trigger"; 
          knowledgeKeyValueIndex.value = configurationFile.getValueOfGivenKey( knowledgeKeyValueIndex.key ); 
