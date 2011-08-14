@@ -199,17 +199,30 @@ bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded ){
 
     
    // Delete all old xml dump files if update needed
-   if( isUpdateNeeded == true ){ 
-       system( "/bin/rm ./dump/*.xml 2>>/dev/null >>/dev/null" ); 
-       system( "/bin/rm ./dump/*.xml.* 2>>/dev/null >>/dev/null" ); 
-   }
+   // Delayed download or slow download could leave system with no feeds if 
+   // we delete them all! 
+   // if( isUpdateNeeded == true ){ 
+   //    system( "/bin/rm ./dump/*.xml 2>>/dev/null >>/dev/null" ); 
+   //    system( "/bin/rm ./dump/*.xml.* 2>>/dev/null >>/dev/null" ); 
+   // }
+
    // Pull out all stations data from vectors and dump xml stations accordingly. 
    for( int stationList = 0 ; stationList < (int) vectorStationSensorIndex.size() ; stationList++ ){
   
-     if( isUpdateNeeded == true ) 
-         downloadXMLFeeds( vectorStationSensorIndex[stationList].stationXMLUrl );
+     string tStationName = "./dump/" + 
+                           parseURLandPullOutStationName( 
+                                                          vectorStationSensorIndex[stationList].stationXMLUrl
+                                                        ); 
 
-     string tStationName = "./dump/" + parseURLandPullOutStationName( vectorStationSensorIndex[stationList].stationXMLUrl ); 
+     if( isUpdateNeeded == true ) {
+  
+         // Delete old feed at a time 
+         string tDeleteCommand = "/bin/rm " + tStationName + " 2>>/dev/null >>/dev/null";
+         system( tDeleteCommand.c_str( ) );
+ 
+         downloadXMLFeeds( vectorStationSensorIndex[stationList].stationXMLUrl );
+      }
+
      if( tStationName.length() != 0 )
          readAndParsePerWeatherStationResponse( tStationName );
      else printDebugMessages( "Opps! Couldn't fetch station name from XMLURL!" );
