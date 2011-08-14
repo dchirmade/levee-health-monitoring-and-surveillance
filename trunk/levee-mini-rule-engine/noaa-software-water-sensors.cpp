@@ -229,7 +229,7 @@ void WaterSensors::readAndParsePerWaterStationResponse( string waterStationRssFe
   }
 
   // Allocate memory according to file length  
-  tStringBuffer = new char [ tRssTextLength ];
+  tStringBuffer = new char [ tRssTextLength + 8 ];
 
   if( tStringBuffer ){
     // Read data as a block:
@@ -240,8 +240,8 @@ void WaterSensors::readAndParsePerWaterStationResponse( string waterStationRssFe
     if( tRssTextLength )
         tStringBuffer[ tRssTextLength + 1 ] = '\0' ;
     printDebugMessages( tStringBuffer );
-
-    delete[] tStringBuffer;
+ 
+    delete [] tStringBuffer;
     fileHandle.close();
    }
    
