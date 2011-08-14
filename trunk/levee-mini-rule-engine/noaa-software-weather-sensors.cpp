@@ -574,7 +574,8 @@ bool WeatherSensors::readAndParseWeatherFeeds( string & tWeatherFeedsFile )
 #ifdef WEATHER_MAIN 
 int main( void ){
 
-  string weatherFeedsIndexFile = "./dump/MAIN.LIST"; // Fixme: Currently hardcoded 
+  // Fixed me: MAIN.LIST should be periodically updated from http://www.weather.gov/data/current_obs/index.xml
+  string weatherFeedsIndexFile = "./dump/MAIN.LIST"; 
     
   // Parse and build weather feeds base into vectors 
   WeatherSensors NOAAWeatherFeeds;

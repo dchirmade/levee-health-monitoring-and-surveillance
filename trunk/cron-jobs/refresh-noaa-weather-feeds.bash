@@ -1,4 +1,4 @@
-# /bin/bash
+#!/bin/bash
 
 # Levee Health Monitoring And Surveillance System (Real-time)
 # Copyright (C) 2011 Fibercorps (http://www.fibercorps.com) 
@@ -24,7 +24,7 @@
 #
 
 # Get the full path of current directory 
-fullDirectoryPath=$(dirname "$(readlink -f ${BASH_SOURCE[0]})")
+fullDirectoryPath="$(dirname "$(readlink -f ${BASH_SOURCE[0]})")"
 
 # Change the directory to mini-rule-engine 
 cd $fullDirectoryPath/../levee-mini-rule-engine
