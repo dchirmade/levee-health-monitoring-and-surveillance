@@ -1,4 +1,4 @@
-# /bin/bash
+#!/bin/bash
 
 # Levee Health Monitoring And Surveillance System (Real-time)
 # Copyright (C) 2011 Fibercorps (http://www.fibercorps.com) 
