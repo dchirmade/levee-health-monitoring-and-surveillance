@@ -190,10 +190,11 @@ string WeatherSensors::parseURLandPullOutStationName( string XMLUrl ){
 //
 // Desc: Crawl through all weather stations and download xml dump for each station  
 // Arguments: bool, Is there any need to update weather files? 
+//            string, station name of which only feeds need to be downloaded. 
 // Returns: bool, true if downloda for all stations is good
 //   
  
-bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded ){
+bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded, string stationLocation = "" ){
 
    bool tReturn = false; 
 
@@ -213,19 +214,22 @@ bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded ){
                            parseURLandPullOutStationName( 
                                                           vectorStationSensorIndex[stationList].stationXMLUrl
                                                         ); 
+     if( vectorStationSensorIndex[stationList].stationName.find( stationLocation ) != string::npos ){ 
 
      if( isUpdateNeeded == true ) {
   
          // Delete old feed at a time 
          string tDeleteCommand = "/bin/rm " + tStationName + " 2>>/dev/null >>/dev/null";
          system( tDeleteCommand.c_str( ) );
- 
+
          downloadXMLFeeds( vectorStationSensorIndex[stationList].stationXMLUrl );
       }
 
      if( tStationName.length() != 0 )
          readAndParsePerWeatherStationResponse( tStationName );
      else printDebugMessages( "Opps! Couldn't fetch station name from XMLURL!" );
+
+     }
    }
 
    // Just assume all is good! 
@@ -596,7 +600,7 @@ int main( void ){
 
    
     // Get per station data
-    if( NOAAWeatherFeeds.crawlThroughStationsData( true ) == true ){
+    if( NOAAWeatherFeeds.crawlThroughStationsData( true , "New Orleans" ) == true ){
        // WIP! Do some actions if needed
     }
 
