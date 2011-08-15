@@ -85,7 +85,14 @@ KnowledgeBase::KnowledgeBase( void ){
          knowledgeKeyValueIndex.key = "noaa-alerting-weather-location"; 
          knowledgeKeyValueIndex.value = configurationFile.getValueOfGivenKey( knowledgeKeyValueIndex.key ); 
          vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
-          
+         knowledgeKeyValueIndex.key = "notification-email-addresses"; 
+         knowledgeKeyValueIndex.value = configurationFile.getValueOfGivenKey( knowledgeKeyValueIndex.key ); 
+         vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
+ 
+         // Configurations flags needed by mini rule engine [ these are not taken from configuraton file ] 
+         knowledgeKeyValueIndex.key = "noaa-water-alert-email-sent"; 
+         knowledgeKeyValueIndex.value = "no"; 
+         vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
     }
 
 }
@@ -100,6 +107,26 @@ KnowledgeBase::~KnowledgeBase( void ){
 
 }
 
+//
+// Desc: Assigns new value of a given configuration key
+// Arguments: string, Key of which value need to be set
+//            string, New value that need to be assigned
+// Returns: void, Nothing 
+//
+   
+void KnowledgeBase::setValueOfaKey( string key, string newValue ){
+
+   
+     for( int keyList = 0 ; keyList < (int) vectorKnowledgeKeyValueIndex.size() ; keyList++ ){
+      
+      // For multiple entries of a same key, only last occurance of key will be considered. 
+      if( vectorKnowledgeKeyValueIndex[keyList].key.find( key ) != string::npos )
+          vectorKnowledgeKeyValueIndex[keyList].value = newValue;    
+      else continue;    
+      }
+
+     return;
+}
 
 //
 // Desc: Fetches value of a given  configuration key

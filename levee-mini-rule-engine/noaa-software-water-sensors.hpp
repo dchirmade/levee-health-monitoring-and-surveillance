@@ -32,6 +32,13 @@
 #include <stdexcept>
 #include <vector>
 
+// Currently only few stations nearby to New Orleans are considered for demo. At later stage all water rss feeds 
+// e.g. http://water.weather.gov/ahps2/rss/ will be considered.    
+
+#define __Lakefront "http://water.weather.gov/ahps2/rss/obs/nwcl1.rss"
+#define __LaBranche "http://water.weather.gov/ahps2/rss/obs/labl1.rss"
+#define __ShellBeach "http://water.weather.gov/ahps2/rss/obs/shbl1.rss"
+
 using namespace std;
 
 //
@@ -47,9 +54,9 @@ public:
       ~WaterSensors( void );                              // Memory de-allocation if any! 
       void printDebugMessages( string, bool);             // Prints debug messages  
       void downloadWaterRSSfeeds( string );               // Downloads rss feeds from Hydrologic station  
-      bool crawlThroughStationsData( bool );              // Does crawling on station's rss feeds   
+      string crawlThroughStationsData( bool, string );      // Does crawling on station's rss feeds   
       string parseURLandPullOutStationName( string );     // Extracts station name from RSS URL 
-      void readAndParsePerWaterStationResponse( string ); // Does parsing and params extraction  
+      string readAndParsePerWaterStationResponse( string ); // Does parsing and params extraction  
 private:
     
       // Is debugger enabled?  
