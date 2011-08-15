@@ -317,17 +317,13 @@ void LeveeMiniRuleEngine::hookupNOAAWeatherSensor( string tPayLoad ){
     WeatherSensors NOAAWeatherFeeds;
     if( NOAAWeatherFeeds.readAndParseWeatherFeeds( weatherFeedsIndexFile ) ){
 
-
      // Get per station data
-     if( NOAAWeatherFeeds.crawlThroughStationsData( false , "New Orleans" ) == true ){
+     if( NOAAWeatherFeeds.crawlThroughStationsData( false , knowledge->getValueOfaKey( "noaa-alerting-weather-location" ) ) == true ){
         // WIP! Do some actions if needed
      }
 
-     // Print all stations attributes. Just for testing!  
-     NOAAWeatherFeeds.printAllStationsData();
-
      // Print all stations located in New Orleans
-     NOAAWeatherFeeds.printAllStationsDataPerLocation("New Orleans");
+     NOAAWeatherFeeds.printAllStationsDataPerLocation( knowledge->getValueOfaKey( "noaa-alerting-weather-location" ) );
     }
     return;  
 } 

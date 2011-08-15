@@ -198,7 +198,9 @@ bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded, string stati
 
    bool tReturn = false; 
 
-    
+   if( stationLocation.find( " " ) == 0 )
+   stationLocation.replace( stationLocation.find( " " ), 1 ,"" ); // Replace spaces if any 
+
    // Delete all old xml dump files if update needed
    // Delayed download or slow download could leave system with no feeds if 
    // we delete them all! 
@@ -247,6 +249,9 @@ bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded, string stati
 void WeatherSensors::printAllStationsDataPerLocation( string tLocationName ){
  
    bool isStationFound = false; 
+   
+   if (tLocationName.find( " " ) == 0 ) 
+   tLocationName.replace( tLocationName.find( " " ), 1 ,"" ); // Replace spaces if any 
     
    // Pull out all stations data from vectors whoes location name matches with given location name 
    for( int stationList = 0 ; stationList < (int) vectorStationSensorIndex.size() ; stationList++ ){
@@ -600,7 +605,7 @@ int main( void ){
 
    
     // Get per station data
-    if( NOAAWeatherFeeds.crawlThroughStationsData( true , "New Orleans" ) == true ){
+    if( NOAAWeatherFeeds.crawlThroughStationsData( false , "New Orleans" ) == true ){
        // WIP! Do some actions if needed
     }
 
@@ -608,7 +613,7 @@ int main( void ){
     NOAAWeatherFeeds.printAllStationsData(); 
 
     // Print all stations located in New Orleans
-    NOAAWeatherFeeds.printAllStationsDataPerLocation("New Orleans"); 
+    NOAAWeatherFeeds.printAllStationsDataPerLocation( "New Orleans" ); 
   }
     
   return EXIT_SUCCESS; 
