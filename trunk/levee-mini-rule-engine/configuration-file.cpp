@@ -193,6 +193,11 @@ int main( void ){
                                                "Value for Key 'noaa-alerting-weather-location' is " + 
                                                configurationFile.getValueOfGivenKey( "noaa-alerting-weather-location" ) 
                                              );
+         configurationFile.printDebugMessages( 
+                                               "Value for Key 'notification-email-addresses' is " + 
+                                               configurationFile.getValueOfGivenKey( "notification-email-addresses" ) 
+                                             );
+        
     }
 
     return EXIT_SUCCESS; 

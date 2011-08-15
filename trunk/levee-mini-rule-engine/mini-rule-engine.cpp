@@ -41,6 +41,7 @@
 #include "noaa-software-water-sensors.hpp"
 #include "serial-reader.hpp"
 #include "configuration-file.hpp"
+#include "alerts-delivery-system.hpp"
 
 // Define rule actions 
 #define __nothing 		            0 
@@ -343,8 +344,56 @@ void LeveeMiniRuleEngine::hookupNOAAWaterSensor( string tPayLoad ){
  
     // Create water sensor's instance and see if it is fetching the reading or not... 
     WaterSensors waterSensor;
-    waterSensor.crawlThroughStationsData( false );
 
+    // Take an appropriate actions if water level is too high than recommended 
+    string tWaterLevelAtLakeFront  = waterSensor.crawlThroughStationsData( false, __Lakefront );
+    string tWaterLevelAtLaBranche  = waterSensor.crawlThroughStationsData( false, __LaBranche );
+    string tWaterLevelAtShellBeach = waterSensor.crawlThroughStationsData( false, __ShellBeach );
+     
+    string tAlertEmailToAddress = knowledge->getValueOfaKey( "notification-email-addresses" ); 
+    string tAlertEmailSubject = "Water level alert!!!";
+    string tAlertEmailBody = "\n";
+    tAlertEmailBody += "Water level at LakeFront (ft)  :" + tWaterLevelAtLakeFront;
+    tAlertEmailBody += "Water level at LaBranche (ft)  :" + tWaterLevelAtLaBranche;
+    tAlertEmailBody += "Water level at ShellBreach (ft):" + tWaterLevelAtShellBeach;
+    tAlertEmailBody += "Alerting Water level (ft)    :" + knowledge->getValueOfaKey( "noaa-alerting-water-level" );
+   
+    // Check the water level at all stations and notify the email if there is any alert! 
+    if( 
+        ( ::strtod( tWaterLevelAtLakeFront.c_str(), 0 ) > 
+        ::strtod( knowledge->getValueOfaKey( "noaa-alerting-water-level" ).c_str(), 0 ) ) || 
+        ( ::strtod( tWaterLevelAtLaBranche.c_str(), 0 ) > 
+        ::strtod( knowledge->getValueOfaKey( "noaa-alerting-water-level" ).c_str(), 0 ) ) || 
+        ( ::strtod( tWaterLevelAtShellBeach.c_str(), 0 ) > 
+        ::strtod( knowledge->getValueOfaKey( "noaa-alerting-water-level" ).c_str(), 0 ) )  
+      ){
+
+      printDebugMessages("Alert!!! Water levels are above alerting level! ");  
+      printDebugMessages( tAlertEmailBody );
+ 
+      // Send an email alert only. Do not send if it is already sent!
+     if( knowledge->getValueOfaKey( "noaa-water-alert-email-sent" ).compare( "no" ) == 0 ){
+
+         printDebugMessages( "Sending an alert to email address: " + tAlertEmailToAddress);
+         sendEmailNotification(
+                               tAlertEmailSubject,
+                               tAlertEmailToAddress,
+                               tAlertEmailBody
+                              );
+      }else
+        printDebugMessages( "An email alert is already sent at: " + tAlertEmailToAddress );
+
+      // Set the sent email flag  
+      knowledge->setValueOfaKey( "noaa-water-alert-email-sent", "yes" );
+    }else{
+ 
+      // Water levels are now came back in control. Reset the flag
+      if( knowledge->getValueOfaKey( "noaa-water-alert-email-sent" ).compare( "yes" ) == 0 )
+          knowledge->setValueOfaKey( "noaa-water-alert-email-sent", "no" );
+
+      printDebugMessages("Waler levels are in control. No need to send any alerts!");
+    }  
+ 
     return;  
 } 
 

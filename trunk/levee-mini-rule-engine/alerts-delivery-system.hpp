@@ -21,7 +21,7 @@
 // GSoC11 Mentor   : Dr.Raju Gottumukkala and Crawford Comeaux
 // 
 // This will parse the xml events fetched from D.A. hardware or software sensor(s) and will take actions
-// 
+// or will send an alert mail if any 
 
 #include <iostream>
 #include <cstdlib>
@@ -43,7 +43,7 @@ void sendEmailNotification(
                           ){
 
    // Build body part!  
-   string tExecCommand = "/bin/echo \"" + tBodyText +  "\" > /tmp/notification.txt >>/dev/null 2>>/dev/null";
+   string tExecCommand = "/bin/echo \'" + tBodyText +  "\' >/tmp/notification.txt";
    system( tExecCommand.c_str() );
 
    // Form a command to send a notification alert

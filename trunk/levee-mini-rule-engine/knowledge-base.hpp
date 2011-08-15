@@ -49,6 +49,7 @@ public:
        void printDebugMessages( string );      // Prints debug messages 
        void printAllKeyValuePair( void );      // Prints all configuration key values 
        string getValueOfaKey( string );        // Get a value of a configuration key
+       void setValueOfaKey( string , string ); // Assigns new value to given configuration key
 
 private:
 
