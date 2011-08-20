@@ -312,6 +312,7 @@ void LeveeMiniRuleEngine::hookupNOAAWeatherSensor( string tPayLoad ){
     printDebugMessages( "Executing 'NOAA Weather sensor' action with payload: " + tPayLoad );
 
     string weatherFeedsIndexFile = "./dump/MAIN.LIST"; // Fixme: Currently hardcoded 
+    string tAlertingWeatherStations = ""; 
 
     // Parse and build weather feeds base into vectors 
     WeatherSensors NOAAWeatherFeeds;
@@ -319,10 +320,45 @@ void LeveeMiniRuleEngine::hookupNOAAWeatherSensor( string tPayLoad ){
 
      // Get per station data
      if( NOAAWeatherFeeds.crawlThroughStationsData( false , knowledge->getValueOfaKey( "noaa-alerting-weather-location" ) ) == true ){
-        // WIP! Do some actions if needed
+          
+         tAlertingWeatherStations = NOAAWeatherFeeds.checkMatchingWeatherConditionPerLocation( 
+                                                                    knowledge->getValueOfaKey( "noaa-alerting-weather-location" ), 
+                                                                    knowledge->getValueOfaKey( "noaa-alerting-weather-type" ) 
+                                                                  );  
+         if( tAlertingWeatherStations.length() > 10 ){
+           
+         // Send an alerts
+         string tAlertEmailToAddress = knowledge->getValueOfaKey( "notification-email-addresses" ); 
+         string tAlertEmailSubject = "Weather condition alert!!!";
+         string tAlertEmailBody = "\n Following stations near " +  knowledge->getValueOfaKey( "noaa-alerting-weather-location" ) + 
+                                  " has matching alerting condition: \n" + tAlertingWeatherStations;
+            
+          printDebugMessages("Alert!!! Weather conditions are not good!");  
+ 
+          // Send an email alert only. Do not send if it is already sent!
+          if( knowledge->getValueOfaKey( "noaa-weather-alert-email-sent" ).compare( "no" ) == 0 ){
+
+              printDebugMessages( "Sending an alert to email address: " + tAlertEmailToAddress);
+              sendEmailNotification(
+                                    tAlertEmailSubject,
+                                    tAlertEmailToAddress,
+                                    tAlertEmailBody
+                                   );
+          }else
+              printDebugMessages( "An email alert is already sent at: " + tAlertEmailToAddress );
+
+         // Set the sent email flag  
+         knowledge->setValueOfaKey( "noaa-weather-alert-email-sent", "yes" );
+           
+         }else{
+               printDebugMessages( "All weather stations shows normal weather conditions. No need to send an alerts!" );
+               // Weather conditions are good now. Reset the flag
+               if( knowledge->getValueOfaKey( "noaa-weather-alert-email-sent" ).compare( "yes" ) == 0 )
+               knowledge->setValueOfaKey( "noaa-weather-alert-email-sent", "no" );
+         }
      }
 
-     // Print all stations located in New Orleans
+     // Print all stations located in New Orleans 
      NOAAWeatherFeeds.printAllStationsDataPerLocation( knowledge->getValueOfaKey( "noaa-alerting-weather-location" ) );
     }
     return;  

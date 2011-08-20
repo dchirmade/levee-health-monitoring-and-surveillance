@@ -67,10 +67,11 @@ public:
       bool readAndParseWeatherFeeds ( string & ) throw( std::runtime_error );             // Read and parse feeds per desire needs        
       bool readAndParsePerWeatherStationResponse( string & ) throw( std::runtime_error ); // Read and parse xml response obtained from station
       void printAllStationsData( void );              // Prints all fetched stations and substation data 
-      void printAllStationsDataPerLocation( string ); // Prints all fetched stations and substation per givin location
+      void printAllStationsDataPerLocation( string ); // Prints all fetched stations and substation per given location
       void downloadXMLFeeds( string );                // Download XML feeds and store them for parsing  
       bool crawlThroughStationsData( bool, string );  // Crawl through all stations and lookout for all stations   
       string parseURLandPullOutStationName( string ); // Extracts station name from URL 
+      string checkMatchingWeatherConditionPerLocation( string, string ); // Checks station's weather data to for matching condition in question   
 
 private:
 
