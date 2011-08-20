@@ -605,7 +605,7 @@ int main( void ){
 
    
     // Get per station data
-    if( NOAAWeatherFeeds.crawlThroughStationsData( false , "New Orleans" ) == true ){
+    if( NOAAWeatherFeeds.crawlThroughStationsData( true , "New Orleans" ) == true ){
        // WIP! Do some actions if needed
     }
 
