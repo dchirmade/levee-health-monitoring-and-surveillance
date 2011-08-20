@@ -93,6 +93,9 @@ KnowledgeBase::KnowledgeBase( void ){
          knowledgeKeyValueIndex.key = "noaa-water-alert-email-sent"; 
          knowledgeKeyValueIndex.value = "no"; 
          vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
+         knowledgeKeyValueIndex.key = "noaa-weather-alert-email-sent"; 
+         knowledgeKeyValueIndex.value = "no"; 
+         vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
     }
 
 

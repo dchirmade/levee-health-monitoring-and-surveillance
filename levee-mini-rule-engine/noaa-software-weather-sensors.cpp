@@ -235,11 +235,51 @@ bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded, string stati
    }
 
    // Just assume all is good! 
+   tReturn = true; 
    return tReturn; 
 }
 
 //
-// This method is implemented for testing! This should go away soon once vector will sorted out... 
+// Desc: This will check the type of weather condition and respond the stations matching to the same.  
+// Arguments: String, String , Area name, Weather condition type  
+// Returns: String, Weather station matching the area 
+//   
+ 
+string WeatherSensors::checkMatchingWeatherConditionPerLocation( string tLocationName, string tWeatherConditionToMatch ){
+ 
+   string tMatchingStations = ""; 
+   
+   if (tLocationName.find( " " ) == 0 ) 
+   tLocationName.replace( tLocationName.find( " " ), 1 ,"" ); // Replace spaces if any 
+
+   if (tWeatherConditionToMatch.find( " " ) == 0 ) 
+   tWeatherConditionToMatch.replace( tWeatherConditionToMatch.find( " " ), 1 ,"" ); // Replace spaces if any 
+   
+   // Pull out all stations data from vectors whoes location name matches with given location name 
+   for( int stationList = 0 ; stationList < (int) vectorStationSensorIndex.size() ; stationList++ ){
+  
+     if( 
+          vectorStationSensorIndex[stationList].stationName.find( tLocationName ) != string::npos &&
+          vectorStationSensorIndex[stationList].drilledDownParameters.weather.find( tWeatherConditionToMatch ) != string::npos 
+       ){ 
+
+      tMatchingStations += "\nStation ID        : " + vectorStationSensorIndex[stationList].stationId;
+      tMatchingStations += "\nStation State     : " + vectorStationSensorIndex[stationList].stationState;
+      tMatchingStations += "\nStation Name      : " + vectorStationSensorIndex[stationList].stationName;
+      tMatchingStations += "\nStation Latitude  : " + vectorStationSensorIndex[stationList].stationLatitude;
+      tMatchingStations += "\nStation Longitude : " + vectorStationSensorIndex[stationList].stationLongitude;
+      tMatchingStations += "\nStation HTML URL  : " + vectorStationSensorIndex[stationList].stationHTMLUrl;
+      tMatchingStations += "\nStation RSS URL   : " + vectorStationSensorIndex[stationList].stationRSSUrl;
+      tMatchingStations += "\nStation XML URL   : " + vectorStationSensorIndex[stationList].stationXMLUrl;
+      tMatchingStations += "\nStation RFC time  : " + vectorStationSensorIndex[stationList].drilledDownParameters.observationTimeRfc822; 
+      tMatchingStations += "\nStation Weather   : " + vectorStationSensorIndex[stationList].drilledDownParameters.weather;                
+      tMatchingStations += "\n-------------------------------------------------------------------------";
+     }
+   }
+
+   return tMatchingStations; 
+}
+
 //
 // Desc: This should print all weather station data per perticular location.   
 // Arguments: String, Location name in which levee is built
@@ -406,6 +446,8 @@ bool WeatherSensors::readAndParsePerWeatherStationResponse( string & tWeatherFee
                break;
           }else continue;  
      }
+     
+       tReturn = true;  
    }
    catch( xercesc::XMLException& error ) {
   
@@ -515,7 +557,7 @@ bool WeatherSensors::readAndParseWeatherFeeds( string & tWeatherFeedsFile )
                         = dynamic_cast< xercesc::DOMElement* >( tCurrentNode );
            
             // Get into all station node  
-            XMLCh* TAG_STATION = XMLString::transcode("station");
+            XMLCh* TAG_STATION = XMLString::transcode( "station" );
             if( XMLString::equals( tCurrentElement->getTagName(), TAG_STATION ) )
             {
                
