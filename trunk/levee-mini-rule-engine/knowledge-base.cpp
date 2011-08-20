@@ -95,6 +95,15 @@ KnowledgeBase::KnowledgeBase( void ){
          vectorKnowledgeKeyValueIndex.push_back( knowledgeKeyValueIndex );
     }
 
+
+         // Validate call! 
+         if( validateAllKeyValuePair() == false ){
+ 
+            // Do not use printDebugMessages over here
+            cout << endl << "Validation error! Please check the configuration file. An empty fields/values are not allowed." << endl; 
+           
+            exit( 1 );
+         }
 }
 
 //
@@ -149,11 +158,37 @@ string KnowledgeBase::getValueOfaKey( string key ){
      return tValue;
 }
 
-void KnowledgeBase::printAllKeyValuePair( void ){
+
+//
+// Desc: This will do a quick validation if any field remains void in configuration pairs  
+// Arguments: Nothing, void 
+// Returns: Bool, true if all is well other false
+//
+
+bool KnowledgeBase::validateAllKeyValuePair( void ){
+
+   bool tReturn = true; 
 
    for( int keyList = 0 ; keyList < (int) vectorKnowledgeKeyValueIndex.size() ; keyList++ ){
 
-     // if( vectorStationSensorIndex[stationList].stationName.find( tLocationName ) != string::npos ){
+      string tValue = vectorKnowledgeKeyValueIndex[keyList].value;
+
+      if( tValue.empty() )
+          tReturn = false;
+   }
+
+   return tReturn; 
+}
+
+//
+// Desc: This should print all key value pair to console
+// Arguments: Nothing, void 
+// Returns: Nothing, void
+//
+
+void KnowledgeBase::printAllKeyValuePair( void ){
+
+   for( int keyList = 0 ; keyList < (int) vectorKnowledgeKeyValueIndex.size() ; keyList++ ){
 
       printDebugMessages( 
                          "Configuration Key \"" + vectorKnowledgeKeyValueIndex[keyList].key + "\" = " +
