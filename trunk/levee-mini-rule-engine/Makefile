@@ -27,7 +27,7 @@ all:
 	g++ -g -Wall -DMINI_RULE_ENGINE_MAIN noaa-software-weather-sensors.cpp noaa-software-water-sensors.cpp \
 		      mini-rule-engine.cpp serial-reader.cpp knowledge-base.cpp configuration-file.cpp \
 		      -pedantic -lxerces-c -lserial -o mini-rule-engine
-	g++ -g -Wall -DSERIAL_MAIN -lserial serial-reader.cpp -o serial-reader
+	g++ -g -Wall -DSERIAL_MAIN -lserial -pedantic -lxerces-c serial-reader.cpp -o serial-reader
 	g++ -g -Wall -DKNOWLEDGE_BASE_MAIN configuration-file.cpp knowledge-base.cpp -o knowledge-base
 	g++ -g -Wall -DCONFIGURATION_FILE_MAIN configuration-file.cpp -o configuration-file
 	g++ -g -Wall -pedantic -lxerces-c -DWEATHER_MAIN noaa-software-weather-sensors.cpp -o noaa-weather-sensor

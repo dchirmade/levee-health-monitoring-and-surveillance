@@ -222,13 +222,13 @@ String tSensorMountPorts /* Port numbers where the sensor is mounted */
   Serial.print(XMLResponseToDA);
   XMLResponseToDA = String( "<sensorevent>" ) + tSensorEvent + String("</sensorevent>\n" );
   Serial.print(XMLResponseToDA);
-  XMLResponseToDA = String( "<sensoreventyype>" ) + tSensorEventType + String("</sensoreventtype>\n" );
+  XMLResponseToDA = String( "<sensoreventtype>" ) + tSensorEventType + String("</sensoreventtype>\n" );
   Serial.print(XMLResponseToDA);
-  XMLResponseToDA = String( "<sensorreadinga>" ) + String( tSensorReadingA ) + String("</sensorreadinga>\n" );
+  XMLResponseToDA = String( "<sensorreadingx>" ) + String( tSensorReadingA ) + String("</sensorreadingx>\n" );
   Serial.print(XMLResponseToDA);
-  XMLResponseToDA = String( "<sensorreadingb>" ) + String( tSensorReadingB ) + String("</sensorreadingb>\n" );
+  XMLResponseToDA = String( "<sensorreadingy>" ) + String( tSensorReadingB ) + String("</sensorreadingy>\n" );
   Serial.print(XMLResponseToDA);
-  XMLResponseToDA = String( "<sensorreadingc>" ) + String( tSensorReadingC ) + String("</sensorreadingc>\n" );
+  XMLResponseToDA = String( "<sensorreadingz>" ) + String( tSensorReadingC ) + String("</sensorreadingz>\n" );
   Serial.print(XMLResponseToDA);
   XMLResponseToDA = String( "<sensortimestamp>" ) + String( second ) + String( ":" ) + String( minute ) + String( ":" ) + String( hours ) + String("</sensortimestamp>\n" );
   Serial.print(XMLResponseToDA);

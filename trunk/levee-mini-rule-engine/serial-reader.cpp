@@ -34,10 +34,11 @@
 #include <string>
 #include <new>
 
+#include "serial-reader.hpp"
+
 using namespace LibSerial;
 using namespace std;
-
-#include "serial-reader.hpp"
+using namespace xercesc;
 
 //
 // Desc: This should initialize serial communicator and few parameters   
@@ -52,6 +53,21 @@ SerialCommunicator::SerialCommunicator( void ){
 
    // Set read/write buffer size to 256  
    charBlockOfDataSize = 256; 
+
+   // Initialize Xerces libraries  
+   try{
+    
+       XMLPlatformUtils::Initialize();
+   } 
+   catch( XMLException & error ){ // Throw and exception if any 
+       
+       char * errorMessage = XMLString::transcode( error.getMessage() ); // Get an error message  
+       printDebugMessages( errorMessage );  
+       XMLString::release( &errorMessage ); 
+   }
+
+   // Assign new instance of DOM parser 
+   daResponseIndexParser = new XercesDOMParser; 
    
 }
 
@@ -65,6 +81,21 @@ SerialCommunicator::~SerialCommunicator( void ){
 
    // Close serial handle if any! 
    serialHandle.Close(  );
+
+   // Free the XML DOM instance before terminating XMLPlatformUtils 
+   if( daResponseIndexParser ) 
+     delete daResponseIndexParser;
+
+   // Terminate and release any allocated memories and libraries 
+   try{
+
+       XMLPlatformUtils::Terminate(); 
+   }
+   catch( xercesc::XMLException & error ){
+       char * errorMessage = XMLString::transcode( error.getMessage() ); // Get an error message  
+       printDebugMessages( errorMessage );  
+       XMLString::release( &errorMessage );
+   } 
 }
 
 //
@@ -204,6 +235,175 @@ void SerialCommunicator::writeToSerialOverUSB( string tWriteDataBuffer ){
    serialHandle << tWriteDataBuffer.c_str();
 } 
 
+//
+// Desc: This should extract the text content of DOM element.   
+// Arguments: DOMElement, DOM element of an XML tree to which text content to be fetched. 
+//            String, Name of a tag in XML tree
+// Returns: String, Returns extracted text content of a desire DOM element
+//   
+ 
+string SerialCommunicator::GetTextContentOfAnElement ( 
+                       DOMElement* tCurrentElementLevel2,
+                       string tagName 
+                       ){
+
+    string tStringAttribute = ""; 
+    try{
+ 
+    // Find text content of a given tag 
+    XMLCh* tTAG = XMLString::transcode( tagName.c_str() );
+    if( XMLString::equals( tCurrentElementLevel2->getTagName(), tTAG) )
+    {
+     
+      // Fetch the parameters at Level 2 children than parents  
+      char *tCharAttribute = NULL;
+      const XMLCh* tCTAG = NULL;
+      tCTAG = tCurrentElementLevel2->getTextContent(); 
+      tCharAttribute = XMLString::transcode(tCTAG);
+                       
+      if( tCharAttribute != NULL )
+          tStringAttribute.assign( tCharAttribute );
+      if( tCharAttribute ) XMLString::release( &tCharAttribute );
+     
+     }
+     else tStringAttribute.assign( "_NO_TAG_FOUND_" );
+     
+     XMLString::release( &tTAG );
+     }
+     catch( ... )
+     {
+       printDebugMessages( "Exception encountered in getting text content." ); 
+     }
+
+     return tStringAttribute;  
+}
+
+//
+// Desc: This will print all parameters from DA response    
+// Arguments: void, nothing  
+// Returns: void, nothing 
+//   
+
+void SerialCommunicator::printParsedDAResponse( void ){
+
+    printDebugMessages( "Sensor Type        : " + daEventResponseIndex.sensorType ); 
+    printDebugMessages( "Sensor Description : " + daEventResponseIndex.sensorDescription ); 
+    printDebugMessages( "Sensor Function    : " + daEventResponseIndex.sensorFunction ); 
+    printDebugMessages( "Sensor Status      : " + daEventResponseIndex.sensorStatus ); 
+    printDebugMessages( "Sensor Event       : " + daEventResponseIndex.sensorEvent ); 
+    printDebugMessages( "Sensor Event Type  : " + daEventResponseIndex.sensorEventType ); 
+    printDebugMessages( "Sensor Reading X   : " + daEventResponseIndex.sensorReadingX ); 
+    printDebugMessages( "Sensor Reading Y   : " + daEventResponseIndex.sensorReadingY ); 
+    printDebugMessages( "Sensor Reading Z   : " + daEventResponseIndex.sensorReadingZ ); 
+    printDebugMessages( "Sensor Time Stamp  : " + daEventResponseIndex.sensorTimeStamp ); 
+    printDebugMessages( "Sensor Mount Ports : " + daEventResponseIndex.sensorMountPorts ); 
+    return;
+}
+
+//
+// Desc: This should read and parse DA response.    
+// Arguments: String, DA response 
+// Returns: Bool, true if all is good otherwise false
+//   
+ 
+bool SerialCommunicator::readAndParseDAFeeds( string tDAFeeds ){
+ 
+   bool tReturn = false;
+   string daXmlFile = "/tmp/daXmlFile.xml";
+   
+   if( tDAFeeds.empty() ) 
+       return tReturn; 
+
+   // Redirect the response to file
+   string tRedirectDAString = "echo '" + tDAFeeds + "' >" + daXmlFile;
+   system( tRedirectDAString.c_str() );
+
+   // Configure the DOM parser 
+
+   daResponseIndexParser->setValidationScheme( XercesDOMParser::Val_Never );
+   daResponseIndexParser->setDoNamespaces( false );
+   daResponseIndexParser->setDoSchema( false );
+   daResponseIndexParser->setLoadExternalDTD( false );
+
+   try
+   {
+      // Parse it from memory rather than file  
+      daResponseIndexParser->parse( daXmlFile.c_str() );
+
+      // No need to free this pointer - owned by the parent parser object 
+      DOMDocument* tXMLDocument = daResponseIndexParser->getDocument();
+
+      // Get the top-level element. 
+      DOMElement* tElementRoot = tXMLDocument->getDocumentElement();
+      if( !tElementRoot ){
+  
+          printDebugMessages( "Well, Looks like DA response is not good!" );         
+          return tReturn;  
+      }
+
+      DOMNodeList* tChildren = tElementRoot->getChildNodes();
+      const  XMLSize_t tNodeCount = tChildren->getLength();
+
+      // For all nodes, children of "hardwaresensor" in the XML tree.  
+      for( XMLSize_t xx = 0; xx < tNodeCount; ++xx ){
+           DOMNode* tCurrentNode = tChildren->item( xx );
+
+         if( tCurrentNode->getNodeType() &&  // True is not NULL 
+             tCurrentNode->getNodeType() == DOMNode::ELEMENT_NODE ) // is element   
+         {
+            // Found node is an Element. Re-cast node as element  
+             DOMElement* tCurrentElement
+                        = dynamic_cast< xercesc::DOMElement* >( tCurrentNode );
+                     
+             string tStringBuffer = "";
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "sensortype" ) ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 daEventResponseIndex.sensorType = tStringBuffer;  
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "sensordescription" ) ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 daEventResponseIndex.sensorDescription = tStringBuffer;  
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "sensorfunction" ) ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 daEventResponseIndex.sensorFunction = tStringBuffer;  
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "sensorstatus" ) ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 daEventResponseIndex.sensorStatus = tStringBuffer;  
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "sensorevent" ) ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 daEventResponseIndex.sensorEvent = tStringBuffer;  
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "sensoreventtype" ) ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 daEventResponseIndex.sensorEventType = tStringBuffer;  
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "sensorreadingx" ) ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 daEventResponseIndex.sensorReadingX = tStringBuffer;  
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "sensorreadingy" ) ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 daEventResponseIndex.sensorReadingY = tStringBuffer;  
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "sensorreadingz" ) ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 daEventResponseIndex.sensorReadingZ = tStringBuffer;  
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "sensortimestamp" ) ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 daEventResponseIndex.sensorTimeStamp = tStringBuffer;  
+             tStringBuffer =  GetTextContentOfAnElement( tCurrentElement, string( "sensormountports" ) ); 
+             if( tStringBuffer.compare( "_NO_TAG_FOUND_" ) != 0 )
+                 daEventResponseIndex.sensorMountPorts = tStringBuffer;  
+        }
+      }
+   }
+   catch( xercesc::XMLException& error ) {
+  
+      char* errorMessage = xercesc::XMLString::transcode( error.getMessage() );
+      string debugLineString = "Error while parsing the XML:";
+      debugLineString.append ( errorMessage );         
+      printDebugMessages( debugLineString ); 
+      XMLString::release( &errorMessage );
+   } 
+
+   return tReturn; 
+}
+
 #endif
 
 //
@@ -221,12 +421,21 @@ int main( void ){
    // Fixme: Remove hardcoded terminal path
    if( serialChatTerminal.openSerialTerminal( "/dev/ttyUSB0" ) ){
     
-    if( serialChatTerminal.initializeSerialTerminal( ) ) // Start reading some data over serial 
-         serialChatTerminal.printDebugMessages( serialChatTerminal.readFromSerialOverUSB( ));
+    if( serialChatTerminal.initializeSerialTerminal( ) ){ // Start reading some data over serial 
+
+         serialChatTerminal.writeToSerialOverUSB( "1" );
+         string tDAResponse = serialChatTerminal.readFromSerialOverUSB();
+         serialChatTerminal.printDebugMessages( tDAResponse );
+
+         // Parse DA response 
+         serialChatTerminal.readAndParseDAFeeds( tDAResponse );
+         serialChatTerminal.printParsedDAResponse();
+    }
     else serialChatTerminal.printDebugMessages( "Some is wrong with serial port settings!" );
    } 
    else serialChatTerminal.printDebugMessages( "Well. It looks like something is wrong with serial port!" ); 
 
    return EXIT_SUCCESS; 
 }
+
 #endif 
