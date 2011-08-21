@@ -1,0 +1,1417 @@
+<br>Sun Aug 21 23:04:14 2011 : Appended new rule: Start Point!
+<br>Sun Aug 21 23:04:14 2011 : Appended new rule: ADXL335
+<br>Sun Aug 21 23:04:14 2011 : Appended new rule: NOAA Weather feeds
+<br>Sun Aug 21 23:04:14 2011 : Appended new rule: NOAA Water feeds
+<br>Sun Aug 21 23:04:14 2011 : Appended new rule: End Point!
+<br>Sun Aug 21 23:04:14 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:04:14 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:04:14 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:04:15 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:04:15 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:04:15 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:04:16 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 353
+Sensor Reading Y   : 404
+Sensor Reading Z   : 429
+Sensor Time Stamp  : 55:34:1
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:04:16 2011 : Sending an alert to email address:  fakeemail@fake.com
+<br>Sun Aug 21 23:04:19 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:04:19 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:04:19 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:04:19 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:04:19 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:04:19 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:19 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:04:19 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:04:19 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:04:19 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:04:19 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:04:19 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:04:19 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:04:19 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:04:19 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:19 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:04:19 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:19 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:04:19 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:04:19 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:04:19 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:04:19 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:04:19 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:04:19 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:04:19 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:04:19 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:19 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:04:19 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:19 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:04:19 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:04:19 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:04:19 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:04:19 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:04:19 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:04:19 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:04:19 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:04:19 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:19 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:04:19 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:19 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:04:19 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:04:19 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:04:19 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:04:19 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:04:19 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:04:19 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:04:19 2011 :Station Weather   : 
+<br>Sun Aug 21 23:04:19 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:22 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:04:22 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:04:22 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:04:22 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:04:22 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:04:22 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:04:22 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:04:23 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:04:23 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:04:23 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:04:24 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:04:24 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:04:24 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:04:25 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:04:25 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:04:25 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:04:26 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 416
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 27:23:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:04:26 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:04:29 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:04:29 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:04:29 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:04:30 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:04:30 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:04:30 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:30 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:04:30 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:04:30 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:04:30 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:04:30 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:04:30 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:04:30 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:04:30 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:04:30 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:30 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:04:30 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:30 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:04:30 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:04:30 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:04:30 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:04:30 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:04:30 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:04:30 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:04:30 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:04:30 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:30 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:04:30 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:30 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:04:30 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:04:30 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:04:30 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:04:30 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:04:30 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:04:30 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:04:30 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:04:30 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:30 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:04:30 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:30 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:04:30 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:04:30 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:04:30 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:04:30 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:04:30 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:04:30 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:04:30 2011 :Station Weather   : 
+<br>Sun Aug 21 23:04:30 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:33 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:04:33 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:04:33 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:04:33 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:04:33 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:04:33 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:04:33 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:04:34 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:04:34 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:04:34 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:04:35 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:04:35 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:04:35 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:04:36 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:04:36 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:04:36 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:04:36 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 416
+Sensor Reading Z   : 445
+Sensor Time Stamp  : 37:23:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:04:36 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:04:39 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:04:39 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:04:39 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:04:40 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:04:40 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:04:40 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:40 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:04:40 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:04:40 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:04:40 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:04:40 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:04:40 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:04:40 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:04:40 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:04:40 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:40 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:04:40 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:40 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:04:40 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:04:40 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:04:40 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:04:40 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:04:40 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:04:40 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:04:40 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:04:40 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:40 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:04:40 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:40 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:04:40 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:04:40 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:04:40 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:04:40 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:04:40 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:04:40 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:04:40 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:04:40 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:40 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:04:40 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:40 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:04:40 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:04:40 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:04:40 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:04:40 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:04:40 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:04:40 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:04:40 2011 :Station Weather   : 
+<br>Sun Aug 21 23:04:40 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:43 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:04:43 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:04:43 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:04:43 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:04:43 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:04:43 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:04:43 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:04:44 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:04:44 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:04:44 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:04:45 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:04:45 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:04:45 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:04:46 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:04:46 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:04:46 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:04:46 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 416
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 47:23:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:04:46 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:04:49 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:04:49 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:04:49 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:04:50 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:04:50 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:04:50 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:50 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:04:50 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:04:50 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:04:50 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:04:50 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:04:50 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:04:50 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:04:50 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:04:50 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:50 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:04:50 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:50 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:04:50 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:04:50 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:04:50 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:04:50 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:04:50 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:04:50 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:04:50 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:04:50 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:50 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:04:50 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:50 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:04:50 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:04:50 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:04:50 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:04:50 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:04:50 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:04:50 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:04:50 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:04:50 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:50 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:04:50 2011 :Station State     : LA
+<br>Sun Aug 21 23:04:50 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:04:50 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:04:50 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:04:50 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:04:50 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:04:50 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:04:50 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:04:50 2011 :Station Weather   : 
+<br>Sun Aug 21 23:04:50 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:04:53 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:04:53 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:04:53 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:04:53 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:04:53 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:04:53 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:04:53 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:04:54 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:04:54 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:04:54 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:04:55 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:04:55 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:04:55 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:04:56 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:04:56 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:04:56 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:04:57 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 374
+Sensor Reading Y   : 417
+Sensor Reading Z   : 445
+Sensor Time Stamp  : 58:23:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:04:57 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:05:00 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:05:00 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:05:00 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:05:00 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:05:00 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:05:00 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:00 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:05:00 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:05:00 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:05:00 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:05:00 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:05:00 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:05:00 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:05:00 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:05:00 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:00 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:05:00 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:00 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:05:00 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:05:00 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:05:00 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:05:00 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:05:00 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:05:00 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:05:00 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:05:00 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:00 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:05:00 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:00 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:05:00 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:05:00 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:05:00 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:05:00 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:05:00 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:05:00 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:05:00 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:05:00 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:00 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:05:00 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:00 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:05:00 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:05:00 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:05:00 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:05:00 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:05:00 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:05:00 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:05:00 2011 :Station Weather   : 
+<br>Sun Aug 21 23:05:00 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:03 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:05:03 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:05:03 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:05:03 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:05:03 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:05:03 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:05:03 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:05:04 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:05:04 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:05:04 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:05:05 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:05:05 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:05:05 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:05:06 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:05:06 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:05:06 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:05:07 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 416
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 8:24:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:05:07 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:05:10 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:05:10 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:05:10 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:05:10 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:05:10 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:05:10 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:10 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:05:10 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:05:10 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:05:10 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:05:10 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:05:10 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:05:10 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:05:10 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:05:10 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:10 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:05:10 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:10 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:05:10 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:05:10 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:05:10 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:05:10 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:05:10 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:05:10 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:05:10 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:05:10 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:10 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:05:10 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:10 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:05:10 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:05:10 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:05:10 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:05:10 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:05:10 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:05:10 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:05:10 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:05:10 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:10 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:05:10 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:10 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:05:10 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:05:10 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:05:10 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:05:10 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:05:10 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:05:10 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:05:10 2011 :Station Weather   : 
+<br>Sun Aug 21 23:05:10 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:13 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:05:13 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:05:13 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:05:13 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:05:13 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:05:13 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:05:13 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:05:14 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:05:14 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:05:14 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:05:15 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:05:15 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:05:15 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:05:16 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:05:16 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:05:16 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:05:17 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 415
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 18:24:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:05:17 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:05:20 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:05:20 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:05:20 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:05:21 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:05:21 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:05:21 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:21 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:05:21 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:05:21 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:05:21 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:05:21 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:05:21 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:05:21 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:05:21 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:05:21 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:21 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:05:21 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:21 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:05:21 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:05:21 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:05:21 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:05:21 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:05:21 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:05:21 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:05:21 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:05:21 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:21 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:05:21 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:21 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:05:21 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:05:21 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:05:21 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:05:21 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:05:21 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:05:21 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:05:21 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:05:21 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:21 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:05:21 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:21 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:05:21 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:05:21 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:05:21 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:05:21 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:05:21 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:05:21 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:05:21 2011 :Station Weather   : 
+<br>Sun Aug 21 23:05:21 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:24 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:05:24 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:05:24 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:05:24 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:05:24 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:05:24 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:05:24 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:05:25 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:05:25 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:05:25 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:05:26 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:05:26 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:05:26 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:05:27 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:05:27 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:05:27 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:05:27 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 415
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 28:24:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:05:27 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:05:30 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:05:30 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:05:30 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:05:31 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:05:31 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:05:31 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:31 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:05:31 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:05:31 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:05:31 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:05:31 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:05:31 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:05:31 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:05:31 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:05:31 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:31 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:05:31 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:31 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:05:31 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:05:31 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:05:31 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:05:31 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:05:31 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:05:31 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:05:31 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:05:31 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:31 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:05:31 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:31 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:05:31 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:05:31 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:05:31 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:05:31 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:05:31 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:05:31 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:05:31 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:05:31 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:31 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:05:31 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:31 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:05:31 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:05:31 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:05:31 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:05:31 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:05:31 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:05:31 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:05:31 2011 :Station Weather   : 
+<br>Sun Aug 21 23:05:31 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:34 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:05:34 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:05:34 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:05:34 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:05:34 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:05:34 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:05:34 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:05:35 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:05:35 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:05:35 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:05:36 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:05:36 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:05:36 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:05:37 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:05:37 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:05:37 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:05:37 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 415
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 38:24:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:05:37 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:05:40 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:05:40 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:05:40 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:05:41 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:05:41 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:05:41 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:41 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:05:41 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:05:41 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:05:41 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:05:41 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:05:41 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:05:41 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:05:41 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:05:41 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:41 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:05:41 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:41 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:05:41 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:05:41 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:05:41 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:05:41 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:05:41 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:05:41 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:05:41 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:05:41 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:41 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:05:41 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:41 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:05:41 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:05:41 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:05:41 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:05:41 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:05:41 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:05:41 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:05:41 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:05:41 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:41 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:05:41 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:41 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:05:41 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:05:41 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:05:41 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:05:41 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:05:41 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:05:41 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:05:41 2011 :Station Weather   : 
+<br>Sun Aug 21 23:05:41 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:44 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:05:44 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:05:44 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:05:44 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:05:44 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:05:44 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:05:44 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:05:45 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:05:45 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:05:45 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:05:46 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:05:46 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:05:46 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:05:47 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:05:47 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:05:47 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:05:47 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 416
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 48:24:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:05:47 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:05:50 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:05:50 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:05:50 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:05:51 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:05:51 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:05:51 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:51 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:05:51 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:05:51 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:05:51 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:05:51 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:05:51 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:05:51 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:05:51 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:05:51 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:51 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:05:51 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:51 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:05:51 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:05:51 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:05:51 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:05:51 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:05:51 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:05:51 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:05:51 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:05:51 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:51 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:05:51 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:51 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:05:51 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:05:51 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:05:51 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:05:51 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:05:51 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:05:51 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:05:51 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:05:51 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:51 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:05:51 2011 :Station State     : LA
+<br>Sun Aug 21 23:05:51 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:05:51 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:05:51 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:05:51 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:05:51 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:05:51 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:05:51 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:05:51 2011 :Station Weather   : 
+<br>Sun Aug 21 23:05:51 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:05:54 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:05:54 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:05:54 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:05:54 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:05:54 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:05:54 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:05:54 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:05:55 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:05:55 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:05:55 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:05:56 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:05:56 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:05:56 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:05:57 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:05:57 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:05:57 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:05:57 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 372
+Sensor Reading Y   : 416
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 59:24:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:05:57 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:06:00 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:06:00 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:06:00 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:06:01 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:06:01 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:06:01 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:01 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:06:01 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:06:01 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:06:01 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:06:01 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:06:01 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:06:01 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:06:01 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:06:01 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:01 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:06:01 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:01 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:06:01 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:06:01 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:06:01 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:06:01 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:06:01 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:06:01 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:06:01 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:06:01 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:01 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:06:01 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:01 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:06:01 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:06:01 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:06:01 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:06:01 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:06:01 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:06:01 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:06:01 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:06:01 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:01 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:06:01 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:01 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:06:01 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:06:01 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:06:01 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:06:01 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:06:01 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:06:01 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:06:01 2011 :Station Weather   : 
+<br>Sun Aug 21 23:06:01 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:04 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:06:04 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:06:04 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:06:04 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:06:04 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:06:04 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:06:04 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:06:05 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:06:05 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:06:05 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:06:06 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:06:06 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:06:06 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:06:07 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:06:07 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:06:07 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:06:08 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 416
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 9:25:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:06:08 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:06:11 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:06:11 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:06:11 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:06:11 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:06:11 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:06:11 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:11 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:06:11 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:06:11 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:06:11 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:06:11 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:06:11 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:06:11 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:06:11 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:06:11 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:11 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:06:11 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:11 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:06:11 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:06:11 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:06:11 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:06:11 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:06:11 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:06:11 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:06:11 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:06:11 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:11 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:06:11 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:11 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:06:11 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:06:11 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:06:11 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:06:11 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:06:11 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:06:11 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:06:11 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:06:11 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:11 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:06:11 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:11 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:06:11 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:06:11 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:06:11 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:06:11 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:06:11 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:06:11 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:06:11 2011 :Station Weather   : 
+<br>Sun Aug 21 23:06:11 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:14 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:06:14 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:06:14 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:06:14 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:06:14 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:06:14 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:06:14 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:06:15 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:06:15 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:06:15 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:06:16 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:06:16 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:06:16 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:06:17 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:06:17 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:06:17 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:06:18 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 416
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 19:25:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:06:18 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:06:21 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:06:21 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:06:21 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:06:21 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:06:21 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:06:21 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:21 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:06:21 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:06:21 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:06:21 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:06:21 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:06:21 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:06:21 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:06:21 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:06:21 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:21 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:06:21 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:21 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:06:21 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:06:21 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:06:21 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:06:21 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:06:21 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:06:21 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:06:21 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:06:21 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:21 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:06:21 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:21 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:06:21 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:06:21 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:06:21 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:06:21 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:06:21 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:06:21 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:06:21 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:06:21 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:21 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:06:21 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:21 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:06:21 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:06:21 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:06:21 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:06:21 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:06:21 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:06:21 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:06:21 2011 :Station Weather   : 
+<br>Sun Aug 21 23:06:21 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:24 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:06:24 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:06:24 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:06:24 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:06:24 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:06:24 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:06:24 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:06:25 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:06:25 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:06:25 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:06:26 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:06:26 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:06:26 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:06:27 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:06:27 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:06:27 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:06:28 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 416
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 29:25:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:06:28 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:06:31 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:06:31 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:06:31 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:06:31 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:06:31 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:06:31 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:31 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:06:31 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:06:31 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:06:31 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:06:31 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:06:31 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:06:31 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:06:31 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:06:31 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:31 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:06:31 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:31 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:06:31 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:06:31 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:06:31 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:06:31 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:06:31 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:06:31 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:06:31 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:06:31 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:31 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:06:31 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:31 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:06:31 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:06:31 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:06:31 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:06:31 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:06:31 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:06:31 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:06:31 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:06:31 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:31 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:06:31 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:31 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:06:31 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:06:31 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:06:31 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:06:31 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:06:31 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:06:31 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:06:31 2011 :Station Weather   : 
+<br>Sun Aug 21 23:06:31 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:34 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:06:34 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:06:34 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:06:34 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:06:34 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:06:34 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:06:34 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:06:35 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:06:35 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:06:35 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:06:36 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:06:36 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:06:36 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:06:37 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:06:37 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:06:37 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:06:38 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 416
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 39:25:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:06:38 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:06:41 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:06:41 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:06:41 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:06:41 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:06:41 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:06:41 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:41 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:06:41 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:06:41 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:06:41 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:06:41 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:06:41 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:06:41 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:06:41 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:06:41 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:41 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:06:41 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:41 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:06:41 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:06:41 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:06:41 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:06:41 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:06:41 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:06:41 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:06:41 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:06:41 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:41 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:06:41 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:41 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:06:41 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:06:41 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:06:41 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:06:41 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:06:41 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:06:41 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:06:41 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:06:41 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:41 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:06:41 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:41 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:06:41 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:06:41 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:06:41 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:06:41 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:06:41 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:06:41 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:06:41 2011 :Station Weather   : 
+<br>Sun Aug 21 23:06:41 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:44 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:06:44 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:06:44 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:06:44 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:06:44 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:06:44 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:06:44 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:06:45 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:06:45 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:06:45 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:06:46 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:06:46 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:06:46 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:06:47 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:06:47 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:06:47 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:06:48 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 415
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 49:25:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:06:48 2011 : An email alert is already sent at:  fakeemail@fake.com
+<br>Sun Aug 21 23:06:51 2011 : Executing current rule : NOAA Weather feeds
+<br>Sun Aug 21 23:06:51 2011 : Next rule in queue     : NOAA Water feeds
+<br>Sun Aug 21 23:06:51 2011 : Executing 'NOAA Weather sensor' action with payload: nothing
+<br>Sun Aug 21 23:06:51 2011 : All weather stations shows normal weather conditions. No need to send an alerts!
+<br>Sun Aug 21 23:06:51 2011 :Station ID        : KMSY
+<br>Sun Aug 21 23:06:51 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:51 2011 :Station Name      : New Orleans International Airport
+<br>Sun Aug 21 23:06:51 2011 :Station Latitude  : 29.98
+<br>Sun Aug 21 23:06:51 2011 :Station Longitude : -90.25
+<br>Sun Aug 21 23:06:51 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KMSY.html
+<br>Sun Aug 21 23:06:51 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KMSY.rss
+<br>Sun Aug 21 23:06:51 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KMSY.xml
+<br>Sun Aug 21 23:06:51 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:06:51 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:06:51 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:51 2011 :Station ID        : KNBG
+<br>Sun Aug 21 23:06:51 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:51 2011 :Station Name      : New Orleans, Naval Air Station
+<br>Sun Aug 21 23:06:51 2011 :Station Latitude  : 29.833
+<br>Sun Aug 21 23:06:51 2011 :Station Longitude : -90.017
+<br>Sun Aug 21 23:06:51 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNBG.html
+<br>Sun Aug 21 23:06:51 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNBG.rss
+<br>Sun Aug 21 23:06:51 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNBG.xml
+<br>Sun Aug 21 23:06:51 2011 :Station RFC time  : Sun, 21 Aug 2011 11:55:00 -0500
+<br>Sun Aug 21 23:06:51 2011 :Station Weather   : Mostly Cloudy
+<br>Sun Aug 21 23:06:51 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:51 2011 :Station ID        : KNEW
+<br>Sun Aug 21 23:06:51 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:51 2011 :Station Name      : New Orleans Lakefront Airport
+<br>Sun Aug 21 23:06:51 2011 :Station Latitude  : 30.04
+<br>Sun Aug 21 23:06:51 2011 :Station Longitude : -90.03
+<br>Sun Aug 21 23:06:51 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/KNEW.html
+<br>Sun Aug 21 23:06:51 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/KNEW.rss
+<br>Sun Aug 21 23:06:51 2011 :Station XML URL   : http://weather.gov/xml/current_obs/KNEW.xml
+<br>Sun Aug 21 23:06:51 2011 :Station RFC time  : Sun, 21 Aug 2011 11:53:00 -0500
+<br>Sun Aug 21 23:06:51 2011 :Station Weather   : A Few Clouds
+<br>Sun Aug 21 23:06:51 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:51 2011 :Station ID        : 42409
+<br>Sun Aug 21 23:06:51 2011 :Station State     : LA
+<br>Sun Aug 21 23:06:51 2011 :Station Name      : 295 NM Southeast of New Orleans
+<br>Sun Aug 21 23:06:51 2011 :Station Latitude  : 26.657
+<br>Sun Aug 21 23:06:51 2011 :Station Longitude : -85.791
+<br>Sun Aug 21 23:06:51 2011 :Station HTML URL  : http://weather.noaa.gov/weather/current/42409.html
+<br>Sun Aug 21 23:06:51 2011 :Station RSS URL   : http://weather.gov/xml/current_obs/42409.rss
+<br>Sun Aug 21 23:06:51 2011 :Station XML URL   : http://weather.gov/xml/current_obs/42409.xml
+<br>Sun Aug 21 23:06:51 2011 :Station RFC time  : Thu, 11 Nov 2010 20:00:00 -0600
+<br>Sun Aug 21 23:06:51 2011 :Station Weather   : 
+<br>Sun Aug 21 23:06:51 2011 :-------------------------------------------------------------------------
+<br>Sun Aug 21 23:06:54 2011 : Executing current rule : NOAA Water feeds
+<br>Sun Aug 21 23:06:54 2011 : Next rule in queue     : End Point!
+<br>Sun Aug 21 23:06:54 2011 : Executing 'NOAA Water sensor' action with payload: nothing
+<br>Sun Aug 21 23:06:54 2011 :<title>Observation - NWCL1 - Tide Station near Lakefront (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:48 AM CST
+#x3E;Latest Observation: 0.51 ft
+
+<br>Sun Aug 21 23:06:54 2011 :<title>Observation - LABL1 - Tide Station near La Branche (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 0.2 ft
+
+<br>Sun Aug 21 23:06:54 2011 :<title>Observation - SHBL1 - Tide Station near Shell Beach (Louisiana)</title>
+Observation Time: Aug 21, 2011 10:42 AM CST
+#x3E;Latest Observation: 1.12 ft
+
+<br>Sun Aug 21 23:06:54 2011 : Water levels are in control. No need to send any alerts!
+<br>Sun Aug 21 23:06:55 2011 : Executing current rule : End Point!
+<br>Sun Aug 21 23:06:55 2011 : Next rule in queue     : Start Point!
+<br>Sun Aug 21 23:06:55 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:06:56 2011 : Executing current rule : Start Point!
+<br>Sun Aug 21 23:06:56 2011 : Next rule in queue     : ADXL335
+<br>Sun Aug 21 23:06:56 2011 : Executing void action with payload: nothing
+<br>Sun Aug 21 23:06:57 2011 : Executing current rule : ADXL335
+<br>Sun Aug 21 23:06:57 2011 : Next rule in queue     : NOAA Weather feeds
+<br>Sun Aug 21 23:06:57 2011 : Executing 'ADXL335' sensor action with payload: nothing
+<br>Sun Aug 21 23:06:58 2011 : 
+Sensor Type        : digital
+Sensor Description : ADXL335 3-Axis Accelerometer Sensors
+Sensor Function    : It gives a reading of acceleration per 3-axis
+Sensor Status      : active
+Sensor Event       : changed
+Sensor Event Type  : compulsory
+Sensor Reading X   : 373
+Sensor Reading Y   : 416
+Sensor Reading Z   : 444
+Sensor Time Stamp  : 59:25:9
+Sensor Mount Ports : A0,A1,A2,A3,AIN,AOUT
+Change in reading of X or Y or Z axis is detected!
+<br>Sun Aug 21 23:06:58 2011 : An email alert is already sent at:  fakeemail@fake.com
