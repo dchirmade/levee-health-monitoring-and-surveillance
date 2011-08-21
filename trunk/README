@@ -1,0 +1,73 @@
+//
+// 
+// Levee Health Monitoring And Surveillance System (Real-time)
+// Copyright (C) 2011 Fibercorps (http://www.fibercorps.com) 
+// 
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+// 
+// GSoC11 Developer: Dipak 
+// GSoC11 Dashboard: http://www.google-melange.com/gsoc/project/google/gsoc2011/q1w2e3r4/12001
+// GSoC11 Mentor   : Dr.Raju Gottumukkala and Crawford Comeaux
+//
+
+Source code: 
+https://code.google.com/p/levee-health-monitoring-and-surveillance/source/browse/trunk
+
+Questionnaires:
+https://code.google.com/p/levee-health-monitoring-and-surveillance/wiki/Questionnaires?ts=1313925872&updated=Questionnaires
+
+Source tree: 
+/levee-health-monitoring-and-surveillance
+|
+|-- cron-jobs                                                   ; Cronjobs to perform couple of jobs in background 
+|   |-- refresh-noaa-water-feeds.bash                           ; To fetch noaa water feeds in background
+|   `-- refresh-noaa-weather-feeds.bash                         ; To fetch noaa weather feeds in background
+|-- documentations-presentation
+|   `-- milestone-1.0-short-presentation.pdf                    ; Small presentation of POC-1 Initial demo
+|-- INSTALL-PREREQUISITE.ubuntu                                 ; Automated package installation script for newbie
+|-- levee-data-acquisition-system                                
+|   |-- hardware-sensors
+|   |   |-- arduino-hardware-sensors-eventbase.pde              ; Eventbase DA system 
+|   |   `-- arduino-hardware-sensors-standalone.pde             ; Standalone DA system [ For getting started! ] 
+|   `-- software-sensors
+|       |-- dump                                                ; Dump data files (XML or RSS)
+|       |   |-- MAIN.LIST                                       ; Master list for all weather stations in USA
+|       |-- Makefile                                            ; Auto compilation file
+|       |-- noaa-software-water-sensors.cpp                     ; NOAA water sensor code base. 
+|       |-- noaa-software-water-sensors.hpp
+|       |-- noaa-software-weather-sensors.cpp                   ; NOAA weather sensor code base. 
+|       |-- noaa-software-weather-sensors.hpp
+|       `-- sample-stations                                     ; Ready to go sample xml dump
+|-- levee-mini-rule-engine
+|   |-- alerts-delivery-system.hpp                              ; Alerts delivery system like sending mail
+|   |-- configuration.conf                                      ; Configuration file for entire codebase
+|   |-- configuration-file.cpp                                  ; Configuration file parser 
+|   |-- configuration-file.hpp
+|   |-- dump                                                    ; Dump data files (XML or RSS)
+|   |-- knowledge-base.cpp                                      ; Knowledge base for monitoring system
+|   |-- knowledge-base.hpp
+|   |-- Makefile                                                ; Automated compilation scripts
+|   |-- mini-rule-engine.cpp                                    ; Mini rule engine to build and execute rule based on actions
+|   |-- mini-rule-engine.hpp
+|   |-- noaa-software-water-sensors.cpp                         ; NOAA water sensors codebase to process water streams 
+|   |-- noaa-software-water-sensors.hpp
+|   |-- noaa-software-weather-sensors.cpp                       ; NOAA weather sensors codebase to process weather streams 
+|   |-- noaa-software-weather-sensors.hpp
+|   |-- serial-reader.cpp                                       ; Serial RS232 wrapper to deal with hardware sensor
+|   |-- serial-reader.hpp
+|   `-- tags
+|-- optional-low-cost-host-system
+|   `-- alix-CF-readme.txt                                      ; Installation procedure to install gnu/linux based ubutnu on CF/Alix
+|-- README                                                      ; This file
+`-- TODO                                                        ; Issue(s) list on code.google.com 
