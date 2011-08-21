@@ -33,3 +33,14 @@
         int nextRuleIndex;        // Next rule to be executed <br>
    [2] To Add rule call AppendNewRule method with right parameters. <br> Sample method could be located in mini-rule-engine.cpp <br> Flag isRuleActive decides if rule need to be executed or skipped (logical deletion) <br> 
    [3] One must need to define action method to handle any actions upon rule. [br]
+
+  * How to install system on small low cost mini embedded single board computer? 
+    Please refer http://code.google.com/p/levee-health-monitoring-and-surveillance/source/browse/trunk/optional-low-cost-host-system/alix-CF-readme.txt <br>
+  * How to do log rotation if debug mode enabled? 
+    Which ever log file you’d like to rotate, rotate the same using http://linuxcommand.org/man_pages/logrotate8.html command. <br>
+  * Under which license source code will be published? 
+    All source code will be published under GNU general public license. <br>
+  * Where is the Initial project development time line and activity?
+    It could be found here at http://www.google-melange.com/gsoc/project/google/gsoc2011/q1w2e3r4/12001 <br>
+  * Is there any demo logs, alerts logs?
+    https://code.google.com/p/levee-health-monitoring-and-surveillance/source/browse/trunk/documentations-presentation/sample-mini-rule-engine.log<br>  
