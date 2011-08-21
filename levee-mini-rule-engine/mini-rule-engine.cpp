@@ -446,13 +446,19 @@ void LeveeMiniRuleEngine::hookupADXL335Sensor( string tPayLoad ){
     SerialCommunicator serialChatTerminal;
 
     // Open Serial terminal and initialize the same
-    if( serialChatTerminal.openSerialTerminal( knowledge->getValueOfaKey( "ADXL335-serial-port" ) ) ){
+    string tSerialHandle = knowledge->getValueOfaKey( "ADXL335-serial-port" );
+    tSerialHandle.replace( tSerialHandle.find( " " ), 1 ,"" ); // Replace spaces if any
+
+    if( serialChatTerminal.openSerialTerminal( tSerialHandle ) ){
 
     if( serialChatTerminal.initializeSerialTerminal( ) ){ // Start reading some data over serial 
 
          // Ask for the data first then read
          serialChatTerminal.writeToSerialOverUSB( "1" );  
-         serialChatTerminal.printDebugMessages( serialChatTerminal.readFromSerialOverUSB( ));
+         // Parse the DA response
+         serialChatTerminal.readAndParseDAFeeds( serialChatTerminal.readFromSerialOverUSB( ) );
+         // Print DA response
+         serialChatTerminal.printParsedDAResponse();
     }
     else serialChatTerminal.printDebugMessages( "Something is wrong with serial port settings!" );
     }
