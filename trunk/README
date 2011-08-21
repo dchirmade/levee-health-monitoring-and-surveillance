@@ -71,3 +71,55 @@ Source tree:
 |   `-- alix-CF-readme.txt                                      ; Installation procedure to install gnu/linux based ubutnu on CF/Alix
 |-- README                                                      ; This file
 `-- TODO                                                        ; Issue(s) list on code.google.com 
+
+
+Questionnaires
+How to compile and get start?
+1? Checkout the souce code by refering: http://code.google.com/p/levee-health-monitoring-and-surveillance/source/checkout 
+2? Then install all prerequisite dependencies packages by running ‘INSTALL-PREREQUISITE.ubuntu’ in main trunk directory. 
+3? To compile levee-mini-rule-engine go to levee-mini-rule-engine and run ‘make’ 
+
+How to install core system and how to configure cronjobs?
+1? Automated script to configure with cron jobs could be found in http://code.google.com/p/levee-health-monitoring-and-surveillance/source/browse/trunk#trunk%2Fcron-jobs 
+2? To configure cronjob add following lines into /etc/crontab and do ‘/etc/init.d/cron restart’ 
+0-59/20 * * * * root /<checkoutpath>/sensors/levee-health-monitoring-and-surveillance/cron-jobs/refresh-noaa-water-feeds.bash 
+0-59/15 * * * * root /<checkoutpath>/sensors/levee-health-monitoring-and-surveillance/cron-jobs/refresh-noaa-weather-feeds.bash
+3? This codebase can be compiled and run with superuser permission directly. Currently no .rpm or .deb release package has been built as such. 
+
+How to run standalone POC based on hardware sensors?
+1? Please refer getting started guide for Arduino board on ‘http://arduino.cc/’ 
+2? Burn source code located in http://code.google.com/p/levee-health-monitoring-and-surveillance/source/browse/trunk#trunk%2Flevee-data-acquisition-system%2Fhardware-sensors on Arduno board 
+
+How to run core monitoring system?
+1? Since all module generate their own binaries one can run them separately according to need. 
+2? But you can run code monitoring engine by running ‘mini-rule-engine’. Of course please make sure if ‘configurations.conf’ is in place and well configured according to need. 
+
+How to add/remove/suspend new rule in monitoring system?
+1? Rule structure is pretty easy to understand and looks like 
+int ruleIndex; // Rule index number 
+bool isRuleActive; // If rule is active or inactive 
+string ruleName; // Human readable rule name 
+string ruleDescription; // Rule description if any 
+unsigned int ruleAction; // Action attached with rule 
+string rulePayload; // Any payload params needed by rule 
+int ruleDelay; // Wait time in rule execution sequence 
+int nextRuleIndex; // Next rule to be executed 
+2? To Add rule call AppendNewRule? method with right parameters. 
+Sample method could be located in mini-rule-engine.cpp 
+Flag isRuleActive decides if rule need to be executed or skipped (logical deletion) 
+3? One must need to define action method to handle any actions upon rule. br?
+
+How to install system on small low cost mini embedded single board computer?
+Please refer http://code.google.com/p/levee-health-monitoring-and-surveillance/source/browse/trunk/optional-low-cost-host-system/alix-CF-readme.txt 
+
+How to do log rotation if debug mode enabled?
+Which ever log file you’d like to rotate, rotate the same using http://linuxcommand.org/man_pages/logrotate8.html command. 
+
+Under which license source code will be published?
+All source code will be published under GNU general public license. 
+
+Where is the Initial project development time line and activity?
+It could be found here at http://www.google-melange.com/gsoc/project/google/gsoc2011/q1w2e3r4/12001 
+
+Is there any demo logs, alerts logs?
+https://code.google.com/p/levee-health-monitoring-and-surveillance/source/browse/trunk/documentations-presentation/sample-mini-rule-engine.log
