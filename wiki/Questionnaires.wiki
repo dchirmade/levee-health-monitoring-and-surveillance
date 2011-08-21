@@ -1,26 +1,35 @@
-#summary One-sentence summary of this page.
+#Brief getting started guide. 
 
-= Introduction =
+=Questionnaires=
 
-Add your content here.
+  * How to compile and get start?
+   [1] Checkout the souce code by refering: http://code.google.com/p/levee-health-monitoring-and-surveillance/source/checkout <br>
+   [2] Then install all prerequisite dependencies packages by running ‘INSTALL-PREREQUISITE.ubuntu’ in main trunk directory. <br>  
+   [3] To compile levee-mini-rule-engine go to levee-mini-rule-engine and run ‘make’ <br>
+  * How to install core system and how to configure cronjobs? 
+   [1] Automated script to configure with cron jobs could be found in http://code.google.com/p/levee-health-monitoring-and-surveillance/source/browse/trunk#trunk%2Fcron-jobs <br>
+   [2] To configure cronjob add following lines into /etc/crontab and do ‘/etc/init.d/cron restart’ <br>
+   `0-59/20 * * * * root /<checkoutpath>/sensors/levee-health-monitoring-and-surveillance/cron-jobs/refresh-noaa-water-feeds.bash` <br>
+   `0-59/15 * * * * root /<checkoutpath>/sensors/levee-health-monitoring-and-surveillance/cron-jobs/refresh-noaa-weather-feeds.bash`<br>
+   [3] This codebase can be compiled and run with superuser permission directly. Currently no .rpm or .deb release package has been built as such. <br> 
 
+  * How to run standalone POC based on hardware sensors? 
+   [1] Please refer getting started guide for Arduino board on ‘http://arduino.cc/’ <br>
+   [2] Burn source code located in http://code.google.com/p/levee-health-monitoring-and-surveillance/source/browse/trunk#trunk%2Flevee-data-acquisition-system%2Fhardware-sensors on Arduno board <br>
 
-= Details =
+  * How to run core monitoring system? 
+   [1] Since all module generate their own binaries one can run them separately according to need. <br> 
+   [2] But you can run code monitoring engine by running ‘mini-rule-engine’. Of course please make sure if ‘configurations.conf’ is in place and well configured according to need. <br> 
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
-
-How to compile? 
-How to install core system and how to configure cronjobs? 
-How to run standalone POC based on hardware sensors? 
-How to run core monitoring system? 
-How to add/remove/suspend new rule in monitoring system?
-How to install system on small low cost mini embedded single board computer? 
-How to compile and burn DA core on an Arduino board?
-Connection details for daughter board along with Arduino board?
-How to do log rotation if debug mode enabled? 
-Under which license source code will be published? 
-Where is the Initial project development time line and activity?
-Is there any demo logs, alerts logs and video posted?
+  * How to add/remove/suspend new rule in monitoring system?
+   [1] Rule structure is pretty easy to understand and looks like <br>
+        int ruleIndex;            // Rule index number <br>
+        bool isRuleActive;        // If rule is active or inactive <br> 
+        string ruleName;          // Human readable rule name <br>
+        string ruleDescription;   // Rule description if any <br>
+        unsigned int ruleAction;  // Action attached with rule <br>   
+        string rulePayload;       // Any payload params needed by rule <br>
+        int ruleDelay;            // Wait time in rule execution sequence <br>
+        int nextRuleIndex;        // Next rule to be executed <br>
+   [2] To Add rule call AppendNewRule method with right parameters. <br> Sample method could be located in mini-rule-engine.cpp <br> Flag isRuleActive decides if rule need to be executed or skipped (logical deletion) <br> 
+   [3] One must need to define action method to handle any actions upon rule. [br]
