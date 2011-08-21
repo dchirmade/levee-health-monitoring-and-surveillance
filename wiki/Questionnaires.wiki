@@ -1,0 +1,26 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+How to compile? 
+How to install core system and how to configure cronjobs? 
+How to run standalone POC based on hardware sensors? 
+How to run core monitoring system? 
+How to add/remove/suspend new rule in monitoring system?
+How to install system on small low cost mini embedded single board computer? 
+How to compile and burn DA core on an Arduino board?
+Connection details for daughter board along with Arduino board?
+How to do log rotation if debug mode enabled? 
+Under which license source code will be published? 
+Where is the Initial project development time line and activity?
+Is there any demo logs, alerts logs and video posted?
