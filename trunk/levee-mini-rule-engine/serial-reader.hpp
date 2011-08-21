@@ -68,7 +68,8 @@ public:
       void writeToSerialOverUSB( string );    // Write data to serial port over USB 
       bool readAndParseDAFeeds( string );     // Parses DA XMl response 
       string GetTextContentOfAnElement( DOMElement*, string ); // Extracts the text content of an elements 
-      void printParsedDAResponse( void );     // Prints Parsed DA response
+      bool checkIfChangeInReadingDetected( string, string, string, string ); // Checks if there is any change in XYZ reading 
+      string getParsedDAResponse( void );     // Gets parsed DA string dump
 
 private: 
 

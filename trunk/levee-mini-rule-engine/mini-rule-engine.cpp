@@ -423,7 +423,7 @@ void LeveeMiniRuleEngine::hookupNOAAWaterSensor( string tPayLoad ){
       if( knowledge->getValueOfaKey( "noaa-water-alert-email-sent" ).compare( "yes" ) == 0 )
           knowledge->setValueOfaKey( "noaa-water-alert-email-sent", "no" );
 
-      printDebugMessages("Waler levels are in control. No need to send any alerts!");
+      printDebugMessages("Water levels are in control. No need to send any alerts!");
     }  
  
     return;  
@@ -458,7 +458,44 @@ void LeveeMiniRuleEngine::hookupADXL335Sensor( string tPayLoad ){
          // Parse the DA response
          serialChatTerminal.readAndParseDAFeeds( serialChatTerminal.readFromSerialOverUSB( ) );
          // Print DA response
-         serialChatTerminal.printParsedDAResponse();
+         printDebugMessages( serialChatTerminal.getParsedDAResponse() ); 
+         // Check if any change in position and send an alert
+         if( serialChatTerminal.checkIfChangeInReadingDetected (
+                                                            knowledge->getValueOfaKey( "ADXL335-X-position" ), 
+                                                            knowledge->getValueOfaKey( "ADXL335-Y-position" ), 
+                                                            knowledge->getValueOfaKey( "ADXL335-Z-position" ), 
+                                                            knowledge->getValueOfaKey( "ADXL335-alerting-trigger" ) 
+                                                           ) == true )
+         {
+           string tAlertEmailToAddress = knowledge->getValueOfaKey( "notification-email-addresses" ); 
+           string tAlertEmailSubject = "ADXL335 Hardware sensor alert!!!";
+           string tAlertEmailBody = "\n";
+           tAlertEmailBody += serialChatTerminal.getParsedDAResponse();
+      
+           // Send an email alert only. Do not send if it is already sent!
+           if( knowledge->getValueOfaKey( "noaa-ADXL335-alert-email-sent" ).compare( "no" ) == 0 ){
+
+            printDebugMessages( "Sending an alert to email address: " + tAlertEmailToAddress);
+            sendEmailNotification(
+                               tAlertEmailSubject,
+                               tAlertEmailToAddress,
+                               tAlertEmailBody
+                              );
+           }else
+            printDebugMessages( "An email alert is already sent at: " + tAlertEmailToAddress );
+
+           // Set the sent email flag  
+            knowledge->setValueOfaKey( "noaa-ADXL335-alert-email-sent", "yes" );
+            
+         }else {
+            // Everything is normal! Just loop...
+            // Water levels are now came back in control. Reset the flag
+            if( knowledge->getValueOfaKey( "noaa-ADXL335-alert-email-sent" ).compare( "yes" ) == 0 )
+                knowledge->setValueOfaKey( "noaa-ADXL335-alert-email-sent", "no" );
+
+                printDebugMessages("ADXL335's reading is normal. No need to send any alerts!");
+         }
+
     }
     else serialChatTerminal.printDebugMessages( "Something is wrong with serial port settings!" );
     }
