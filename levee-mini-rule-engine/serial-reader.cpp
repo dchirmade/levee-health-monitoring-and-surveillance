@@ -279,25 +279,57 @@ string SerialCommunicator::GetTextContentOfAnElement (
 }
 
 //
-// Desc: This will print all parameters from DA response    
+// Desc: Checks if there is any change in x,y,z reading
+// Arguments: String, String, String, String,  XYZ reading and alerting trigger  
+// Returns: bool, true if change detected else false
+
+bool SerialCommunicator::checkIfChangeInReadingDetected( 
+                                                         string tXReading, 
+                                                         string tYReading, 
+                                                         string tZReading, 
+                                                         string tAlertingTrigger 
+                                                       ){
+ 
+     bool tReturn = false;
+
+     // Check if there is any change in readings 
+     if(  (
+          ( ::strtod( tXReading.c_str(), 0 ) - ::strtod( daEventResponseIndex.sensorReadingX.c_str(), 0 ) ) > ::strtod( tAlertingTrigger.c_str(), 0 ) || 
+          ( ::strtod( tXReading.c_str(), 0 ) - ::strtod( daEventResponseIndex.sensorReadingX.c_str(), 0 ) ) < ( ::strtod( tAlertingTrigger.c_str(), 0 ) * -1) ) || (
+          ( ::strtod( tYReading.c_str(), 0 ) - ::strtod( daEventResponseIndex.sensorReadingY.c_str(), 0 ) ) > ::strtod( tAlertingTrigger.c_str(), 0 ) || 
+          ( ::strtod( tYReading.c_str(), 0 ) - ::strtod( daEventResponseIndex.sensorReadingY.c_str(), 0 ) ) < ( ::strtod( tAlertingTrigger.c_str(), 0 ) * -1) ) || (
+          ( ::strtod( tZReading.c_str(), 0 ) - ::strtod( daEventResponseIndex.sensorReadingZ.c_str(), 0 ) ) > ::strtod( tAlertingTrigger.c_str(), 0 ) || 
+          ( ::strtod( tZReading.c_str(), 0 ) - ::strtod( daEventResponseIndex.sensorReadingZ.c_str(), 0 ) ) < ( ::strtod( tAlertingTrigger.c_str(), 0 ) * -1) )
+       ){
+          printDebugMessages( "Change in reading of X or Y or Z axis is detected!" );
+          tReturn = true;
+     } 
+  
+     return tReturn;
+}
+
+//
+// Desc: Get current status of all sensors parameters 
 // Arguments: void, nothing  
-// Returns: void, nothing 
+// Returns: string, Current sensor status string dump 
 //   
 
-void SerialCommunicator::printParsedDAResponse( void ){
+string SerialCommunicator::getParsedDAResponse( void ){
 
-    printDebugMessages( "Sensor Type        : " + daEventResponseIndex.sensorType ); 
-    printDebugMessages( "Sensor Description : " + daEventResponseIndex.sensorDescription ); 
-    printDebugMessages( "Sensor Function    : " + daEventResponseIndex.sensorFunction ); 
-    printDebugMessages( "Sensor Status      : " + daEventResponseIndex.sensorStatus ); 
-    printDebugMessages( "Sensor Event       : " + daEventResponseIndex.sensorEvent ); 
-    printDebugMessages( "Sensor Event Type  : " + daEventResponseIndex.sensorEventType ); 
-    printDebugMessages( "Sensor Reading X   : " + daEventResponseIndex.sensorReadingX ); 
-    printDebugMessages( "Sensor Reading Y   : " + daEventResponseIndex.sensorReadingY ); 
-    printDebugMessages( "Sensor Reading Z   : " + daEventResponseIndex.sensorReadingZ ); 
-    printDebugMessages( "Sensor Time Stamp  : " + daEventResponseIndex.sensorTimeStamp ); 
-    printDebugMessages( "Sensor Mount Ports : " + daEventResponseIndex.sensorMountPorts ); 
-    return;
+    string tParsedDAResponse = ""; 
+    tParsedDAResponse += "\nSensor Type        : " + daEventResponseIndex.sensorType; 
+    tParsedDAResponse += "\nSensor Description : " + daEventResponseIndex.sensorDescription; 
+    tParsedDAResponse += "\nSensor Function    : " + daEventResponseIndex.sensorFunction; 
+    tParsedDAResponse += "\nSensor Status      : " + daEventResponseIndex.sensorStatus; 
+    tParsedDAResponse += "\nSensor Event       : " + daEventResponseIndex.sensorEvent; 
+    tParsedDAResponse += "\nSensor Event Type  : " + daEventResponseIndex.sensorEventType; 
+    tParsedDAResponse += "\nSensor Reading X   : " + daEventResponseIndex.sensorReadingX; 
+    tParsedDAResponse += "\nSensor Reading Y   : " + daEventResponseIndex.sensorReadingY; 
+    tParsedDAResponse += "\nSensor Reading Z   : " + daEventResponseIndex.sensorReadingZ; 
+    tParsedDAResponse += "\nSensor Time Stamp  : " + daEventResponseIndex.sensorTimeStamp; 
+    tParsedDAResponse += "\nSensor Mount Ports : " + daEventResponseIndex.sensorMountPorts; 
+
+    return tParsedDAResponse;
 }
 
 //
@@ -429,7 +461,7 @@ int main( void ){
 
          // Parse DA response 
          serialChatTerminal.readAndParseDAFeeds( tDAResponse );
-         serialChatTerminal.printParsedDAResponse();
+         serialChatTerminal.printDebugMessages( serialChatTerminal.getParsedDAResponse());
     }
     else serialChatTerminal.printDebugMessages( "Some is wrong with serial port settings!" );
    } 
