@@ -43,13 +43,6 @@
 
 #include "noaa-software-water-sensors.hpp"
 
-// Currently only few stations nearby to New Orleans are considered for demo. At later stage all water rss feeds 
-// e.g. http://water.weather.gov/ahps2/rss/ will be considered.    
-
-#define __Lakefront "http://water.weather.gov/ahps2/rss/obs/nwcl1.rss"
-#define __LaBranche "http://water.weather.gov/ahps2/rss/obs/labl1.rss"
-#define __ShellBeach "http://water.weather.gov/ahps2/rss/obs/shbl1.rss"
-
 using namespace std;
 
 //
@@ -98,7 +91,7 @@ void WaterSensors::printDebugMessages(
 
    // Print debug messages to standard console. 
    if( isDebugEnabled || isDebugForced )
-       cout << tLocaltime << " :" << debugLines << endl; 
+       cout << "<br>" << tLocaltime << " :" << debugLines << endl; 
 
    return; 
 }
@@ -149,52 +142,50 @@ string WaterSensors::parseURLandPullOutStationName( string RSSUrl ){
 //
 // Desc: This should do crawling though all fetched RSS URL
 // Arguments: bool, is it needed to update all RSS feeds or not? 
-// Returns: bool, true if all is well otherwise false
+//            string, Complete URL of a water station in question. 
+// Returns: string, Water level in fts
 // 
 
-bool WaterSensors::crawlThroughStationsData( bool isUpdateNeeded = "false" ){
+string WaterSensors::crawlThroughStationsData( 
+                                            bool isUpdateNeeded = false,
+                                            string stationUrl = ""
+                                           ){
 
-   bool tReturn = false;
+   string tWaterLevel = "-99";
+   string tStationName = "./dump/" + parseURLandPullOutStationName( stationUrl );
 
    // Delete all old rss dump files if update needed
    if( isUpdateNeeded == true ){
-       system( "/bin/rm ./dump/*.rss 2>>/dev/null >>/dev/null" );
-       system( "/bin/rm ./dump/*.rss.* 2>>/dev/null >>/dev/null" );
+       // Do not delete all rss feeds at a time. Delete them one at a time 
+       // system( "/bin/rm ./dump/*.rss 2>>/dev/null >>/dev/null" );
+       // system( "/bin/rm ./dump/*.rss.* 2>>/dev/null >>/dev/null" );
+  
+       string tDeleteCommand  = "/bin/rm " + tStationName + " 2>>/dev/null >>/dev/null"; 
+       system( tDeleteCommand.c_str() );
 
-      // Download RSS feeds only for few locations for the time being. 
-      downloadWaterRSSfeeds( __Lakefront );
-      string tStationName = "./dump/" + parseURLandPullOutStationName( __Lakefront );
-      if( tStationName.length() != 0 )
-         readAndParsePerWaterStationResponse( tStationName );
-      else printDebugMessages( "Opps! Couldn't fetch station name from RSSURL!" );
-
-      downloadWaterRSSfeeds( __LaBranche );
-      tStationName = "./dump/" + parseURLandPullOutStationName( __LaBranche );
-      if( tStationName.length() != 0 )
-         readAndParsePerWaterStationResponse( tStationName );
-      else printDebugMessages( "Opps! Couldn't fetch station name from RSSURL!" );
-
-      downloadWaterRSSfeeds( __ShellBeach );
-      tStationName = "./dump/" + parseURLandPullOutStationName( __ShellBeach );
-      if( tStationName.length() != 0 )
-         readAndParsePerWaterStationResponse( tStationName );
-      else printDebugMessages( "Opps! Couldn't fetch station name from RSSURL!" );
+       // Download RSS feeds  
+       downloadWaterRSSfeeds( stationUrl );  
     }
+
+   if( tStationName.length() != 0 )
+       tWaterLevel = readAndParsePerWaterStationResponse( tStationName );
+   else printDebugMessages( "Opps! Couldn't fetch station name from RSSURL!" );
      
    // Just assume all is good! 
-   return tReturn;
+   return tWaterLevel;
 }
 
 //
 // Desc: This method does parsing and extraction of demanded attributes 
 // Arguments: string, Path to fetched RSS file 
-// Returns: Nothing, void 
+// Returns: string, Water level in fts 
 // 
 
-void WaterSensors::readAndParsePerWaterStationResponse( string waterStationRssFeeds){
+string WaterSensors::readAndParsePerWaterStationResponse( string waterStationRssFeeds){
 
   int tRssTextLength = 0;
   char * tStringBuffer = NULL;
+  string tWaterLevel = "-99";
 
   // Create new file instance to store rss processed output 
   system( "/bin/rm /tmp/rss.txt >> /dev/null 2>>/dev/null; /usr/bin/touch /tmp/rss.txt >>/dev/null 2>>/dev/null" ); 
@@ -223,24 +214,38 @@ void WaterSensors::readAndParsePerWaterStationResponse( string waterStationRssFe
 
      printDebugMessages( "Failed to process RSS files or RSS file is empty!" );
      fileHandle.close();
-     return; 
+     return tWaterLevel; 
   }
 
   // Allocate memory according to file length  
-  tStringBuffer = new char [ tRssTextLength ];
+  tStringBuffer = new char [ tRssTextLength + 1 ];
 
   if( tStringBuffer ){
     // Read data as a block:
     fileHandle.read ( tStringBuffer, tRssTextLength );
 
-    // Fixme! Process extracted out put to cross verify with knowledge base at later state 
-    cout.write ( tStringBuffer, tRssTextLength );
+    if( tRssTextLength )
+        tStringBuffer[ tRssTextLength ] = '\0' ;
 
-    delete[] tStringBuffer;
+    printDebugMessages( tStringBuffer );
+
+    // Extract water level in fts 
+    string tEntireString = tStringBuffer;  
+
+    if( tEntireString.length() != 0 ) {
+        tEntireString =  tEntireString.substr( tEntireString.rfind( ":" ) + 1 ); 
+ 
+        // Replace spaces and 'ft' so that only reading could be fetched
+        tEntireString.replace( tEntireString.find( " " ), 2 ,"" );
+        tEntireString.replace( tEntireString.find( "ft" ), 2 ,"\0" );
+        tWaterLevel = tEntireString;
+     }
+ 
+    delete [] tStringBuffer;
     fileHandle.close();
    }
    
-   return; 
+   return tWaterLevel; 
 }
 
 //
@@ -254,7 +259,11 @@ int main( void ){
 
   // Create water sensor's instance and see if it is fetching the reading or not... 
   WaterSensors waterSensor;    
-  waterSensor.crawlThroughStationsData( "true" );
+
+  waterSensor.printDebugMessages ( "Water level at LakeFront  :" + waterSensor.crawlThroughStationsData( true, __Lakefront ) );
+  waterSensor.printDebugMessages ( "Water level at LaBranche  :" + waterSensor.crawlThroughStationsData( true, __LaBranche ) );
+  waterSensor.printDebugMessages ( "Water level at ShellBeach :" + waterSensor.crawlThroughStationsData( true, __ShellBeach ) );
+
   return EXIT_SUCCESS; 
 } 
 
