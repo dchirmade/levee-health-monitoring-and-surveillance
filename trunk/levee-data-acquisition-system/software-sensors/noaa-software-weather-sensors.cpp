@@ -165,7 +165,7 @@ void WeatherSensors::printDebugMessages(
 
    // Print debug messages to standard console. 
    if( isDebugEnabled || isDebugForced )
-       cout << tLocaltime << " :" << debugLines << endl; 
+       cout << "<br>" << tLocaltime << " :" << debugLines << endl; 
 
    return; 
 }
@@ -190,37 +190,96 @@ string WeatherSensors::parseURLandPullOutStationName( string XMLUrl ){
 //
 // Desc: Crawl through all weather stations and download xml dump for each station  
 // Arguments: bool, Is there any need to update weather files? 
+//            string, station name of which only feeds need to be downloaded. 
 // Returns: bool, true if downloda for all stations is good
 //   
  
-bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded = "false" ){
+bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded, string stationLocation = "" ){
 
    bool tReturn = false; 
 
-    
+   if( stationLocation.find( " " ) == 0 )
+   stationLocation.replace( stationLocation.find( " " ), 1 ,"" ); // Replace spaces if any 
+
    // Delete all old xml dump files if update needed
-   if( isUpdateNeeded == true ){ 
-       system( "/bin/rm ./dump/*.xml 2>>/dev/null >>/dev/null" ); 
-       system( "/bin/rm ./dump/*.xml.* 2>>/dev/null >>/dev/null" ); 
-   }
+   // Delayed download or slow download could leave system with no feeds if 
+   // we delete them all! 
+   // if( isUpdateNeeded == true ){ 
+   //    system( "/bin/rm ./dump/*.xml 2>>/dev/null >>/dev/null" ); 
+   //    system( "/bin/rm ./dump/*.xml.* 2>>/dev/null >>/dev/null" ); 
+   // }
+
    // Pull out all stations data from vectors and dump xml stations accordingly. 
    for( int stationList = 0 ; stationList < (int) vectorStationSensorIndex.size() ; stationList++ ){
   
-     if( isUpdateNeeded == true ) 
-         downloadXMLFeeds( vectorStationSensorIndex[stationList].stationXMLUrl );
+     string tStationName = "./dump/" + 
+                           parseURLandPullOutStationName( 
+                                                          vectorStationSensorIndex[stationList].stationXMLUrl
+                                                        ); 
+     if( vectorStationSensorIndex[stationList].stationName.find( stationLocation ) != string::npos ){ 
 
-     string tStationName = "./dump/" + parseURLandPullOutStationName( vectorStationSensorIndex[stationList].stationXMLUrl ); 
+     if( isUpdateNeeded == true ) {
+  
+         // Delete old feed at a time 
+         string tDeleteCommand = "/bin/rm " + tStationName + " 2>>/dev/null >>/dev/null";
+         system( tDeleteCommand.c_str( ) );
+
+         downloadXMLFeeds( vectorStationSensorIndex[stationList].stationXMLUrl );
+      }
+
      if( tStationName.length() != 0 )
          readAndParsePerWeatherStationResponse( tStationName );
      else printDebugMessages( "Opps! Couldn't fetch station name from XMLURL!" );
+
+     }
    }
 
    // Just assume all is good! 
+   tReturn = true; 
    return tReturn; 
 }
 
 //
-// This method is implemented for testing! This should go away soon once vector will sorted out... 
+// Desc: This will check the type of weather condition and respond the stations matching to the same.  
+// Arguments: String, String , Area name, Weather condition type  
+// Returns: String, Weather station matching the area 
+//   
+ 
+string WeatherSensors::checkMatchingWeatherConditionPerLocation( string tLocationName, string tWeatherConditionToMatch ){
+ 
+   string tMatchingStations = ""; 
+   
+   if (tLocationName.find( " " ) == 0 ) 
+   tLocationName.replace( tLocationName.find( " " ), 1 ,"" ); // Replace spaces if any 
+
+   if (tWeatherConditionToMatch.find( " " ) == 0 ) 
+   tWeatherConditionToMatch.replace( tWeatherConditionToMatch.find( " " ), 1 ,"" ); // Replace spaces if any 
+   
+   // Pull out all stations data from vectors whoes location name matches with given location name 
+   for( int stationList = 0 ; stationList < (int) vectorStationSensorIndex.size() ; stationList++ ){
+  
+     if( 
+          vectorStationSensorIndex[stationList].stationName.find( tLocationName ) != string::npos &&
+          vectorStationSensorIndex[stationList].drilledDownParameters.weather.find( tWeatherConditionToMatch ) != string::npos 
+       ){ 
+
+      tMatchingStations += "\nStation ID        : " + vectorStationSensorIndex[stationList].stationId;
+      tMatchingStations += "\nStation State     : " + vectorStationSensorIndex[stationList].stationState;
+      tMatchingStations += "\nStation Name      : " + vectorStationSensorIndex[stationList].stationName;
+      tMatchingStations += "\nStation Latitude  : " + vectorStationSensorIndex[stationList].stationLatitude;
+      tMatchingStations += "\nStation Longitude : " + vectorStationSensorIndex[stationList].stationLongitude;
+      tMatchingStations += "\nStation HTML URL  : " + vectorStationSensorIndex[stationList].stationHTMLUrl;
+      tMatchingStations += "\nStation RSS URL   : " + vectorStationSensorIndex[stationList].stationRSSUrl;
+      tMatchingStations += "\nStation XML URL   : " + vectorStationSensorIndex[stationList].stationXMLUrl;
+      tMatchingStations += "\nStation RFC time  : " + vectorStationSensorIndex[stationList].drilledDownParameters.observationTimeRfc822; 
+      tMatchingStations += "\nStation Weather   : " + vectorStationSensorIndex[stationList].drilledDownParameters.weather;                
+      tMatchingStations += "\n-------------------------------------------------------------------------";
+     }
+   }
+
+   return tMatchingStations; 
+}
+
 //
 // Desc: This should print all weather station data per perticular location.   
 // Arguments: String, Location name in which levee is built
@@ -230,6 +289,9 @@ bool WeatherSensors::crawlThroughStationsData( bool isUpdateNeeded = "false" ){
 void WeatherSensors::printAllStationsDataPerLocation( string tLocationName ){
  
    bool isStationFound = false; 
+   
+   if (tLocationName.find( " " ) == 0 ) 
+   tLocationName.replace( tLocationName.find( " " ), 1 ,"" ); // Replace spaces if any 
     
    // Pull out all stations data from vectors whoes location name matches with given location name 
    for( int stationList = 0 ; stationList < (int) vectorStationSensorIndex.size() ; stationList++ ){
@@ -384,6 +446,8 @@ bool WeatherSensors::readAndParsePerWeatherStationResponse( string & tWeatherFee
                break;
           }else continue;  
      }
+     
+       tReturn = true;  
    }
    catch( xercesc::XMLException& error ) {
   
@@ -493,7 +557,7 @@ bool WeatherSensors::readAndParseWeatherFeeds( string & tWeatherFeedsFile )
                         = dynamic_cast< xercesc::DOMElement* >( tCurrentNode );
            
             // Get into all station node  
-            XMLCh* TAG_STATION = XMLString::transcode("station");
+            XMLCh* TAG_STATION = XMLString::transcode( "station" );
             if( XMLString::equals( tCurrentElement->getTagName(), TAG_STATION ) )
             {
                
@@ -574,7 +638,8 @@ bool WeatherSensors::readAndParseWeatherFeeds( string & tWeatherFeedsFile )
 #ifdef WEATHER_MAIN 
 int main( void ){
 
-  string weatherFeedsIndexFile = "./dump/MAIN.LIST"; // Fixme: Currently hardcoded 
+  // Fixed me: MAIN.LIST should be periodically updated from http://www.weather.gov/data/current_obs/index.xml
+  string weatherFeedsIndexFile = "./dump/MAIN.LIST"; 
     
   // Parse and build weather feeds base into vectors 
   WeatherSensors NOAAWeatherFeeds;
@@ -582,7 +647,7 @@ int main( void ){
 
    
     // Get per station data
-    if( NOAAWeatherFeeds.crawlThroughStationsData( false ) == true ){
+    if( NOAAWeatherFeeds.crawlThroughStationsData( true , "New Orleans" ) == true ){
        // WIP! Do some actions if needed
     }
 
@@ -590,7 +655,7 @@ int main( void ){
     NOAAWeatherFeeds.printAllStationsData(); 
 
     // Print all stations located in New Orleans
-    NOAAWeatherFeeds.printAllStationsDataPerLocation("New Orleans"); 
+    NOAAWeatherFeeds.printAllStationsDataPerLocation( "New Orleans" ); 
   }
     
   return EXIT_SUCCESS; 
