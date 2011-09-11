@@ -46,6 +46,33 @@ using namespace xercesc;
 using namespace std;
 
 //
+// Desc: This should print debug messages only if it is enabled.   
+// Arguments: String, Lines which needs to be printed on standard console.
+//            Bool, Show debug messages forcefully 
+// Returns: Nothing, void 
+//   
+ 
+void WeatherSensors::printDebugMessages( 
+                                         string debugLines,
+                                         bool isDebugForced = false
+                                       ){
+
+   // Get current time and stamp it with logs 
+   time_t tRawTime;
+   time ( &tRawTime );
+
+   string tLocaltime = asctime( localtime( &tRawTime ) );
+   tLocaltime.replace( tLocaltime.find( "\n" ), 1 ,"\0" ); // Replace \n at the end of time string
+
+
+   // Print debug messages to standard console. 
+   if( isDebugEnabled || isDebugForced )
+       cout << "<br>" << tLocaltime << " :" << debugLines << endl; 
+
+   return; 
+}
+
+//
 // Desc: Constructor for weather sensor. This should initialize xerces libraries and parser handle.  
 // Arguments: Nothing, void  
 // Returns: Not applicable  
@@ -71,7 +98,10 @@ WeatherSensors::WeatherSensors( void ){
 
    // Assign new instance of DOM parser 
    weatherFeedsIndexParser = new XercesDOMParser; 
-     
+ 
+   knowledge = NULL; 
+   knowledge = new KnowledgeBase [1];     
+   if( !knowledge ) printDebugMessages( "Opps! Invalid configurations!" );
 }
 
 
@@ -97,7 +127,10 @@ WeatherSensors::~WeatherSensors( void ){
        printDebugMessages( errorMessage, false );  
        XMLString::release( &errorMessage );
    } 
-  
+ 
+   // Deallocate knowledge base  
+   if( knowledge ); 
+       delete [ ] knowledge;
 }
 
 //
@@ -141,33 +174,6 @@ string WeatherSensors::GetTextContentOfAnElement (
      }
 
      return tStringAttribute;  
-}
-
-//
-// Desc: This should print debug messages only if it is enabled.   
-// Arguments: String, Lines which needs to be printed on standard console.
-//            Bool, Show debug messages forcefully 
-// Returns: Nothing, void 
-//   
- 
-void WeatherSensors::printDebugMessages( 
-                                         string debugLines,
-                                         bool isDebugForced = false
-                                       ){
-
-   // Get current time and stamp it with logs 
-   time_t tRawTime;
-   time ( &tRawTime );
-
-   string tLocaltime = asctime( localtime( &tRawTime ) );
-   tLocaltime.replace( tLocaltime.find( "\n" ), 1 ,"\0" ); // Replace \n at the end of time string
-
-
-   // Print debug messages to standard console. 
-   if( isDebugEnabled || isDebugForced )
-       cout << "<br>" << tLocaltime << " :" << debugLines << endl; 
-
-   return; 
 }
 
 //
@@ -647,7 +653,7 @@ int main( void ){
 
    
     // Get per station data
-    if( NOAAWeatherFeeds.crawlThroughStationsData( true , "New Orleans" ) == true ){
+    if( NOAAWeatherFeeds.crawlThroughStationsData( true, NOAAWeatherFeeds.knowledge->getValueOfaKey( "noaa-alerting-weather-location" ) ) == true ){
        // WIP! Do some actions if needed
     }
 
@@ -655,7 +661,7 @@ int main( void ){
     NOAAWeatherFeeds.printAllStationsData(); 
 
     // Print all stations located in New Orleans
-    NOAAWeatherFeeds.printAllStationsDataPerLocation( "New Orleans" ); 
+    NOAAWeatherFeeds.printAllStationsDataPerLocation( NOAAWeatherFeeds.knowledge->getValueOfaKey( "noaa-alerting-weather-location" ) ); 
   }
     
   return EXIT_SUCCESS; 
