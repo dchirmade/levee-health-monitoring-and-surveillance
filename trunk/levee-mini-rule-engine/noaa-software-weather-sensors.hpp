@@ -46,6 +46,9 @@
 #include <stdexcept>
 #include <vector>
 
+// Include knowledge base for automated configurations 
+#include "knowledge-base.hpp"
+
 using namespace xercesc;
 using namespace std;
 
@@ -72,6 +75,9 @@ public:
       bool crawlThroughStationsData( bool, string );  // Crawl through all stations and lookout for all stations   
       string parseURLandPullOutStationName( string ); // Extracts station name from URL 
       string checkMatchingWeatherConditionPerLocation( string, string ); // Checks station's weather data to for matching condition in question   
+      
+      // Knowledge base 
+      KnowledgeBase *knowledge;
 
 private:
 
@@ -121,6 +127,7 @@ private:
       xercesc::XercesDOMParser *weatherFeedsIndexParser;    
       // Is debugger enabled?  
       bool isDebugEnabled; 
+
 }; 
 
 #endif
