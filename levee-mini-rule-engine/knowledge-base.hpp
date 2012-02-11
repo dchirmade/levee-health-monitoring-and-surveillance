@@ -16,10 +16,6 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // 
-// GSoC11 Developer: Dipak 
-// GSoC11 Dashboard: http://www.google-melange.com/gsoc/project/google/gsoc2011/q1w2e3r4/12001
-// GSoC11 Mentor   : Dr.Raju Gottumukkala and Crawford Comeaux
-// 
 //
 // This is knowledge base for mini-rule-engine. Currently this knowledge base has hardwared value 
 // or value read from plain text file. In future this could be replaced my automated expert system 
